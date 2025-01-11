@@ -3,10 +3,10 @@ title: Reliability report
 description: This article describes the reliability score for each Windows quality update cycle based on stop error codes detected on managed devices.
 ms.date: 04/09/2024
 ms.service: windows-client
-ms.subservice: itpro-updates
+ms.subservice: autopatch
 ms.topic: how-to
 ms.localizationpriority: medium
-author: tiaraquan 
+author: tiaraquan
 ms.author: tiaraquan
 manager: aaroncz
 ms.reviewer: hathind
@@ -16,6 +16,8 @@ ms.collection:
 ---
 
 # Reliability report (public preview)
+
+[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 > [!IMPORTANT]
 > This feature is in **public preview**. It's being actively developed, and might not be complete.
@@ -117,4 +119,4 @@ The following information is available as default columns in the Reliability rep
 
 ## Known limitations
 
-The Reliability report supports tenant and service-level score data going back to September 2023. Data before that date isn't supported. A full 12 months of score data will be available to select from the menu dropdowns in September 2024.
+The Reliability report supports tenant and service-level score data going back to September 2023. Data before that date isn't supported. A full 12 months of score data are available to select from the menu dropdowns in September 2024.

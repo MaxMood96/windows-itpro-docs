@@ -1,12 +1,8 @@
 ---
 title: FIPS 140 validated modules for Windows 11
 description: This topic lists the completed FIPS 140 cryptographic module validations for Windows 11.
-ms.date: 2/1/2024
+ms.date: 11/12/2024
 ms.topic: reference
-ms.author: v-rodurff
-author: msrobertd
-ms.reviewer: paoloma
-ms.collection: tier3
 ---
 
 # FIPS 140 validated modules for Windows 11
@@ -20,6 +16,8 @@ Build: 10.0.22000. Validated Edition: Windows 11
 |Cryptographic Module (linked to Security Policy document)|CMVP Certificate #|Validated Algorithms|
 |--- |--- |--- |
 |[Boot Manager][sp-4546]|[#4546][certificate-4546]|FIPS Approved: AES, CKG, HMAC, PBKDF, RSA, and SHS|
+|[Cryptographic Primitives Library][sp-4825]|[#4825][certificate-4825]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
+|[Kernel Mode Cryptographic Primitives Library][sp-4766]|[#4766][certificate-4766]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
 
 ---
 
@@ -28,7 +26,11 @@ Build: 10.0.22000. Validated Edition: Windows 11
 <!-- CMVP Certificates -->
 
 [certificate-4546]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4546
+[certificate-4766]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4766
+[certificate-4825]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4825
 
 <!-- Security Policies -->
 
 [sp-4546]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4546.pdf
+[sp-4766]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4766.pdf
+[sp-4825]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4825.pdf

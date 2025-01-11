@@ -2,7 +2,7 @@
 title: Configure firewall rules with group policy
 description: Learn how to configure firewall rules using group policy with the Windows Firewall with Advanced Security console.
 ms.topic: how-to
-ms.date: 11/21/2023
+ms.date: 09/06/2024
 ---
 
 # Configure rules with group policy
@@ -11,7 +11,7 @@ This article contains examples how to configure Windows Firewall rules using the
 
 ## Access the Windows Firewall with Advanced Security console
 
-If you're configuring devices joined to an Active Directory domain, to complete these procedures you must be a member of the Domain Administrators group, or otherwise have delegated permissions to modify the GPOs in the domain. To access the *Windows Firewall with Advanced Security* console, [create or edit](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754740(v=ws.11)) a group policy object (GPO) and expand the nodes **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Windows Firewall with Advanced Security**.
+If you're configuring devices joined to an Active Directory domain, to complete these procedures you must be a member of the Domain Administrators group, or otherwise have delegated permissions to modify the GPOs in the domain. To access the *Windows Firewall with Advanced Security* console, [create or edit](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754740(v=ws.11)) a group policy object (GPO) and expand the nodes **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Windows Firewall with Advanced Security**. Pay attention to the [Group policy processing considerations][GPPC] when using Group Policy.
 
 If you are configuring a single device, you must have administrative rights on the device. In which case, to access the *Windows Firewall with Advanced Security* console, select <kbd>START</kbd>, type `wf.msc`, and press <kbd>ENTER</kbd>.
 
@@ -176,3 +176,5 @@ Using the two rules configured as described in this topic helps to protect your 
 1. On the **Action** page, select **Allow the connection**, and then select **Next**
 1. On the **Profile** page, select the network location types to which this rule applies, and then select **Next**
 1. On the **Name** page, type a name and description for your rule, and then select **Finish**
+
+[GPPC]: /windows/security/operating-system-security/network-security/windows-firewall/tools#group-policy-processing-considerations

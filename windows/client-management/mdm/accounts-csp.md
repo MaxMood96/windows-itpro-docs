@@ -54,7 +54,7 @@ Available naming macros:
 Supported operation is Add.
 
 > [!Note]
-> For desktop PCs on Windows 10, version 2004 or later, use the **Ext/Microsoft/DNSComputerName** node in [DevDetail CSP](devdetail-csp.md).
+> For desktop PCs on supported versions of Windows 10 or later, use the **Ext/Microsoft/DNSComputerName** node in [DevDetail CSP](devdetail-csp.md).
 
 <a href="" id="users"></a>**Users**
 Interior node for the user account information.
@@ -62,11 +62,25 @@ Interior node for the user account information.
 <a href="" id="users-username"></a>**Users/_UserName_**
 This node specifies the username for a new local user account. This setting can be managed remotely.
 
+> [!IMPORTANT]
+> The username is limited to 20 characters. 
+
 <a href="" id="users-username-password"></a>**Users/_UserName_/Password**
 This node specifies the password for a new local user account. This setting can be managed remotely.
 
 Supported operation is Add.
 GET operation isn't supported.  This setting will report as failed when deployed from Intune.
+
+> [!IMPORTANT]
+> This string needs to meet the current password policy requirements.
+>
+> Escape any special characters in the string. For example,
+>
+> | Character | Escape sequence |
+> |:---|:---|
+> | `<` | `&lt;` |
+> | `>` | `&gt;` |
+> | `&` | `&amp;` |
 
 <a href="" id="users-username-localusergroup"></a>**Users/_UserName_/LocalUserGroup**
 This optional node specifies the local user group that a local user account should be joined to.  If the node isn't set, the new local user account is joined just to the Standard Users group.  Set the value to 2 for Administrators group. This setting can be managed remotely.

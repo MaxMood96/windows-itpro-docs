@@ -1,8 +1,8 @@
 ---
-title: Taskbar policy settings
-description: Learn about the policy settings to configure the Windows taskbar.
+title: List of the Policy Settings To Configure the Windows Taskbar
+description: Learn about the CSP and GPO policy settings to configure the Windows taskbar.
 ms.topic: reference
-ms.date: 04/17/2024
+ms.date: 11/07/2024
 appliesto:
 zone_pivot_groups: windows-versions-11-10
 ---

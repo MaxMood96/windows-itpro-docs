@@ -1,7 +1,7 @@
 ---
 title: Windows Hello for Business cloud-only deployment guide
 description: Learn how to deploy Windows Hello for Business in a cloud-only deployment scenario.
-ms.date: 03/12/2024
+ms.date: 11/22/2024
 ms.topic: tutorial
 ---
 
@@ -54,7 +54,7 @@ Follow the instructions below to configure your devices using either Microsoft I
 
 | Category | Setting name | Value |
 |--|--|--|
-| **Windows Hello for Business** | Use Passport For Work | true |
+| **Windows Hello for Business** | Use Windows Hello For Business | true |
 | **Windows Hello for Business** | Require Security Device | true |
 
 [!INCLUDE [intune-settings-catalog-2](../../../../../includes/configure/intune-settings-catalog-2.md)]

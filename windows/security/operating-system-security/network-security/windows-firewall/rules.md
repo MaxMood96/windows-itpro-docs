@@ -1,7 +1,7 @@
 ---
 title: Windows Firewall rules
 description: Learn about Windows Firewall rules and design recommendations.
-ms.date: 11/21/2023
+ms.date: 09/06/2024
 ms.topic: concept-article
 ---
 
@@ -30,11 +30,13 @@ When first installed, network applications and services issue a *listen call* sp
 
 :::row:::
   :::column span="2":::
-    If there's no active application or administrator-defined allow rule(s), a dialog box prompts the user to either allow or block an application's packets the first time the app is launched or tries to communicate in the network:
+  If there's no active application or administrator-defined allow rule(s), a dialog box prompts the user to either allow or block an application's packets the first time the app is launched or tries to communicate in the network:
+  
+- If the user has admin permissions, they're prompted. If they respond *No* or cancel the prompt, block rules are created. Two rules are typically created, one each for TCP and UDP traffic
+- If the user isn't a local admin and they are prompted, block rules are created. It doesn't matter what option is selected
 
-    - If the user has admin permissions, they're prompted. If they respond *No* or cancel the prompt, block rules are created. Two rules are typically created, one each for TCP and UDP traffic
-    - If the user isn't a local admin, they won't be prompted. In most cases, block rules are created
-
+To disable the notification prompt, you can use the [command line](/windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line) or the **Windows Firewall with Advanced Security** console
+  
   :::column-end:::
   :::column span="2":::
     :::image type="content" source="images/uac.png" alt-text="Screenshot showing the User Account Control (UAC) prompt to allow Microsoft Teams." border="false":::
@@ -46,11 +48,11 @@ In either of these scenarios, once the rules are added, they must be deleted to 
 > [!NOTE]
 > The firewall's default settings are designed for security. Allowing all inbound connections by default introduces the network to various threats. Therefore, creating exceptions for inbound connections from non-Microsoft software should be determined by trusted app developers, the user, or the admin on behalf of the user.
 
-### WDAC tagging policies
+### App Control tagging policies
 
-Windows Firewall supports the use of Windows Defender Application Control (WDAC) Application ID (AppID) tags in firewall rules. With this capability, Windows Firewall rules can be scoped to an application or a group of applications by referencing process tags, without using absolute path or sacrificing security. There are two steps for this configuration:
+Windows Firewall supports the use of App Control for Business Application ID (AppID) tags in firewall rules. With this capability, Windows Firewall rules can be scoped to an application or a group of applications by referencing process tags, without using absolute path or sacrificing security. There are two steps for this configuration:
 
-1. Deploy *WDAC AppId tagging policies*: a Windows Defender Application Control policy must be deployed, which specifies individual applications or groups of applications to apply a *PolicyAppId tag* to the process token(s). Then, the admin can define firewall rules that are scoped to all processes tagged with the matching *PolicyAppId*. For more information, see the [WDAC AppId tagging guide](../../../application-security/application-control/windows-defender-application-control/AppIdTagging/wdac-appid-tagging-guide.md) to create, deploy, and test an AppID policy to tag applications.
+1. Deploy *App Control AppId tagging policies*: an App Control for Business policy must be deployed, which specifies individual applications or groups of applications to apply a *PolicyAppId tag* to the process token(s). Then, the admin can define firewall rules that are scoped to all processes tagged with the matching *PolicyAppId*. For more information, see the [App Control AppId tagging guide](../../../application-security/application-control/app-control-for-business/AppIdTagging/appcontrol-appid-tagging-guide.md) to create, deploy, and test an AppID policy to tag applications.
 1. Configure firewall rules using *PolicyAppId tags* using one of the two methods:
     - Using the [PolicyAppId node of the Firewall CSP](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenamepolicyappid) with an MDM solution like Microsoft Intune. If you use Microsoft Intune, you can deploy the rules from Microsoft Intune Admin center, under the path **Endpoint security** > **Firewall** > **Create policy** > **Windows 10, Windows 11, and Windows Server** > **Windows Firewall Rules**. When creating the rules, provide the *AppId tag* in the **Policy App ID** setting
     - Create local firewall rules with PowerShell: use the [`New-NetFirewallRule`](/powershell/module/netsecurity/new-netfirewallrule) cmdlet and specify the `-PolicyAppId` parameter. You can specify one tag at a time while creating firewall rules. Multiple User Ids are supported

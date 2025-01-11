@@ -25,4 +25,4 @@ This file contains the images that are included in this GitHub repository that a
 
 :::image type="content" source="ux-iot-edge-list.png" alt-text="A screenshot of the terminal after the command 'iotedge list', showing all three containers running successfully.":::
 
-:::image type="content" source="ux-mcc-failed.png" alt-text="A screenshot of the terminal after the command 'iotedge list', showing the MCC container in a failure state.":::
+:::image type="content" source="ux-mcc-failed.png" alt-text="A screenshot of the terminal after the command 'iotedge list', showing the Microsoft Connected Cache container in a failure state.":::

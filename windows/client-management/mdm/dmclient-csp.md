@@ -1,7 +1,7 @@
 ---
 title: DMClient CSP
 description: Learn more about the DMClient CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -1654,7 +1654,7 @@ This node allows the MDM to set custom error text, detailing what the user needs
 
 <!-- Device-Provider-{ProviderID}-FirstSyncStatus-ExpectedModernAppPackages-Description-Begin -->
 <!-- Description-Source-DDF -->
-This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseModernAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. E. G. ./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName/Name;4"\xF000" ./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName2/Name;2 Which will represent that App Package PackageFullName contains 4 apps, whereas PackageFullName2 contains 2 apps.
+This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseModernAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. For example, `./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName/Name;4"\xF000" ./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName2/Name;2` Which will represent that App Package PackageFullName contains 4 apps, whereas PackageFullName2 contains 2 apps.
 <!-- Device-Provider-{ProviderID}-FirstSyncStatus-ExpectedModernAppPackages-Description-End -->
 
 <!-- Device-Provider-{ProviderID}-FirstSyncStatus-ExpectedModernAppPackages-Editable-Begin -->
@@ -1694,7 +1694,7 @@ This node contains a list of LocURIs that refer to App Packages the ISV expects 
 
 <!-- Device-Provider-{ProviderID}-FirstSyncStatus-ExpectedMSIAppPackages-Description-Begin -->
 <!-- Description-Source-DDF -->
-This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseDesktopAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. E. G. ./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID1/Status;4"\xF000" ./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID2/Status;2 Which will represent that App Package ProductID1 contains 4 apps, whereas ProductID2 contains 2 apps.
+This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseDesktopAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. For example, `./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID1/Status;4"\xF000" ./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID2/Status;2` Which will represent that App Package ProductID1 contains 4 apps, whereas ProductID2 contains 2 apps.
 <!-- Device-Provider-{ProviderID}-FirstSyncStatus-ExpectedMSIAppPackages-Description-End -->
 
 <!-- Device-Provider-{ProviderID}-FirstSyncStatus-ExpectedMSIAppPackages-Editable-Begin -->
@@ -4311,7 +4311,7 @@ This node allows the MDM to set custom error text, detailing what the user needs
 
 <!-- User-Provider-{ProviderID}-FirstSyncStatus-ExpectedModernAppPackages-Description-Begin -->
 <!-- Description-Source-DDF -->
-This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseModernAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. E. G. ./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName/Name;4"\xF000" ./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName2/Name;2 Which will represent that App Package PackageFullName contains 4 apps, whereas PackageFullName2 contains 2 apps. This is per user.
+This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseModernAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. For example, `./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName/Name;4"\xF000" ./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/AppStore/PackageFamilyName/PackageFullName2/Name;2` Which will represent that App Package PackageFullName contains 4 apps, whereas PackageFullName2 contains 2 apps. This is per user.
 <!-- User-Provider-{ProviderID}-FirstSyncStatus-ExpectedModernAppPackages-Description-End -->
 
 <!-- User-Provider-{ProviderID}-FirstSyncStatus-ExpectedModernAppPackages-Editable-Begin -->
@@ -4351,7 +4351,7 @@ This node contains a list of LocURIs that refer to App Packages the ISV expects 
 
 <!-- User-Provider-{ProviderID}-FirstSyncStatus-ExpectedMSIAppPackages-Description-Begin -->
 <!-- Description-Source-DDF -->
-This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseDesktopAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. E. G. ./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID1/Status;4"\xF000" ./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID2/Status;2 Which will represent that App Package ProductID1 contains 4 apps, whereas ProductID2 contains 2 apps. This is per user.
+This node contains a list of LocURIs that refer to App Packages the ISV expects to provision via EnterpriseDesktopAppManagement CSP, delimited by the character L"\xF000". The LocURI will be followed by a semicolon and a number, representing the number of apps included in the App Package. We won't verify that number. For example, `./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID1/Status;4"\xF000" ./User/Vendor/MSFT/EnterpriseDesktopAppManagement/MSI/ProductID2/Status;2` Which will represent that App Package ProductID1 contains 4 apps, whereas ProductID2 contains 2 apps. This is per user.
 <!-- User-Provider-{ProviderID}-FirstSyncStatus-ExpectedMSIAppPackages-Description-End -->
 
 <!-- User-Provider-{ProviderID}-FirstSyncStatus-ExpectedMSIAppPackages-Editable-Begin -->

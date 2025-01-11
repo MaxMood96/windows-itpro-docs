@@ -1,8 +1,8 @@
 ---
-title: Taskbar XML Schema Definition (XSD)
-description: Taskbar XSD reference article.
+title: Windows Taskbar XML Schema Definition (XSD)
+description: Reference article about the Taskbar XML schema definition (XSD).
 ms.topic: reference
-ms.date: 02/15/2024
+ms.date: 11/11/2024
 ---
 
 # Taskbar XML Schema Definition (XSD)

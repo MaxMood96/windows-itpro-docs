@@ -10,15 +10,36 @@ metadata:
   author: paolomatarazzo
   ms.author: paoloma
   manager: aaroncz
-  ms.date: 03/12/2024
+  ms.date: 10/18/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
 
 landingContent:
 
-  - title: Learn about hardware security
+  - title: Windows 11 security book
     linkLists:
       - linkListType: overview
+        links:
+          - text: Introduction
+            url: /windows/security/book
+          - text: Hardware security
+            url: /windows/security/book/hardware-security
+          - text: Operating system security
+            url: /windows/security/book/operating-system-security
+          - text: Application security
+            url: /windows/security/book/application-security
+          - text: Identity protection
+            url: /windows/security/book/identity-protection
+          - text: Privacy
+            url: /windows/security/book/privacy
+          - text: Cloud services
+            url: /windows/security/book/cloud-services
+          - text: Security foundation
+            url: /windows/security/book/security-foundation
+
+  - title: Learn about hardware security
+    linkLists:
+      - linkListType: get-started
         links:
           - text: Trusted Platform Module (TPM)
             url: /windows/security/hardware-security/tpm/trusted-platform-module-overview
@@ -33,7 +54,7 @@ landingContent:
 
   - title: Learn about OS security
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: Trusted boot
             url: /windows/security/operating-system-security
@@ -41,7 +62,7 @@ landingContent:
             url: /windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center
           - text: BitLocker
             url: /windows/security/operating-system-security/data-protection/bitlocker/
-          - text: Personal Data Encryption (PDE)
+          - text: Personal Data Encryption
             url: /windows/security/operating-system-security/data-protection/personal-data-encryption
           - text: Windows security baselines
             url: /windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines
@@ -57,7 +78,7 @@ landingContent:
         links:
           - text: Configure BitLocker
             url: /windows/security/operating-system-security/data-protection/bitlocker/configure
-          - text: Configure PDE
+          - text: Configure Personal Data Encryption
             url: /windows/security/operating-system-security/data-protection/personal-data-encryption/configure
       - linkListType: whats-new
         links:
@@ -66,7 +87,7 @@ landingContent:
 
   - title: Learn about identity protection
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: Passwordless strategy
             url: /windows/security/identity-protection/passwordless-strategy
@@ -99,9 +120,9 @@ landingContent:
 
   - title: Learn about application security
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
-          - text: Windows Defender Application Control (WDAC)
+          - text: App Control for Business
             url: /windows/security/application-security/application-control/windows-defender-application-control/
           - text: User Account Control (UAC)
             url: /windows/security/application-security/application-control/user-account-control
@@ -118,7 +139,7 @@ landingContent:
 
   - title: Learn about security foundations
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: Zero trust
             url: /windows/security/security-foundations/zero-trust-windows-device-health
@@ -141,7 +162,7 @@ landingContent:
 
   - title: Learn about cloud security
     linkLists:
-      - linkListType: overview
+      - linkListType: get-started
         links:
           - text: Security baselines with Intune
             url: /mem/intune/protect/security-baselines

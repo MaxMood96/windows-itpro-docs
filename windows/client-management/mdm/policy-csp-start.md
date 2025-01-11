@@ -1,13 +1,15 @@
 ---
 title: Start Policy CSP
 description: Learn more about the Start Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/27/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
 
 <!-- Start-Begin -->
 # Policy CSP - Start
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- Start-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -512,6 +514,63 @@ This policy controls the visibility of the Videos shortcut on the Start menu. Th
 <!-- AllowPinnedFolderVideos-Examples-End -->
 
 <!-- AllowPinnedFolderVideos-End -->
+
+<!-- AlwaysShowNotificationIcon-Begin -->
+## AlwaysShowNotificationIcon
+
+<!-- AlwaysShowNotificationIcon-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ❌ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- AlwaysShowNotificationIcon-Applicability-End -->
+
+<!-- AlwaysShowNotificationIcon-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/Start/AlwaysShowNotificationIcon
+```
+<!-- AlwaysShowNotificationIcon-OmaUri-End -->
+
+<!-- AlwaysShowNotificationIcon-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- AlwaysShowNotificationIcon-Description-End -->
+
+<!-- AlwaysShowNotificationIcon-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AlwaysShowNotificationIcon-Editable-End -->
+
+<!-- AlwaysShowNotificationIcon-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- AlwaysShowNotificationIcon-DFProperties-End -->
+
+<!-- AlwaysShowNotificationIcon-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Auto-hide notification bell icon. |
+| 1 | Show notification bell icon. |
+<!-- AlwaysShowNotificationIcon-AllowedValues-End -->
+
+<!-- AlwaysShowNotificationIcon-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | AlwaysShowNotificationIcon |
+| Path | Taskbar > AT > StartMenu |
+<!-- AlwaysShowNotificationIcon-GpMapping-End -->
+
+<!-- AlwaysShowNotificationIcon-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AlwaysShowNotificationIcon-Examples-End -->
+
+<!-- AlwaysShowNotificationIcon-End -->
 
 <!-- ConfigureStartPins-Begin -->
 ## ConfigureStartPins
@@ -2246,6 +2305,63 @@ For more information on how to customize the Start layout, see [Customize the St
 <!-- StartLayout-Examples-End -->
 
 <!-- StartLayout-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-Begin -->
+## TurnOffAbbreviatedDateTimeFormat
+
+<!-- TurnOffAbbreviatedDateTimeFormat-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ❌ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- TurnOffAbbreviatedDateTimeFormat-Applicability-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/Start/TurnOffAbbreviatedDateTimeFormat
+```
+<!-- TurnOffAbbreviatedDateTimeFormat-OmaUri-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- TurnOffAbbreviatedDateTimeFormat-Description-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- TurnOffAbbreviatedDateTimeFormat-Editable-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- TurnOffAbbreviatedDateTimeFormat-DFProperties-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Show abbreviated time and date format. |
+| 1 | Show classic time and date format. |
+<!-- TurnOffAbbreviatedDateTimeFormat-AllowedValues-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | TurnOffAbbreviatedDateTimeFormat |
+| Path | Taskbar > AT > StartMenu |
+<!-- TurnOffAbbreviatedDateTimeFormat-GpMapping-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- TurnOffAbbreviatedDateTimeFormat-Examples-End -->
+
+<!-- TurnOffAbbreviatedDateTimeFormat-End -->
 
 <!-- Start-CspMoreInfo-Begin -->
 <!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->

@@ -33,7 +33,7 @@ To view which version your cache nodes are currently on, navigate to the **Cache
 There are two main steps required to uninstall your cache node:
 
 1. Remove your cache node from Azure portal
-1. Run the uninstall script to cleanly remove MCC from your server
+1. Run the uninstall script to cleanly remove Microsoft Connected Cache from your server
 
 You must complete both steps to ensure a clean uninstall of your cache node.
 
@@ -50,7 +50,7 @@ The **uninstallmcc.sh** script removes the following components:
 - IoT Edge
 - Edge Agent
 - Edge Hub
-- MCC
+- Connected Cache
 - Moby CLI
 - Moby engine
 

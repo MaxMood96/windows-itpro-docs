@@ -14,7 +14,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-delivery-optimization target=_blank>Delivery Optimization</a>
-ms.date: 05/23/2024
+ms.date: 10/15/2024
 ---
 
 # Delivery Optimization reference
@@ -48,8 +48,8 @@ In MDM, the same settings are under **.Vendor/MSFT/Policy/Config/DeliveryOptimiz
 | [Monthly upload data cap](#monthly-upload-data-cap) | DOMonthlyUploadDataCap | 1607 | Default value is 20 GB. |
 | [Minimum background QoS](#minimum-background-qos) | DOMinBackgroundQoS | 1607 | Recommend setting this to 500 KB/s. Default value is 2500 KB/s. |
 | [Enable peer caching while the device connects via VPN](#enable-peer-caching-while-the-device-connects-via-vpn) | DOAllowVPNPeerCaching | 1709 | Default is to not allow peering while on VPN. |
-| [VPN keywords](#vpn-keywords) | DOVpnKeywords | 22H2 September Moment | Allows you to set one or more keywords used to recognize VPN connections. |
-| [Disallow cache server downloads from VPN](#disallow-cache-server-downloads-on-vpn) | DODisallowCacheServerDownloadsOnVPN | 22H2 September Moment | Disallow downloads from Microsoft Connected Cache servers when the device connects via VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected via VPN. |
+| [VPN keywords](#vpn-keywords) | DOVpnKeywords | Windows 11, version 22H2 with the September 2023 or later update installed | Allows you to set one or more keywords used to recognize VPN connections. |
+| [Disallow cache server downloads from VPN](#disallow-cache-server-downloads-on-vpn) | DODisallowCacheServerDownloadsOnVPN | Windows 11, version 22H2 with the September 2023 or later update installed | Disallow downloads from Microsoft Connected Cache servers when the device connects via VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected via VPN. |
 | [Allow uploads while the device is on battery while under set battery level](#allow-uploads-while-the-device-is-on-battery-while-under-set-battery-level) | DOMinBatteryPercentageAllowedToUpload | 1709 | Default is to not allow peering while on battery.  |
 | [Maximum foreground download bandwidth (percentage)](#maximum-foreground-download-bandwidth) | DOPercentageMaxForegroundBandwidth | 1803 | Default is '0' which will dynamically adjust. |
 | [Maximum background download bandwidth (percentage)](#maximum-background-download-bandwidth) | DOPercentageMaxBackgroundBandwidth | 1803 | Default is '0' which will dynamically adjust. |
@@ -96,19 +96,19 @@ More options available that control the impact Delivery Optimization has on your
 
 #### Policies to prioritize the use of peer-to-peer and cache server sources
 
-When Delivery Optimization client is configured to use peers and Microsoft Connected Cache (MCC), to achieve the best possible content delivery experience, the client connects to both MCC and peers in parallel. If the desired content can't be obtained from MCC or peers, Delivery Optimization will automatically fall back to the HTTP source to get the requested content. There are four settings that allow you to prioritize peer-to-peer or MCC sources by delaying the immediate fallback to HTTP source, which is the default behavior.
+When Delivery Optimization client is configured to use peers and Microsoft Connected Cache, to achieve the best possible content delivery experience, the client connects to both Connected Cache and peers in parallel. If the desired content can't be obtained from Connected Cache or peers, Delivery Optimization will automatically fall back to the HTTP source to get the requested content. There are four settings that allow you to prioritize peer-to-peer or Connected Cache sources by delaying the immediate fallback to HTTP source, which is the default behavior.
 
 ##### Peer-to-peer delay fallback settings
 
 - [Delay foreground download from HTTP (in secs)](#delay-foreground-download-from-http-in-secs) allows you to delay the use of an HTTP source in a foreground (interactive) download that is allowed to use P2P.
 - [Delay background download from HTTP (in secs)](#delay-background-download-from-http-in-secs) allows you to delay the use of an HTTP source in a background download that is allowed to use P2P.
 
-##### Microsoft Connected Cache (MCC) delay fallback settings
+##### Microsoft Connected Cache delay fallback settings
 
 - [Delay foreground download cache server fallback (in secs)](#delay-foreground-download-cache-server-fallback-in-secs) allows you to delay the use of an HTTP source in a foreground (interactive) download that is allowed to use a cache server.
-- [Delay background download from HTTP (in secs)](#delay-background-download-from-http-in-secs) allows you to delay the use of an HTTP source in a background  download that is allowed to use a cache server.
+- [Delay background download cache server fallback (in secs)](#delay-background-download-cache-server-fallback-in-secs) allows you to delay the use of an HTTP source in a background  download that is allowed to use a cache server.
 
-**If both peer-to-peer and MCC are configured, the peer-to-peer delay settings will take precedence over the cache server delay settings.** This setting allows Delivery Optimization to discover peers first then recognize the fallback setting for the MCC cache server.
+**If both peer-to-peer and Connected Cache are configured, the peer-to-peer delay settings will take precedence over the cache server delay settings.** This setting allows Delivery Optimization to discover peers first then recognize the fallback setting for the Connected Cache cache server.
 
 #### System resource usage
 
@@ -245,13 +245,13 @@ The default behaviors differ between Windows 10 and Windows 11. In Windows 10, t
 
 MDM Setting: **DODelayForegroundDownloadFromHttp**
 
-Starting in Windows 10, version 1803, allows you to delay the use of an HTTP source in a foreground (interactive) download that is allowed to use peer-to-peer. The maximum value is 4294967295 seconds. **By default, this policy isn't configured.**
+Starting in Windows 10, version 1803, allows you to delay the use of an HTTP source in a foreground (interactive) download that is allowed to use peer-to-peer. **By default, this policy isn't configured.**
 
 ### Delay background download from HTTP (in secs)
 
 MDM Setting: **DODelayBackgroundDownloadFromHttp**
 
-Starting in Windows 10, version 1803, this allows you to delay the use of an HTTP source in a background download that is allowed to use peer-to-peer. The maximum value is 4294967295 seconds. **By default, this policy isn't configured.**
+Starting in Windows 10, version 1803, this allows you to delay the use of an HTTP source in a background download that is allowed to use peer-to-peer. **By default, this policy isn't configured.**
 
 ### Delay foreground download cache server fallback (in secs)
 

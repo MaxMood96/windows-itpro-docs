@@ -1,17 +1,20 @@
 ---
-title: Privacy
-description: Windows 11 security book - Privacy chapter.
+title: Windows 11 security book - Privacy controls
+description: Privacy chapter - Privacy controls.
 ms.topic: overview
-ms.date: 04/09/2024
+ms.date: 11/18/2024
 ---
 
 # Privacy controls
 
-:::image type="content" source="images/privacy.png" alt-text="Diagram of containing a list of security features." lightbox="images/privacy.png" border="false":::
+## Microsoft Privacy Dashboard
 
-## Privacy dashboard and report
+Customers can use the Microsoft Privacy Dashboard to view, export, and delete their information, giving them further transparency and control. They can also use the Microsoft Privacy Report to learn more about Windows data collection and how to manage it. For organizations, we provide a guide for Windows Privacy Compliance that includes more details on the available controls and transparency.
 
-Customers can use the [Microsoft Privacy dashboard](https://account.microsoft.com/privacy) to view, export, and delete their information, giving them further transparency and control. They can also use the [Microsoft Privacy Report](https://privacy.microsoft.com/privacy-report) to learn more about Windows data collection and how to manage it. For enterprises we provide a guide for Windows Privacy Compliance that includes additional details on the available controls and transparency.
+[!INCLUDE [learn-more](includes/learn-more.md)]
+
+- [Microsoft Privacy Dashboard](https://account.microsoft.com/privacy)
+- [Microsoft Privacy Report](https://privacy.microsoft.com/privacy-report)
 
 ## Privacy transparency and controls
 
@@ -19,7 +22,7 @@ Prominent system tray icons show users when resources and apps like microphones 
 
 ## Privacy resource usage
 
-Every Microsoft customer should be able to use our products secure in the knowledge that we will protect their privacy and give them the information and tools they need to easily make privacy decisions with confidence. Accessed in Settings, the new app usage history feature gives users a seven-day history of resource access for Location, Camera, Microphone, Phone Calls, Messaging, Contacts, Pictures, Videos, Music library, Screenshots, and other apps.
+Every Microsoft customer should be able to use our products secure in the knowledge that we protect their privacy, and give them the information and tools they need to easily make privacy decisions with confidence. From Settings, the app usage history feature provides users with a seven-day history of resource access for Location, Camera, Microphone, Phone Calls, Messaging, Contacts, Pictures, Videos, Music library, Screenshots, and other apps.
 
 This information helps you determine if an app is behaving as expected so that you can change the app's access to resources as desired.
 
@@ -27,6 +30,6 @@ This information helps you determine if an app is behaving as expected so that y
 
 The Windows diagnostic data processor configuration enables the user to be the controller, as defined by the European Union General Data Protection Regulation (GDPR), for the Windows diagnostic data collected from Windows devices that meet the configuration requirements.
 
-:::image type="icon" source="images/learn-more.svg" border="false"::: **Learn more:**
+[!INCLUDE [learn-more](includes/learn-more.md)]
 
 - [Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration)

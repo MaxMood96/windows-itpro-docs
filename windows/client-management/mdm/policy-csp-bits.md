@@ -1,7 +1,7 @@
 ---
 title: BITS Policy CSP
 description: Learn more about the BITS Area in Policy CSP.
-ms.date: 01/18/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -32,7 +32,7 @@ ms.date: 01/18/2024
 <!-- Description-Source-ADMX -->
 This policy setting limits the network bandwidth that Background Intelligent Transfer Service (BITS) uses for background transfers. (This policy setting doesn't affect foreground transfers).
 
-You can specify a limit to use during a specific time interval and at all other times. For example, limit the use of network bandwidth to 10 Kbps from 8:00 A. M. to 5:00 P. M., and use all available unused bandwidth the rest of the day's hours.
+You can specify a limit to use during a specific time interval and at all other times. For example, limit the use of network bandwidth to 10 Kbps from 8:00 A.M. to 5:00 P.M., and use all available unused bandwidth the rest of the day's hours.
 
 - If you enable this policy setting, BITS will limit its bandwidth usage to the specified values. You can specify the limit in kilobits per second (Kbps). If you specify a value less than 2 kilobits, BITS will continue to use approximately 2 kilobits. To prevent BITS transfers from occurring, specify a limit of 0.
 
@@ -98,7 +98,7 @@ Consider using this setting to prevent BITS transfers from competing for network
 <!-- Description-Source-ADMX -->
 This policy setting limits the network bandwidth that Background Intelligent Transfer Service (BITS) uses for background transfers. (This policy setting doesn't affect foreground transfers).
 
-You can specify a limit to use during a specific time interval and at all other times. For example, limit the use of network bandwidth to 10 Kbps from 8:00 A. M. to 5:00 P. M., and use all available unused bandwidth the rest of the day's hours.
+You can specify a limit to use during a specific time interval and at all other times. For example, limit the use of network bandwidth to 10 Kbps from 8:00 A.M. to 5:00 P.M., and use all available unused bandwidth the rest of the day's hours.
 
 - If you enable this policy setting, BITS will limit its bandwidth usage to the specified values. You can specify the limit in kilobits per second (Kbps). If you specify a value less than 2 kilobits, BITS will continue to use approximately 2 kilobits. To prevent BITS transfers from occurring, specify a limit of 0.
 
@@ -164,7 +164,7 @@ Consider using this setting to prevent BITS transfers from competing for network
 <!-- Description-Source-ADMX -->
 This policy setting limits the network bandwidth that Background Intelligent Transfer Service (BITS) uses for background transfers. (This policy setting doesn't affect foreground transfers).
 
-You can specify a limit to use during a specific time interval and at all other times. For example, limit the use of network bandwidth to 10 Kbps from 8:00 A. M. to 5:00 P. M., and use all available unused bandwidth the rest of the day's hours.
+You can specify a limit to use during a specific time interval and at all other times. For example, limit the use of network bandwidth to 10 Kbps from 8:00 A.M. to 5:00 P.M., and use all available unused bandwidth the rest of the day's hours.
 
 - If you enable this policy setting, BITS will limit its bandwidth usage to the specified values. You can specify the limit in kilobits per second (Kbps). If you specify a value less than 2 kilobits, BITS will continue to use approximately 2 kilobits. To prevent BITS transfers from occurring, specify a limit of 0.
 

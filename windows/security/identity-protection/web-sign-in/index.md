@@ -1,7 +1,7 @@
 ---
-title: Web sign-in for Windows
+title: Use Web Sign-In To Enable Passwordless Sign-In In Windows
 description: Learn how Web sign-in in Windows works, key scenarios, and how to configure it.
-ms.date: 04/10/2024
+ms.date: 12/02/2024
 ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

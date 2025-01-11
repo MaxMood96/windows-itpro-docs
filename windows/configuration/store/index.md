@@ -1,8 +1,8 @@
 ---
-title: Configure access to the Microsoft Store app
+title: Configure Access To The Microsoft Store App For Windows Devices
 description: Learn how to configure access to the Microsoft Store app.
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 12/02/2024
 ---
 
 # Configure access to the Microsoft Store app

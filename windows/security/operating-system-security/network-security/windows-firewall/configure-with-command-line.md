@@ -2,7 +2,7 @@
 title: Manage Windows Firewall with the command line
 description: Learn how to manage Windows Firewall from the command line. This guide provides examples how to manage Windows Firewall with PowerShell and Netsh.
 ms.topic: how-to
-ms.date: 11/21/2023
+ms.date: 09/06/2024
 ---
 
 # Manage Windows Firewall with the command line
@@ -32,19 +32,19 @@ netsh.exe advfirewall set allprofiles state on
 ### Control Windows Firewall behavior
 
 The global default settings can be defined through the command-line interface. These modifications are also available through the Windows Firewall console.
-The following scriptlets set the default inbound and outbound actions, specifies protected network connections, and allows notifications to be displayed to the user when a program is blocked from receiving inbound connections. It allows unicast response to multicast or broadcast network traffic, and it specifies logging settings for troubleshooting.
+The following scriptlets set the default inbound and outbound actions, specifies protected network connections, and disallows notifications to be displayed to the user when a program is blocked from receiving inbound connections. It allows unicast response to multicast or broadcast network traffic, and it specifies logging settings for troubleshooting.
 
 # [:::image type="icon" source="images/powershell.svg"::: **PowerShell**](#tab/powershell)
 
 ```powershell
-Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow -NotifyOnListen True -AllowUnicastResponseToMulticast True -LogFileName %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log
+Set-NetFirewallProfile -DefaultInboundAction Block -DefaultOutboundAction Allow -NotifyOnListen False -AllowUnicastResponseToMulticast True -LogFileName %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log
 ```
 
 # [:::image type="icon" source="images/cmd.svg"::: **Command Prompt**](#tab/cmd)
 
 ```cmd
 netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
-netsh advfirewall set allprofiles settings inboundusernotification enable
+netsh advfirewall set allprofiles settings inboundusernotification disable
 netsh advfirewall set allprofiles settings unicastresponsetomulticast enable
 netsh advfirewall set allprofiles logging filename %SystemRoot%\System32\LogFiles\Firewall\pfirewall.log
 ```
@@ -53,19 +53,14 @@ netsh advfirewall set allprofiles logging filename %SystemRoot%\System32\LogFile
 
 ### Disable Windows Firewall
 
-Microsoft recommends that you don't disable Windows Firewall because you lose other benefits provided by the service, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, [Windows Service Hardening](https://go.microsoft.com/fwlink/?linkid=104976), and [boot time filters](https://blogs.technet.microsoft.com/networking/2009/03/24/stopping-the-windows-authenticating-firewall-service-and-the-boot-time-policy/).
-Disabling Windows Firewall can also cause problems, including:
+Microsoft recommends that you don't disable Windows Firewall because you lose other benefits, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, Windows Service Hardening, and [boot time filters][BTF]. Non-Microsoft firewall software can programmatically disable only the [rule types][FWRC] of Windows Firewall that need to be disabled for compatibility. You shouldn't disable the firewall yourself for this purpose. 
+If disabling Windows Firewall is required, don't disable it by stopping the Windows Firewall service (in the Services snap-in, the display name is Windows Defender Firewall and the service name is MpsSvc). Stopping the Windows Firewall service isn't supported by Microsoft and can cause problems, including:
 
 - Start menu can stop working
 - Modern applications can fail to install or update
 - Activation of Windows via phone fails
 - Application or OS incompatibilities that depend on Windows Firewall
 
-Microsoft recommends disabling Windows Firewall only when installing a non-Microsoft firewall, and resetting Windows Firewall back to defaults when the non-Microsoft software is disabled or removed.
-If disabling Windows Firewall is required, don't disable it by stopping the Windows Firewall service (in the **Services** snap-in, the display name is Windows Firewall and the service name is MpsSvc).
-Stopping the Windows Firewall service isn't supported by Microsoft.
-Non-Microsoft firewall software can programmatically disable only the parts of Windows Firewall that need to be disabled for compatibility.
-You shouldn't disable the firewall yourself for this purpose.
 The proper method to disable the Windows Firewall is to disable the Windows Firewall Profiles and leave the service running.
 Use the following procedure to turn off the firewall, or disable the Group Policy setting **Computer Configuration|Administrative Templates|Network|Network Connections|Windows Firewall|Domain Prolfile|Windows Firewall:Protect all network connections**.
 For more information, see [Windows Firewall deployment guide](windows-firewall-with-advanced-security-deployment-guide.md).
@@ -569,3 +564,6 @@ netsh advfirewall firewall add rule name="Inbound Secure Bypass Rule" dir=in sec
 ```
 
 ---
+[BTF]: /windows/win32/fwp/basic-operation
+[MFWC]: /windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line
+[FWRC]: /windows/win32/api/icftypes/ne-icftypes-net_fw_rule_category

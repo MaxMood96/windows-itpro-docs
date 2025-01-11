@@ -1,8 +1,8 @@
 ---
-title: Configure the Start menu
+title: Configure The Windows Start Menu With Policy Settings
 description: Learn how to configure the Windows Start menu to provide quick access to the tools and applications that users need most.
 ms.topic: overview
-ms.date: 04/10/2024
+ms.date: 12/02/2024
 zone_pivot_groups: windows-versions-11-10
 ms.collection:
 - essentials-manage

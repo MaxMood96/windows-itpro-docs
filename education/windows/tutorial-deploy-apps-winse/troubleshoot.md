@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot app deployment issues in Windows SE
+title: Troubleshoot App Deployment Issues In Windows Se
 description: Troubleshoot common issues when deploying apps to Windows SE devices.
-ms.date: 04/10/2024
+ms.date: 12/02/2024
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11 SE, version 22H2 and later</a>

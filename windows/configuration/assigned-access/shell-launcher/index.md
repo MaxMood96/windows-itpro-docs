@@ -1,7 +1,7 @@
 ---
 title: What is Shell Launcher?
 description: Learn how to configure devices with Shell Launcher.
-ms.date: 06/18/2024
+ms.date: 10/31/2024
 ms.topic: overview
 ---
 
@@ -78,7 +78,7 @@ $shellLauncherConfiguration = @"
 $namespaceName="root\cimv2\mdm\dmmap"
 $className="MDM_AssignedAccess"
 $obj = Get-CimInstance -Namespace $namespaceName -ClassName $className
-$obj.Configuration = [System.Net.WebUtility]::HtmlEncode($shellLauncherConfiguration)
+$obj.ShellLauncher = [System.Net.WebUtility]::HtmlEncode($shellLauncherConfiguration)
 $obj = Set-CimInstance -CimInstance $obj -ErrorVariable cimSetError -ErrorAction SilentlyContinue
 if($cimSetError) {
     Write-Output "An ERROR occurred. Displaying error record and attempting to retrieve error logs...`n"
@@ -86,6 +86,7 @@ if($cimSetError) {
 
     $timeout = New-TimeSpan -Seconds 30
     $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
+    $eventLogFilterHashTable = @{ LogName='Microsoft-Windows-AssignedAccess/Admin' }
     do{
         $events = Get-WinEvent -FilterHashtable $eventLogFilterHashTable -ErrorAction Ignore
     } until ($events.Count -or $stopwatch.Elapsed -gt $timeout) # wait for the log to be available
@@ -127,5 +128,4 @@ Depending on your configuration, you can have a user to automatically sign in to
 <!--links-->
 
 [MEM-1]: /mem/intune/configuration/custom-settings-windows-10
-[MEM-2]: /mem/intune/fundamentals/licenses#device-only-licenses
 [WIN-3]: /windows/client-management/mdm/assignedaccess-csp

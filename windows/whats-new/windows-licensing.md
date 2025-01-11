@@ -1,5 +1,5 @@
 ---
-title: Windows commercial licensing overview
+title: Windows Commercial Licensing Overview
 description: Learn about products and use rights available through Windows commercial licensing.
 ms.subservice: itpro-security
 author: paolomatarazzo
@@ -8,7 +8,7 @@ manager: aaroncz
 ms.collection:
 - tier2
 ms.topic: overview
-ms.date: 02/29/2024
+ms.date: 12/02/2024
 appliesto:
 - ✅ <a href=/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 ms.service: windows-client
@@ -83,7 +83,6 @@ The following table describes the unique Windows Enterprise cloud-based features
 |-|-|
 |**[Windows subscription activation][WIN-5]**|Enables you to *step-up* from **Windows Pro edition** to **Enterprise edition**. You can eliminate license key management and the deployment of Enterprise edition images.|
 |**[Windows Autopatch][WIN-6]**|Cloud service that puts Microsoft in control of automating updates to Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams.|
-|**[Windows Update For Business deployment service][WIN-7]**|This cloud service gives you the control over the approval, scheduling, and safeguarding of quality, feature upgrades, and driver updates delivered from Windows Update.|
 |**[Universal Print][UP-1]**|Removes the need for on-premises print servers and enables any endpoint to print to cloud registered printers.|
 |**[Microsoft Connected Cache][WIN-8]**|A software solution that caches app and OS updates on the local network to save Internet bandwidth in locations with limited connectivity.|
 |**[Endpoint analytics proactive remediation][MEM-1]**|Helps you fix common support issues before end-users notice them.|
@@ -144,7 +143,7 @@ The following table lists the Windows 11 Enterprise features and their Windows e
 |**[Credential Guard][WIN-1]**|❌|Yes|
 |**[Microsoft Defender Application Guard (MDAG) for Microsoft Edge][WIN-11]**|Yes|Yes|
 |**[Modern BitLocker Management][WIN-2]**|Yes|Yes|
-|**[Personal data encryption (PDE)][WIN-3]**|❌|Yes|
+|**[Personal Data Encryption][WIN-3]**|❌|Yes|
 |**[Direct Access][WINS-1]**|Yes|Yes|
 |**[Always On VPN][WINS-2]**|Yes|Yes|
 |**[Windows Experience customization][WIN-4]**|❌|Yes|
@@ -155,7 +154,6 @@ The following table lists the Windows 11 Enterprise cloud-based features and the
 |-|-|-|
 |**[Windows subscription activation][WIN-5]**|Yes|Yes|
 |**[Windows Autopatch][WIN-6]**|Yes|Yes|
-|**[Windows Update For Business deployment service][WIN-7]**|Yes|Yes|
 |**[Universal Print][UP-1]**|Yes|Yes|
 |**[Microsoft Connected Cache][WIN-8]**|Yes|Yes|
 |**[Endpoint analytics proactive remediation][MEM-1]**|Yes|Yes|

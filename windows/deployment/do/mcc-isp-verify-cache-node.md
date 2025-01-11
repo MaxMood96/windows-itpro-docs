@@ -49,7 +49,7 @@ Sign into the [Azure portal](https://www.portal.azure.com) and navigate to the *
 
 It can take a few minutes for the container to deploy after you've saved the configuration.
 
-To validate a properly functioning MCC, run the following command in the terminal of the cache server or any device in the network. Replace `<CacheServerIP>` with the IP address of the cache server.
+To validate a properly functioning Microsoft Connected Cache, run the following command in the terminal of the cache server or any device in the network. Replace `<CacheServerIP>` with the IP address of the cache server.
 
 ```bash
 wget http://<CacheServerIP>/mscomtest/wuidt.gif?cacheHostOrigin=au.download.windowsupdate.com

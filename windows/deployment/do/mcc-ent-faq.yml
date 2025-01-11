@@ -1,0 +1,78 @@
+### YamlMime:FAQ
+metadata:
+  title: Microsoft Connected Cache for Enterprise and Education Frequently Asked Questions
+  description: The following article is a list of frequently asked questions for Microsoft Connected Cache for Enterprise.
+  ms.service: windows-client
+  ms.subservice: itpro-updates
+  ms.topic: faq
+  ms.author: nidos
+  author: doshnid
+  ms.reviewer: mstewart
+  manager: aaroncz
+  ms.collection:
+    - highpri
+    - tier3
+  appliesto: 
+    - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
+    - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
+  ms.date: 10/30/2024
+title: Microsoft Connected Cache for Enterprise Frequently Asked Questions
+summary: |
+  Frequently asked questions about Microsoft Connected Cache for Enterprise
+  
+sections:
+  - name: Ignored
+    questions:
+      - question: What are the licesning requirement?
+        answer: Microsoft Connected Cache for Enterprise and Education is available to all Windows E3, E5 and F3 and Education A3 and A5 customers.
+      - question: Is there a charge to create Connected Cache resources and cache node on Azure?
+        answer: No. You won't be charged to create Connected Cache resource and cache nodes on Azure. However, you need an Azure pay-as-you-go subscription to create the resources but there is no charge for the resource itself.
+      - question: Is there a nondisclosure agreement to sign?
+        answer: No, a nondisclosure agreement isn't required.
+      - question: What will Microsoft Connected Cache for Enterprise and Education do for me? 
+        answer: "[Delivery Optimization](waas-delivery-optimization-reference.md) and Microsoft Connected Cache are Microsoft’s comprehensive solutions for minimizing enterprises’ internet bandwidth consumption, with Delivery Optimization acting as the distributed content source and Connected Cache as a dedicated content source. Microsoft customers have benefited from these solutions, seeing savings of more than 90% of bandwidth when managing Windows 11 upgrades, Autopilot device provisioning, Intune application installations, and monthly update deployments."
+      - question: Can I deploy Connected Cache to a production environment?
+        answer: The core caching engine of Microsoft Connected Cache is deployed to hundreds of ISPs globally and has been reliably delivering Microsoft content to customers. Connected Cache relies on production Azure services for the deployment and management of Connected Cache nodes and for Windows installations Windows Subsystem for Linux. Microsoft support is fully onboarded to support your organization whether you deploy Connected Cache in a lab for testing or in production.
+      - question: When will Microsoft Connected Cache for Enterprise and Education be made generally available (GA)?
+        answer: "[Delivery Optimization](waas-delivery-optimization-reference.md) and Microsoft Connected Cache are Microsoft’s comprehensive solutions for minimizing enterprises’ internet bandwidth consumption. Microsoft is committed to making Connected Cache generally available soon. Additionally, Microsoft support is fully onboarded to support your organization in whatever capacity you deploy Connected Cache."
+      - question: What are the prerequisites and hardware requirements?
+        answer:  | 
+         - [Azure pay-as-you-go subscription](https://azure.microsoft.com/offers/ms-azr-0003p/).
+         - [Hardware to host Microsoft Connected Cache](mcc-ent-edu-overview.md)
+         - [Host machine requirements](mcc-ent-prerequisites.md)
+      - question: What host OS do I need to deploy Connected Cache?
+        answer: You can use Linux or Windows OS. Depending on the OS, the provisioning script and certain provisioning steps are different. 
+      - question: What content is cached by Microsoft Connected Cache?
+        answer: For more information about content cached, see [Delivery Optimization and Microsoft Connected Cache content endpoints](delivery-optimization-endpoints.md).
+      - question: Do I need to provide hardware BareMetal server or a virtual machine (VM)?
+        answer: Microsoft Connected Cache is a software-only caching solution and requires you to provide your own server to host the software.   
+      - question: Can we use hard drives instead of SSDs?
+        answer: We highly recommend using SSDs as Microsoft Connected Cache is a read intensive application. We also recommend using multiple drives to improve performance.
+      - question: Where should we install Microsoft Connected Cache?
+        answer: You are in control of your hardware and you can pick the location based on your traffic and end clients. You can choose the location where you have your routers or where you have dense traffic or any other parameters.   
+      - question: How can I set up a gMSA account?
+        answer: For more information about gMSA accounts, see [Learn how to provision a Group Managed Service Account on a Domain Controller](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#create-group-managed-service-accounts). Make sure that your gMSA has been granted permissions to "Log on as batch job" within the host machine's [local security policies](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+      - question: How can I set up a local account?
+        answer: For more information, see [Learn how to provision a Local User Account](https://support.microsoft.com/topic/104dc19f-6430-4b49-6a2b-e4dbd1dcdf32). Make sure that your gMSA has been granted permissions to "Log on as batch job" within the host machine's [local security policies](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+      - question: Where can I monitor cache node usage?
+        answer: You can monitor your cache node usage on Azure portal. For more information, see [Monitor cache node usage Info on Reporting Capabilities](mcc-ent-monitoring.md).
+      - question: How does Microsoft Connected Cache populate its content? Can I precache content?
+        answer: Microsoft Connected Cache is a cold cache warmed by client requests at the byte range level so your clients only request the content they need. The client requests content and that is what fills the cache which means there's no cache fill necessary. "Preseeding" can be achieved by use of update rings. A test ring or early adopter ring can be used to fill the cache and all subsequent requests by other clients will come from cache.
+      - question: How long would a piece of content live within the Microsoft Connected Cache? Is content purged from the cache?
+        answer: Once a request for said content is made, NGINX looks at the cache control headers from the original acquisition. If that content is expired, NGINX continues to serve the stale content while it's downloading the new content. We cache the content for 30 days. The content is in the hot cache path (open handles and such) for 24 hrs, but resides on disk for 30 days. The drive fills up and nginx starts to delete content based on its own algorithm, probably some combination of least recently used.
+      - question: Is it possible to not update the Microsoft Connected Cache software or delay update longer than the timeline provided in the updates configuration?
+        answer: No. It's important to keep the Microsoft Connected Cache software up to date, especially when it comes to security issues. Microsoft validates updates prior to releasing Enterprises Connected Cache updates and only releases updates when it's necessary to keep customers secure or to ensure the continued successful operation of Connected Cache nodes for customers.  
+      - question: How do I set up CLI?
+        answer: For more information, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
+      - question: How do I install the Microsoft Connected Cache Azure CLI extension?
+        answer: For more information, see [Install the Microsoft Connected Cache extension](mcc-ent-manage-using-cli.md#prerequisites).
+      - question: What do I do if I have to set up or change existing proxy?
+        answer: You can enable proxy and provide proxy information on Azure portal or use the CLI. Don't forget to rerun the provisioning script after making any proxy changes. For more information, see [Set up or change existing proxy](mcc-ent-create-resource-and-cache.md#proxy-settings).
+      - question: How do we set up Microsoft Connected Cache if we support multiple countries or regions?
+        answer: Microsoft Connected Cache isn't a service that has dependency on a specific Azure region, and there isn't personal or organizational identifiable information stored in the resource that necessitates data residency. The three regions that the Connected Cache resource can be deployed to are (Europe) North Europe, (Asia Pacific) Korea Central, and (US) West US.
+      - question: Should I use a gMSA, local user, or domain account to deploy Microsoft Connected Cache to Windows?
+        answer: There are pros and cons to the account options available to customers. We anticipate that security and manageability are top priories for customers. Microsoft provides guidance on both Active Directory and Microsoft Entra-based service accounts ([Introduction to Active Directory service accounts - Choose the right type of service account](/entra/architecture/service-accounts-on-premises#types-of-on-premises-service-accounts)) and user-based service accounts ([Secure user-based service accounts in Active Directory)](/entra/architecture/service-accounts-user-on-premises#assess-on-premises-user-account-security)).
+      - question: Does the user have to be logged using the account that installed Microsoft Connected Cache on Windows or Linux?
+        answer: No. As part of the installation on Windows a scheduled task is created using the account used to install Connected Cache. Regardless of which user is logged in or not logged in, the scheduled task remains running. On Linux, Connected Cache is installed by the user and remains running regardless of which user is logged in to the OS.
+      - question: What do I do if I need more support and have more questions even after reading this FAQ page?
+        answer: For further support for Microsoft Connected Cache, see [Troubleshooting issues for Microsoft Connected Cache for Enterprise and Education](mcc-ent-troubleshooting.md). If you still need more support, you can contact customer support.

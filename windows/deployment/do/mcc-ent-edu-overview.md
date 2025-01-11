@@ -1,38 +1,71 @@
 ---
-title: MCC for Enterprise and Education Overview
-description: Overview, supported scenarios, and content types for Microsoft Connected Cache (MCC) for Enterprise and Education.
+title: Microsoft Connected Cache for Enterprise and Education Overview
+description: Overview, supported scenarios, and content types for Microsoft Connected Cache for Enterprise and Education.
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: conceptual
-ms.author: carmenf
-author: cmknox
-manager: aaroncz
+ms.author: andyriv
+author: chrisjlin
+manager: naengler
 ms.reviewer: mstewart
 ms.collection: tier3
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
-ms.date: 05/23/2024
+ms.date: 10/30/2024
 ---
 
 # Microsoft Connected Cache for Enterprise and Education Overview
 
 > [!IMPORTANT]
->
-> - Microsoft Connected Cache is currently a preview feature. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
-> - As we near the release of public preview, we have paused onboarding. Please continue to submit the form to express interest so we can follow up with you once public preview of Microsoft Connected Cache for Enteprise and Education is available. To register your interest, fill out the form located at [https://aka.ms/MSConnectedCacheSignup](https://aka.ms/MSConnectedCacheSignup).
+> Microsoft Connected Cache is currently a preview feature. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
-Microsoft Connected Cache (MCC) for Enterprise and Education (early preview) is a software-only caching solution that delivers Microsoft content within Enterprise and Education networks. MCC can be deployed to as many Windows servers, bare-metal servers, or VMs as needed, and is managed from a cloud portal. Cache nodes are created in the cloud portal and are configured by applying the client policy using management tools such as Intune.
+Microsoft Connected Cache for Enterprise and Education (preview) is a software-only caching solution that delivers Microsoft content within enterprise and education networks. Connected Cache can be managed from the Azure portal or through Azure CLI. It can be deployed to as many Windows devices, Linux devices, or VMs as needed. Managed Windows devices can be configured to download cloud content from a Connected Cache server by applying the client policy using management tools such as Microsoft Intune.
 
-Microsoft Connected Cache (MCC) for Enterprise and Education (early preview) is a standalone cache for customers moving towards modern management and away from Configuration Manager distribution points. For information about Microsoft Connected Cache in Configuration Manager (generally available, starting Configuration Manager version 2111), see [Microsoft Connected Cache in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
+For information about Microsoft Connected Cache in Configuration Manager<!-- version 2111-->, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
 
-## Supported scenarios
+Microsoft Connected Cache deployed directly to Windows relies on [Windows Subsystem for Linux (WSL](/windows/wsl/about) and either a [Group Managed Service Account](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), local user account, or domain user account are required to run WSL. WSL needs to run in a user context and any user, even if the currently logged-in user, could be used to run WSL and Microsoft Connected Cache.
 
-Connected Cache (early preview) supports the following scenarios:
+## Supported scenarios and configurations
 
-- Pre-provisioning of devices using Windows Autopilot
-- Cloud-only devices, such as Intune-enrolled devices
+Microsoft Connected Cache for Enterprise and Education (preview) is intended to support all Windows cloud downloads that use Delivery Optimization including, but not limited to, the following content delivery scenarios:
+
+- Windows Autopilot deployment scenarios
+- Co-managed clients that get monthly updates and Win32 apps from Microsoft Intune
+- Cloud-only managed devices, such as Intune-enrolled devices without the Configuration Manager client, that get monthly updates and Win32 apps from Microsoft Intune
+
+Microsoft Connected Cache is built for flexible deployments to support several different enterprise configurations:
+
+### Branch office
+
+Customers may have globally dispersed offices that meet some or all of the following parameters:
+
+- Have 10 to 50 Windows devices on-site
+- Don't have dedicated server hardware
+- Have internet bandwidth that is limited (satellite internet)
+- Have intermittent internet connectivity
+
+To support the branch office scenario, customers can deploy a Connected Cache node to a Windows 11 client device.
+
+### Large Enterprise
+
+Customers may have office spaces, data centers, or Azure deployments that meet some or all of the following parameters:  
+
+- Have 100s or 1,000s of Windows devices (desktop or server)
+- Have some existing server hardware (Decommissioned Distribution Point, file server, cloud print server)
+- Have Azure VMs and/or Azure Virtual Desktop deployed
+- Have limited internet bandwidth (T1 or T3 lines)
+
+To support the large enterprise scenario, customers can deploy a Connected Cache node to a server running Windows Server 2022 or Ubuntu 22.04.
+
+See [Connected Cache node host machine requirements](mcc-ent-prerequisites.md) for recommended host machine specifications in each configuration.
+
+| Enterprise configuration | Download speed range | Download speeds and approximate content volume delivered in 8 Hours |
+|---|---|---|
+|Branch office|< 1 Gbps Peak| 500 Mbps => 1,800 GB </br></br> 250 Mbps => 900 GB </br></br> 100 Mbps => 360 GB </br></br> 50 Mbps => 180 GB|
+|Small to medium enterprises/Autopilot provisioning center (50 - 500 devices in a single location) |1 - 5 Gbps| 5 Gbps => 18,000 GB </br></br>3 Gbps => 10,800 GB </br></br>1 Gbps => 3,600 GB|
+|Medium to large enterprises/Autopilot provisioning center (500 - 5,000 devices in a single location) |5 - 10 Gbps Peak|   9 Gbps => 32,400 GB </br></br> 5 Gbps => 18,000 GB </br></br>3 Gbps => 10,800 GB|
 
 ## Supported content types
 
@@ -47,27 +80,21 @@ For the full list of content endpoints that Microsoft Connected Cache for Enterp
 
 ## How it works
 
-MCC is a hybrid (mix of on-premises and cloud resources) SaaS solution built as an Azure IoT Edge module and Docker compatible Linux container deployed to your Windows devices. The Delivery Optimization team chose IoT Edge for Linux on Windows (EFLOW) as a secure, reliable container management infrastructure. EFLOW is a Linux virtual machine, based on Microsoft's first party CBL-Mariner operating system. It's built with the IoT Edge runtime and validated as a tier 1 supported environment for IoT Edge workloads. MCC is a Linux IoT Edge module running on the Windows Host OS.  
+The following diagram displays an overview of how Connected Cache functions:
 
-1. The Azure Management Portal is used to create MCC nodes.
-1. The MCC container is deployed and provisioned to the server using the installer provided in the portal.
-1. Client policy is set in your management solution to point to the IP address or FQDN of the cache server.
-1. Microsoft end-user devices make range requests for content from the MCC node.
-1. The MCC node pulls content from the CDN, seeds its local cache stored on disk, and delivers the content to the client.
-1. Subsequent requests from end-user devices for content will now come from cache.
-1. If the MCC node is unavailable, the client pulls content from CDN to ensure uninterrupted service for your subscribers.
+:::image type="content" source="./images/mcc_ent_publicpreview.png" alt-text="Diagram displaying the components of Connected Cache." lightbox="./images/mcc_ent_publicpreview.png":::
 
-The following diagram displays an overview of how MCC functions:
+1. The Azure management portal for Microsoft Connected Cache or CLI are used to create cache nodes, configure deployments, including unauthenticated proxy settings.
+1. Prepare Windows or Linux devices. If deploying to Windows devices, prepare accounts - gMSA, local user account, domain account. Deploy to Windows or Linux devices using scripts.
+1. The Microsoft Connected Cache container is deployed to the device using Azure IoT Edge container management services and the cache server begins reporting status and metrics to Delivery Optimization services.
+1. The DOCacheHost setting is configured using Intune or other MDM, DHCP custom option, or registry key.
+1. Devices request content from the cache server, the cache server forwards the requests to the CDN and fills the cache, the cache server delivers the content requested to the devices, and uses Peer to Peer (depending on DO Download mode settings) for all DO content.
+1. Devices can fall back to CDN if the cache server is unavailable for any reason or use Delivery Optimization delay fallback to http (CDN) settings to prefer the local cache server.
+You can view data about Microsoft Connected Cache downloads on management portal and Windows Update for Business reports.
 
-:::image type="content" source="./images/waas-mcc-diag-overview.png" alt-text="Diagram displaying the components of MCC." lightbox="./images/waas-mcc-diag-overview.png":::
+## Next steps
 
-## IoT Edge
+>[!div class="nextstepaction"]
 
-Even though your MCC scenario isn't related to IoT, Azure IoT Edge is used as a more generic Linux container deployment and management infrastructure. The Azure IoT Edge runtime sits on your designated MCC device and performs management and communication operations. The runtime performs several functions important to manage MCC on your edge device:
-
-1. Installs and updates MCC on your edge device.
-1. Maintains Azure IoT Edge security standards on your edge device.
-1. Ensures that MCC is always running.
-1. Reports MCC health and usage to the cloud for remote monitoring.
-  
-For more information on Azure IoT Edge, see the Azure IoT Edge [documentation](/azure/iot-edge/about-iot-edge).
+>[Create Connected Cache Azure resources](mcc-ent-create-resource-and-cache.md)
+>

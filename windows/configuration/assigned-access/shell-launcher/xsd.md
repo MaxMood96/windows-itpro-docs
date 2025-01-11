@@ -2,7 +2,7 @@
 title: Shell Launcher XML Schema Definition (XSD)
 description: Shell Launcher XSD reference article.
 ms.topic: reference
-ms.date: 02/15/2024
+ms.date: 10/31/2024
 ---
 
 # Shell Launcher XML Schema Definition (XSD)

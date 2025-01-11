@@ -33,14 +33,14 @@ Windows Hello for Business works exclusively with the Active Directory Federatio
 
 Sign in to the CA or management workstations with **Enterprise Admin** equivalent credentials.
 
-1. Open the **Certification Authority** management console
-1. Expand the parent node from the navigation pane
-1. Select **Certificate Templates** in the navigation pane
-1. Right-click the **Certificate Templates** node. Select **New > Certificate Template** to issue
-1. In the **Enable Certificates Templates** window, select the *WHFB Enrollment Agent* template you created in the previous step. Select **OK** to publish the selected certificate templates to the certification authority
-1. If you published the *Domain Controller Authentication (Kerberos)* certificate template, then unpublish the certificate templates you included in the superseded templates list
-   - To unpublish a certificate template, right-click the certificate template you want to unpublish and select **Delete**. Select **Yes** to confirm the operation
-1. Close the console
+1. Open the **Certification Authority** management console.
+1. Expand the parent node from the navigation pane.
+1. Select **Certificate Templates** in the navigation pane.
+1. Right-click the **Certificate Templates** node. Select **New > Certificate Template** to issue.
+1. In the **Enable Certificates Templates** window, select the *WHFB Enrollment Agent* template you created in the previous step. Select **OK** to publish the selected certificate templates to the certification authority.
+1. If you published the *Domain Controller Authentication (Kerberos)* certificate template, then unpublish the certificate templates you included in the superseded templates list.
+   - To unpublish a certificate template, right-click the certificate template you want to unpublish and select **Delete**. Select **Yes** to confirm the operation.
+1. Close the console.
 
 ## Configure the certificate registration authority
 
@@ -55,7 +55,7 @@ Set-AdfsCertificateAuthority -EnrollmentAgent -EnrollmentAgentCertificateTemplat
    ```
 
 >[!NOTE]
-> If you gave your Windows Hello for Business Enrollment Agent and Windows Hello for Business Authentication certificate templates different names, then replace *WHFBEnrollmentAgent* and *WHFBAuthentication* in the above command with the name of your certificate templates. It's important that you use the template name rather than the template display name.  You can view the template name on the **General** tab of the certificate template by using the **Certificate Template** management console (certtmpl.msc). Or, you can view the template name by using the `Get-CATemplate` PowerShell cmdlet on a CA.
+> If you gave your Windows Hello for Business Enrollment Agent and Windows Hello for Business Authentication certificate templates different names, then replace *WHFBEnrollmentAgent* and *WHFBAuthentication* in the above command with the name of your certificate templates. It's important that you use the template name rather than the template display name.  You can view the template name on the **General** tab of the certificate template by using the **Certificate Template** management console (_certtmpl.msc_). Or, you can view the template name by using the `Get-CATemplate` PowerShell cmdlet on a CA.
 
 ### Enrollment agent certificate lifecycle management
 
@@ -89,18 +89,18 @@ For detailed information about the certificate, use `Certutil -q -v <certificate
 > [!div class="checklist"]
 > Before you continue with the deployment, validate your deployment progress by reviewing the following items:
 >
-> - Configure an enrollment agent certificate template
-> - Confirm only the AD FS service account has the allow enroll permission for the enrollment agent certificate template
-> - Consider using an HSM to protect the enrollment agent certificate; however, understand the frequency and quantity of signature operations the enrollment agent server makes and understand the impact it has on overall performance
-> - Confirm you properly configured the Windows Hello for Business authentication certificate template
-> - Confirm all certificate templates were properly published to the appropriate issuing certificate authorities
-> - Confirm the AD FS service account has the allow enroll permission for the Windows Hello Business authentication certificate template
-> - Confirm the AD FS certificate registration authority is properly configured using the `Get-AdfsCertificateAuthority` Windows PowerShell cmdlet
-> Confirm you restarted the AD FS service
-> - Confirm you properly configured load-balancing (hardware or software)
-> - Confirm you created a DNS A Record for the federation service and the IP address used is the load-balanced IP address
-> - Confirm you created and deployed the Intranet Zone settings to prevent double authentication to the federation server
-> - Confirm you have deployed a MFA solution for AD FS
+> - Configure an enrollment agent certificate template.
+> - Confirm only the AD FS service account has the allow enroll permission for the enrollment agent certificate template.
+> - Consider using an HSM to protect the enrollment agent certificate; however, understand the frequency and quantity of signature operations the enrollment agent server makes and understand the impact it has on overall performance.
+> - Confirm you properly configured the Windows Hello for Business authentication certificate template.
+> - Confirm all certificate templates were properly published to the appropriate issuing certificate authorities.
+> - Confirm the AD FS service account has the allow enroll permission for the Windows Hello Business authentication certificate template.
+> - Confirm the AD FS certificate registration authority is properly configured using the `Get-AdfsCertificateAuthority` Windows PowerShell cmdlet.
+> - Confirm you restarted the AD FS service.
+> - Confirm you properly configured load-balancing (hardware or software).
+> - Confirm you created a DNS A Record for the federation service and the IP address used is the load-balanced IP address.
+> - Confirm you created and deployed the Intranet Zone settings to prevent double authentication to the federation server.
+> - Confirm you have deployed a MFA solution for AD FS.
 
 > [!div class="nextstepaction"]
 > [Next: configure and enroll in Windows Hello for Business >](on-premises-cert-trust-enroll.md)

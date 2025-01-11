@@ -2,7 +2,7 @@
 title: "Quickstart: configure a kiosk experience with Shell Launcher"
 description: Learn how to configure a kiosk experience with Shell Launcher, using the Assigned Access configuration service provider (CSP), Microsoft Intune, PowerShell, or group policy (GPO).
 ms.topic: quickstart
-ms.date: 02/05/2024
+ms.date: 10/31/2024
 ---
 
 # Quickstart: configure a kiosk experience with Shell Launcher

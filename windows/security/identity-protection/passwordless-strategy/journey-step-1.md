@@ -2,7 +2,7 @@
 title: Deploy a passwordless replacement option
 description: Learn about how to deploy a passwordless replacement option, the first step of the Microsoft passwordless journey.
 ms.topic: concept-article
-ms.date: 01/29/2024
+ms.date: 10/29/2024
 ---
 
 # Deploy a passwordless replacement option

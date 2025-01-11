@@ -1,7 +1,7 @@
 ---
 title: Defender CSP
 description: Learn more about the Defender CSP.
-ms.date: 06/21/2024
+ms.date: 11/27/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -1289,7 +1289,7 @@ Define data duplication remote location for Device Control. When configuring thi
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Description-Begin -->
 <!-- Description-Source-DDF -->
-Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 25 days when enabled.
+Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 30 days when enabled.
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Description-End -->
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Editable-Begin -->
@@ -1304,7 +1304,7 @@ Configure how many days can pass before an aggressive quick scan is triggered. T
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
 | Allowed Values | Range: `[7-60]` |
-| Default Value  | 25 |
+| Default Value  | 30 |
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-DFProperties-End -->
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Examples-Begin -->
@@ -3775,9 +3775,9 @@ Enable this policy to specify when devices receive Microsoft Defender security i
 
 | Value | Description |
 |:--|:--|
-| 0 (Default) | Not configured (Default). The device will stay up to date automatically during the gradual release cycle. Suitable for most devices. |
-| 4 | Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%). |
-| 5 | Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). |
+| 0 (Default) | Not configured (Default). Microsoft will either assign the device to Current Channel (Broad) or a beta channel early in the gradual release cycle. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which may not be suitable for devices in a production or critical environment. |
+| 4 | Current Channel (Staged): Same as Current Channel (Broad). |
+| 5 | Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in all populations, including production. |
 <!-- Device-Configuration-SecurityIntelligenceUpdatesChannel-AllowedValues-End -->
 
 <!-- Device-Configuration-SecurityIntelligenceUpdatesChannel-Examples-Begin -->

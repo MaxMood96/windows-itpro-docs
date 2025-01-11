@@ -2,7 +2,7 @@
 title: BitLocker recovery process
 description: Learn how to obtain BitLocker recovery information for Microsoft Entra joined, Microsoft Entra hybrid joined, and Active Directory joined devices, and how to restore access to a locked drive.
 ms.topic: how-to
-ms.date: 07/18/2024
+ms.date: 12/05/2024
 ---
 
 # BitLocker recovery process
@@ -26,6 +26,9 @@ A recovery key can't be stored in any of the following locations:
 - The root directory of a nonremovable drive
 - An encrypted volume
 
+> [!WARNING]
+> A recovery key is sensitive information that allows users to unlock an encrypted drive and perform administrative tasks on the drive. For enhanced security, it's recommended to enable self-service in trusted environments only, or rely on helpdesk recovery.
+
 ### Self-recovery with recovery password
 
 If you have access to the recovery key, enter the 48-digits in the preboot recovery screen.
@@ -38,7 +41,7 @@ If you have access to the recovery key, enter the 48-digits in the preboot recov
 If BitLocker recovery keys are stored in Microsoft Entra ID, users can access them using the following URL: https://myaccount.microsoft.com. From the **Devices** tab, users can select a Windows device that they own, and select the option **View BitLocker Keys**.
 
 > [!NOTE]
-> By default, users can retrieve their BitLocker reecovery keys from Microsoft Entra ID. This behavior can be modified with the option **Restrict users from recovering the BitLocker key(s) for their owned devices**. For more information, see [Restrict member users' default permissions][ENTRA-1].
+> By default, users can retrieve their BitLocker recovery keys from Microsoft Entra ID. This behavior can be modified with the option **Restrict users from recovering the BitLocker key(s) for their owned devices**. For more information, see [Restrict member users' default permissions][ENTRA-1].
 
 ### Self-recovery with USB flash drive
 
@@ -179,6 +182,9 @@ When a volume is unlocked using a recovery password:
 - the encryption key is released and is ready for on-the-fly encryption/decryption when data is written/read to and from the volume
 
 After the volume is unlocked, BitLocker behaves the same way, regardless of how the access was granted.
+
+> [!NOTE]
+> If you move an OS volume with a TPM protector to a different device and unlock it using a recovery protector, BitLocker will bind to the new TPM. Returning the volume to the original device will prompt for the recovery protector due to the TPM mismatch. Once unlocked using recovery protector again, the volume will re-bind to the original device.
 
 If a device experiences multiple recovery password events, an administrator should perform post-recovery analysis to determine the root cause of the recovery. Then, refresh the BitLocker platform validation to prevent entering a recovery password each time that the device starts up.
 

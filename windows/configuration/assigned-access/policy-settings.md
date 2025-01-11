@@ -2,7 +2,7 @@
 title: Assigned Access policy settings
 description: Learn about the policy settings enforced on a device configured with Assigned Access.
 ms.topic: reference
-ms.date: 03/04/2024
+ms.date: 10/31/2024
 ---
 
 # Assigned Access policy settings
@@ -39,7 +39,7 @@ The following policy settings are applied at the device level when you deploy a 
 
 ## User policy settings
 
-The following policy settings are applied to any nonadministrator account when you deploy a restricted user experience:
+The following policy settings are applied to targeted user accounts when you deploy a restricted user experience:
 
 | Type    | Path                                                                             | Name/Description                                                  |
 |---------|----------------------------------------------------------------------------------|-------------------------------------------------------------------|
@@ -47,8 +47,9 @@ The following policy settings are applied to any nonadministrator account when y
 | **CSP** | `./User/Vendor/MSFT/Policy/Config/Start/HidePeopleBar`                           | Hide People Bar from appearing on taskbar                         |
 | **CSP** | `./User/Vendor/MSFT/Policy/Config/Start/HideRecentlyAddedApps`                   | Hide recently added apps from appearing on the Start menu         |
 | **CSP** | `./User/Vendor/MSFT/Policy/Config/Start/HideRecentJumplists`                     | Hide recent jumplists from appearing on the Start menu/taskbar    |
+| **GPO** | User Configuration\Administrative Templates\Desktop                              | Hide and disable all items on the desktop                         |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Clear history of recently opened documents on exit                |
-| **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Disable showing balloon notifications as toast                    |
+| **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Disable showing balloon notifications as toasts                   |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Do not allow pinning items in Jump Lists                          |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Do not allow pinning programs to the Taskbar                      |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Do not display or track items in Jump Lists from remote locations |
@@ -69,21 +70,23 @@ The following policy settings are applied to any nonadministrator account when y
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Remove Notification and Action Center                             |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Remove Quick Settings                                             |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Remove Run menu from Start Menu                                   |
-| **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Remove the Security and Maintenance icon                          |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Turn off all balloon notifications                                |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar               | Turn off feature advertisement balloon notifications              |
+| **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar\Notifications | Hide the TaskView button                                          |
 | **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar\Notifications | Turn off toast notifications                                      |
 | **GPO** | User Configuration\Administrative Templates\System\Ctrl+Alt+Del Options          | Remove Change Password                                            |
 | **GPO** | User Configuration\Administrative Templates\System\Ctrl+Alt+Del Options          | Remove Logoff                                                     |
 | **GPO** | User Configuration\Administrative Templates\System\Ctrl+Alt+Del Options          | Remove Task Manager                                               |
+| **GPO** | User Configuration\Administrative Templates\Windows Components\File Explorer     | Prevent access to drives from My Computer                         |
 | **GPO** | User Configuration\Administrative Templates\Windows Components\File Explorer     | Remove *Map network drive* and *Disconnect Network Drive*         |
 | **GPO** | User Configuration\Administrative Templates\Windows Components\File Explorer     | Remove File Explorer's default context menu                       |
+| **GPO** | User Configuration\Administrative Templates\Windows Components\Windows Copilot   | Turn off Windows Copilot                                          |
 
 The following policy settings are applied to the kiosk account when you configure a kiosk experience with Microsoft Edge:
 
 | Type    | Path                                                                              | Name/Description                                       |
 |---------|-----------------------------------------------------------------------------------|--------------------------------------------------------|
-| **GPO** | User Configuration\Administrative Templates\Start Menu and Taskbar\Notifications  | Run only specified Windows applications > `msedge.exe` |
+| **GPO** | User Configuration\Administrative Templates\System                                | Run only specified Windows applications > `msedge.exe` |
 | **GPO** | User Configuration\Administrative Templates\System                                | Turn off toast notifications                           |
 | **GPO** | User Configuration\Administrative Templates\Windows Components\Attachment Manager | Default risk level for file attachments > High risk    |
 | **GPO** | User Configuration\Administrative Templates\Windows Components\Attachment Manager | Inclusion list for low file types > `.pdf;.epub`       |
@@ -112,3 +115,32 @@ The deny list is used to prevent the user from accessing the apps, which are cur
 1. The default rule is to allow all users to launch the desktop programs signed with *Microsoft Certificate* for the system to boot and function. The rule also allows the admin user group to launch all desktop programs.
 1. There's a predefined inbox desktop app deny list for the Assigned Access user account, which is updated based on the *desktop app allow list* that you defined in the Assigned Access configuration
 1. Enterprise-defined allowed desktop apps are added in the AppLocker allow list
+
+## Keyboard shortcuts
+
+The following keyboard shortcuts are blocked for the user accounts with Assigned Access:
+
+| Keyboard shortcut                                    | Action                                                                                        |
+|------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd>  + <kbd>Esc</kbd> | Open Task Manager                                                                             |
+| <kbd>WIN</kbd> + <kbd>,</kbd> (comma)                | Temporarily peek at the desktop                                                               |
+| <kbd>WIN</kbd> + <kbd>A</kbd>                        | Open Action center                                                                            |
+| <kbd>WIN</kbd> + <kbd>Alt</kbd>  + <kbd> D</kbd>     | Display and hide the date and time on the desktop                                             |
+| <kbd>WIN</kbd> + <kbd>Ctrl</kbd>  + <kbd> F</kbd>    | Find computer objects in Active Directory                                                     |
+| <kbd>WIN</kbd> + <kbd>D</kbd>                        | Display and hide the desktop                                                                  |
+| <kbd>WIN</kbd> + <kbd>E</kbd>                        | Open File Explorer                                                                            |
+| <kbd>WIN</kbd> + <kbd>F</kbd>                        | Open Feedback Hub                                                                             |
+| <kbd>WIN</kbd> + <kbd>G</kbd>                        | Open Game bar when a game is open                                                             |
+| <kbd>WIN</kbd> + <kbd>I</kbd>                        | Open Settings                                                                                 |
+| <kbd>WIN</kbd> + <kbd>J</kbd>                        | Set focus to a Windows tip when one is available                                              |
+| <kbd>WIN</kbd> + <kbd>O</kbd>                        | Lock device orientation                                                                       |
+| <kbd>WIN</kbd> + <kbd>Q</kbd>                        | Open search                                                                                   |
+| <kbd>WIN</kbd> + <kbd>R</kbd>                        | Open the Run dialog box                                                                       |
+| <kbd>WIN</kbd> + <kbd>S</kbd>                        | Open search                                                                                   |
+| <kbd>WIN</kbd> + <kbd>Shift</kbd>  + <kbd> C</kbd>   | Open Cortana in listening mode                                                                |
+| <kbd>WIN</kbd> + <kbd>X</kbd>                        | Open the Quick Link menu                                                                      |
+| <kbd>LaunchApp1</kbd>                                | Open the app that is assigned to this key                                                     |
+| <kbd>LaunchApp2</kbd>                                | Open the app that is assigned to this key. On many Microsoft keyboards, the app is Calculator |
+| <kbd>LaunchMail</kbd>                                | Open the default mail client                                                                  |
+
+For information on how to customize keyboard shortcuts, see [Assigned Access recommendations](recommendations.md#keyboard-shortcuts).

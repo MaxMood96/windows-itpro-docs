@@ -1,8 +1,8 @@
 ---
-title: Certificate Requirements and Enumeration 
+title: Certificate Requirements and Enumeration
 description: This topic for the IT professional and smart card developers describes how certificates are managed and used for smart card sign-in.
 ms.topic: concept-article
-ms.date: 01/16/2024
+ms.date: 10/29/2024
 ---
 
 # Certificate Requirements and Enumeration
@@ -71,7 +71,8 @@ Following are the steps that are performed during a smart card sign-in:
 1. Winlogon presents the data from LogonUI to the LSA with the user information in LSALogonUser
 1. LSA calls the Kerberos authentication package (Kerberos SSP) to create a Kerberos authentication service request (KRB_AS_REQ), which containing a preauthenticator (as specified in RFC 4556: [Public Key Cryptography for Initial Authentication in Kerberos (PKINIT)](http://www.ietf.org/rfc/rfc4556.txt)).
 
-    If the authentication is performed by using a certificate that uses a digital signature, the preauthentication data consists of the user's public certificate and the certificate that is digitally signed with the corresponding private key.\
+    If the authentication is performed by using a certificate that uses a digital signature, the preauthentication data consists of the user's public certificate and the certificate that is digitally signed with the corresponding private key.
+
     If the authentication is performed by using a certificate that uses key encipherment, the preauthentication data consists of the user's public certificate and the certificate that is encrypted with the corresponding private key.
 
 1. To sign the request digitally (as per RFC 4556), a call is made to the corresponding CSP for a private key operation. Because the private key in this case is stored in a smart card, the smart card subsystem is called, and the necessary operation is completed. The result is sent back to the Kerberos security support provider (SSP).

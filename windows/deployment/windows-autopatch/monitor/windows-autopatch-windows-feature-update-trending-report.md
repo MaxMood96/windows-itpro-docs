@@ -1,9 +1,9 @@
 ---
 title: Feature update trending report
 description: Provides a visual representation of Windows OS upgrade trends for all devices over the last 90 days.
-ms.date: 07/08/2024
+ms.date: 09/16/2024
 ms.service: windows-client
-ms.subservice: itpro-updates
+ms.subservice: autopatch
 ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
@@ -16,6 +16,8 @@ ms.collection:
 ---
 
 # Feature update trending report
+
+[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 Windows Autopatch provides a visual representation of Windows OS upgrade trends for all devices over the last 90 days.
 

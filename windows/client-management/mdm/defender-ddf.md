@@ -1,7 +1,7 @@
 ---
 title: Defender DDF file
 description: View the XML file containing the device description framework (DDF) for the Defender configuration service provider.
-ms.date: 06/28/2024
+ms.date: 11/27/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -1627,15 +1627,15 @@ The following XML file contains the device description framework (DDF) for the D
           <MSFT:AllowedValues ValueType="ENUM">
             <MSFT:Enum>
               <MSFT:Value>0</MSFT:Value>
-              <MSFT:ValueDescription>Not configured (Default). The device will stay up to date automatically during the gradual release cycle. Suitable for most devices.</MSFT:ValueDescription>
+              <MSFT:ValueDescription>Not configured (Default). Microsoft will either assign the device to Current Channel (Broad) or a beta channel early in the gradual release cycle. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which may not be suitable for devices in a production or critical environment</MSFT:ValueDescription>
             </MSFT:Enum>
             <MSFT:Enum>
               <MSFT:Value>4</MSFT:Value>
-              <MSFT:ValueDescription>Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%).</MSFT:ValueDescription>
+              <MSFT:ValueDescription>Current Channel (Staged): Same as Current Channel (Broad).</MSFT:ValueDescription>
             </MSFT:Enum>
             <MSFT:Enum>
               <MSFT:Value>5</MSFT:Value>
-              <MSFT:ValueDescription>Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%).</MSFT:ValueDescription>
+              <MSFT:ValueDescription>Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in all populations, including production.</MSFT:ValueDescription>
             </MSFT:Enum>
           </MSFT:AllowedValues>
         </DFProperties>
@@ -2373,8 +2373,8 @@ The following XML file contains the device description framework (DDF) for the D
             <Get />
             <Replace />
           </AccessType>
-          <DefaultValue>25</DefaultValue>
-          <Description>Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 25 days when enabled.</Description>
+          <DefaultValue>30</DefaultValue>
+          <Description>Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 30 days when enabled.</Description>
           <DFFormat>
             <int />
           </DFFormat>

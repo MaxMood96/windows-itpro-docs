@@ -1,7 +1,5 @@
 items:
-  - name: Overview
-    href: index.md
-  - name: Hardware root of trust
+  - name: Hardware root-of-trust
     items:
       - name: System Guard
         href: how-hardware-based-root-of-trust-helps-protect-windows.md

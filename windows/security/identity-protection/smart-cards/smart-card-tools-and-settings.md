@@ -1,8 +1,8 @@
 ---
-title: Smart Card Tools and Settings 
+title: Smart Card Tools and Settings
 description: This topic for the IT professional and smart card developer links to information about smart card debugging, settings, and events.
 ms.topic: get-started
-ms.date: 01/16/2024
+ms.date: 10/29/2024
 ---
 
 # Smart Card Tools and Settings

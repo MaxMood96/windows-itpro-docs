@@ -2,7 +2,7 @@
 title: BitLocker preboot recovery screen
 description: Learn about the information displayed in the BitLocker preboot recovery screen, depending on configured policy settings and recovery keys status.
 ms.topic: concept-article
-ms.date: 06/19/2024
+ms.date: 12/05/2024
 ---
 
 # BitLocker preboot recovery screen

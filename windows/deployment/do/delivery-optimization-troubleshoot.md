@@ -29,7 +29,7 @@ This article discusses how to troubleshoot Delivery Optimization.
 
 - -HealthCheck: Provides an overall check of the device setup to ensure Delivery Optimization communication is possible on the device.
 - -P2P: Provides output specific to P2P settings, efficiency, and errors.
-- -MCC: Provides output specific to MCC settings and verifies the client can access the cache server.
+- -MCC: Provides output specific to Microsoft Connected Cache settings and verifies the client can access the cache server.
 
 ## Common problems and solutions
 

@@ -1,9 +1,9 @@
 ---
 title: Windows quality update summary dashboard
-description: Provides a summary view of the current update status for all devices enrolled into Windows Autopatch
-ms.date: 01/22/2024
+description: Provides a summary view of the current update status for all Intune devices.
+ms.date: 11/20/2024
 ms.service: windows-client
-ms.subservice: itpro-updates
+ms.subservice: autopatch
 ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
@@ -17,7 +17,9 @@ ms.collection:
 
 # Windows quality update summary dashboard
 
-The Summary dashboard provides a summary view of the current update status for all devices enrolled into Windows Autopatch.
+[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
+
+The Summary dashboard provides a summary view of the current update status for all Intune devices.
 
 **To view the current update status for all your enrolled devices:**
 
@@ -25,9 +27,12 @@ The Summary dashboard provides a summary view of the current update status for a
 1. Navigate to **Reports** > **Windows Autopatch** > **Windows quality updates**.
 
 > [!NOTE]
-> The data in this report is refreshed every 24 hours with data received by your Windows Autopatch managed devices. The last refreshed on date/time can be seen at the top of the page. For more information about how often Windows Autopatch receives data from your managed devices, see [Data latency](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#about-data-latency).
+> The data in this report is refreshed every four hours with data received by your managed devices. The last refreshed on date/time can be seen at the top of the page. For more information about how often Windows Autopatch receives data from your managed devices, see [Data latency](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#about-data-latency).
 
 ## Report information
+
+> [!IMPORTANT]
+> **Due to a recent change, we have identified an issue that prevents the Paused column from being displayed**. Until a fix is deployed, **you must keep track of your paused releases so you can resume them at a later date**. The team is actively working on resolving this issue and we'll provide an update when a fix is deployed.
 
 The following information is available in the Summary dashboard:
 

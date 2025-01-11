@@ -1,7 +1,7 @@
 ---
 title: ADMX_Globalization Policy CSP
 description: Learn more about the ADMX_Globalization Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -638,7 +638,7 @@ This policy setting is related to the "Turn off handwriting personalization" pol
 
 <!-- LocaleSystemRestrict-Description-Begin -->
 <!-- Description-Source-ADMX -->
-This policy setting restricts the permitted system locales to the specified list. If the list is empty, it locks the system locale to its current value. This policy setting doesn't change the existing system locale; however, the next time that an administrator attempts to change the computer's system locale, they will be restricted to the specified list.
+This policy setting restricts the permitted system locales to the specified list. If the list is empty, it locks the system locale to its current value. This policy setting doesn't change the existing system locale; however, the next time that an administrator attempts to change the computer's system locale, they'll be restricted to the specified list.
 
 The locale list is specified using language names, separated by a semicolon (;). For example, en-US is English (United States). Specifying "en-US;en-CA" would restrict the system locale to English (United States) and English (Canada).
 
@@ -1097,7 +1097,7 @@ This policy setting prevents the user from customizing their locale by changing 
 
 Any existing overrides in place when this policy is enabled will be frozen. To remove existing user overrides, first reset the user(s) values to the defaults and then apply this policy.
 
-When this policy setting is enabled, users can still choose alternate locales installed on the system unless prevented by other policies, however, they will be unable to customize those choices. The user can't customize their user locale with user overrides.
+When this policy setting is enabled, users can still choose alternate locales installed on the system unless prevented by other policies, however, they'll be unable to customize those choices. The user can't customize their user locale with user overrides.
 
 - If this policy setting is disabled or not configured, then the user can customize their user locale overrides.
 
@@ -1166,7 +1166,7 @@ This policy setting prevents the user from customizing their locale by changing 
 
 Any existing overrides in place when this policy is enabled will be frozen. To remove existing user overrides, first reset the user(s) values to the defaults and then apply this policy.
 
-When this policy setting is enabled, users can still choose alternate locales installed on the system unless prevented by other policies, however, they will be unable to customize those choices. The user can't customize their user locale with user overrides.
+When this policy setting is enabled, users can still choose alternate locales installed on the system unless prevented by other policies, however, they'll be unable to customize those choices. The user can't customize their user locale with user overrides.
 
 - If this policy setting is disabled or not configured, then the user can customize their user locale overrides.
 

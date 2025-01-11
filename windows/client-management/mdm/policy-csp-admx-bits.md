@@ -1,7 +1,7 @@
 ---
 title: ADMX_Bits Policy CSP
 description: Learn more about the ADMX_Bits Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -348,7 +348,7 @@ This policy setting limits the network bandwidth that Background Intelligent Tra
 
 - If you enable this policy setting, you can define a separate set of network bandwidth limits and set up a schedule for the maintenance period.
 
-You can specify a limit to use for background jobs during a maintenance schedule. For example, if normal priority jobs are currently limited to 256 Kbps on a work schedule, you can further limit the network bandwidth of normal priority jobs to 0 Kbps from 8:00 A. M. to 10:00 A. M. on a maintenance schedule.
+You can specify a limit to use for background jobs during a maintenance schedule. For example, if normal priority jobs are currently limited to 256 Kbps on a work schedule, you can further limit the network bandwidth of normal priority jobs to 0 Kbps from 8:00 A.M. to 10:00 A.M. on a maintenance schedule.
 
 - If you disable or don't configure this policy setting, the limits defined for work or nonwork schedules will be used.
 
@@ -412,7 +412,7 @@ This policy setting limits the network bandwidth that Background Intelligent Tra
 
 - If you enable this policy setting, you can set up a schedule for limiting network bandwidth during both work and nonwork hours. After the work schedule is defined, you can set the bandwidth usage limits for each of the three BITS background priority levels: high, normal, and low.
 
-You can specify a limit to use for background jobs during a work schedule. For example, you can limit the network bandwidth of low priority jobs to 128 Kbps from 8:00 A. M. to 5:00 P. M. on Monday through Friday, and then set the limit to 512 Kbps for nonwork hours.
+You can specify a limit to use for background jobs during a work schedule. For example, you can limit the network bandwidth of low priority jobs to 128 Kbps from 8:00 A.M. to 5:00 P.M. on Monday through Friday, and then set the limit to 512 Kbps for nonwork hours.
 
 - If you disable or don't configure this policy setting, BITS uses all available unused bandwidth for background job transfers.
 <!-- BITS_MaxBandwidthV2_Work-Description-End -->

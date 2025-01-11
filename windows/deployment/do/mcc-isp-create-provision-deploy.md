@@ -84,7 +84,7 @@ To set up and enable BGP routing for your cache node, follow the steps below:
 1. Under **Routing information**, select the routing method you would like to use. For more information, see [Client routing](#client-routing).
 
     - If you choose **Manual routing**, enter your address range/CIDR blocks.  
-    - If you choose **BGP routing**, enter the ASN and IP addresses of the neighborship. Use your ASN, the one used to sign up for MCC. MCC will be automatically assigned as the same ASN as the neighbor.
+    - If you choose **BGP routing**, enter the ASN and IP addresses of the neighborship. Use your ASN, the one used to sign up for Microsoft Connected Cache. Connected Cache will be automatically assigned as the same ASN as the neighbor.
     > [!NOTE]
     > **Prefix count** and **IP Space** will stop displaying `0` when BGP is successfully established.
 
@@ -96,12 +96,12 @@ Once the user executes the cache server provisioning script, resources are creat
 
 #### IoT Edge
 
-IoT Edge performs several functions important to manage MCC on your edge device:
+IoT Edge performs several functions important to manage Connected Cache on your edge device:
 
-1. Installs and updates MCC on your edge device.
+1. Installs and updates Connected Cache on your edge device.
 1. Maintains Azure IoT Edge security standards on your edge device.
-1. Ensures that MCC is always running.
-1. Reports MCC health and usage to the cloud for remote monitoring.
+1. Ensures that Connected Cache is always running.
+1. Reports Connected Cache health and usage to the cloud for remote monitoring.
 
 #### Docker container engine
 
@@ -121,7 +121,7 @@ There are five IDs that the device provisioning script takes as input in order t
 #### Provision your server
 
 > [!IMPORTANT]
-> Have you correctly mounted your disk? Your MCC will not be successfully installed without this important step. Before provisioning your server, ensure your disk is correctly mounted by following the instructions here: [Attach a data disk to a Linux VM](/azure/virtual-machines/linux/attach-disk-portal#find-the-disk).
+> Have you correctly mounted your disk? Your Connected Cache will not be successfully installed without this important step. Before provisioning your server, ensure your disk is correctly mounted by following the instructions here: [Attach a data disk to a Linux VM](/azure/virtual-machines/linux/attach-disk-portal#find-the-disk).
 
 :::image type="content" source="images/mcc-isp-deploy-cache-node-numbered.png" alt-text="Screenshot of the server provisioning tab within cache node configuration in Azure portal.":::
 
@@ -145,8 +145,8 @@ There are five IDs that the device provisioning script takes as input in order t
 | Field Name | Expected Value| Description |
 |---|---|---|
 | **Cache node name** | Alphanumeric string that contains no spaces  | The name of the cache node. You may choose names based on location like Seattle-1. This name must be unique and can't be changed later. |
-| **Server IP address** | IPv4 address  | IP address of your MCC server. This address is used to route end-user devices in your network to the server for Microsoft content downloads. The IP address must be publicly accessible. |
-| **Max allowable egress (Mbps)** | Integer in Mbps | The maximum egress (Mbps) of your MCC based on the specifications of your hardware. For example, 10,000 Mbps.|
+| **Server IP address** | IPv4 address  | IP address of your Connected Cache server. This address is used to route end-user devices in your network to the server for Microsoft content downloads. The IP address must be publicly accessible. |
+| **Max allowable egress (Mbps)** | Integer in Mbps | The maximum egress (Mbps) of your Connected Cache based on the specifications of your hardware. For example, 10,000 Mbps.|
 | **Enable cache node** | Enable or Disable | You can choose to enable or disable a cache node at any time. |
 
 ### Storage fields
@@ -164,6 +164,6 @@ There are five IDs that the device provisioning script takes as input in order t
 
 | Field Name | Expected Value| Description |
 |---|---|---|
-| **Manual routing - Address range/CIDR blocks** | IPv4 CIDR notation | The IP address range (CIDR blocks) that should be routed to the MCC server as a comma separated list. For example: 2.21.234.0/24, 3.22.235.0/24, 4.23.236.0/24 |
+| **Manual routing - Address range/CIDR blocks** | IPv4 CIDR notation | The IP address range (CIDR blocks) that should be routed to the Connected Cache server as a comma separated list. For example: 2.21.234.0/24, 3.22.235.0/24, 4.23.236.0/24 |
 | **BGP - Neighbor ASN** | ASN | When configuring BGP, enter the ASN(s) of your neighbors that you want to establish. |
 | **BGP - Neighbor IP address** | IPv4 address | When configuring BGP, enter the IP address(es) of neighbors that you want to establish. |

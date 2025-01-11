@@ -257,6 +257,7 @@ The PnP enumerated device is removed from the System Spec because one of the har
 
 | Error code |  Message                          | Description                                                  |
 |------------|-----------------------------------|--------------------------------------------------------------|
+| `0x80070020` | `InstallFileLocked`| Couldn't access the file because it is already in use. This can occur when the installer tries to replace a file that an antivirus, antimalware or backup program is currently scanning. |
 | `0x80240001` | `WU_E_NO_SERVICE`                 | Windows Update Agent was unable to provide the service.
 | `0x80240002` | `WU_E_MAX_CAPACITY_REACHED`       | The maximum capacity of the service was exceeded.
 | `0x80240003` | `WU_E_UNKNOWN_ID`                 | An ID can't be found.

@@ -2,7 +2,7 @@
 title: Assigned Access XML Schema Definition (XSD)
 description: Assigned Access XSD reference article.
 ms.topic: reference
-ms.date: 04/08/2024
+ms.date: 10/31/2024
 ---
 
 # Assigned Access XML Schema Definition (XSD)

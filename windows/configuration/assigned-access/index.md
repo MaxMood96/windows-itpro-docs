@@ -2,7 +2,7 @@
 title: Windows kiosks and restricted user experiences
 description: Learn about the options available in Windows to configure kiosks and restricted user experiences.
 ms.topic: overview
-ms.date: 03/04/2024
+ms.date: 10/31/2024
 ---
 
 # Windows kiosks and restricted user experiences
@@ -42,6 +42,8 @@ Windows offers two different features to configure a kiosk experience:
 :::row-end:::
 
 This option loads the Windows desktop, but it only allows to run a defined set of applications. When the designated user signs in, the user can only run the apps that are allowed. The Start menu is customized to show only the apps that are allowed to execute. With this approach, you can configure a locked-down experience for different account types. This option is sometimes referred to as *multi-app kiosk*.
+
+:::image type="content" source="images/restricted-user-experience-example.png" alt-text="Screenshot of a restricted user experience in Windows 11." border="false":::
 
 To configure a restricted user experience, you use the **Assigned Access** feature.
 

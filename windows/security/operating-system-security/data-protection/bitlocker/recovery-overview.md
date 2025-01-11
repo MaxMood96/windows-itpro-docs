@@ -2,7 +2,7 @@
 title: BitLocker recovery overview
 description: Learn about BitLocker recovery scenarios, recovery options, and how to determine root cause of failed automatic unlocks.
 ms.topic: how-to
-ms.date: 06/18/2024
+ms.date: 12/05/2024
 ---
 
 # BitLocker recovery overview
@@ -21,6 +21,7 @@ The following list provides examples of common events that cause a device to ent
 - Docking or undocking a portable computer
 - Changes to the NTFS partition table on the disk
 - Changes to the boot manager
+- Using PXE boot
 - Turning off, disabling, deactivating, or clearing the TPM
 - TPM self-test failure
 - Upgrading the motherboard to a new one with a new TPM

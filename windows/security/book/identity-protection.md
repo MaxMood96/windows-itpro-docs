@@ -1,16 +1,16 @@
 ---
-title: Identity protection
-description: Windows 11 security book -Identity protection chapter.
+title: Windows 11 security book - Identity protection
+description: Identity protection chapter.
 ms.topic: overview
-ms.date: 04/09/2024
+ms.date: 11/18/2024
 ---
 
 # Identity protection
 
 :::image type="content" source="images/identity-protection-cover.png" alt-text="Cover of the identity protection chapter." border="false":::
 
-:::image type="content" source="images/identity-protection-on.png" alt-text="Diagram of containing a list of security features." lightbox="images/identity-protection.png" border="false":::
+Employes are increasingly targets for cyberattacks in organizations, making identity protection a priority. Weak or reused passwords, password spraying, social engineering, and phishing are just a few of the risks businesses face today.
 
-Today's flexible workstyles and the security of your organization depend on secure access to corporate resources, including strong identity protection. Weak or reused passwords, password spraying, social engineering, and phishing are some of the top attack vectors. In the last 12 months, we saw an average of more than 4,000 password attacks per second.11 And phishing threats have increased, making identity a continuous battleground. As Bret Arsenault, Chief Information Security Officer at Microsoft says, *Hackers don't break in, they log in.*
+Identity protection in Windows 11 continuously evolves to provide organizations with the latest defenses, including Windows Hello for Business passwordless and Windows Hello Enhanced Sign-in Security (ESS). By leveraging these powerful identity safeguards, organizations of all sizes can reduce the risk of credential theft and unauthorized access to devices, data, and other company resources.
 
-Because threats are constantly evolving and often difficult for employees to detect, organizations need proactive protection, including effortlessly secure authentication and features that defend users in real time while they work. Windows 11 is designed with powerful identity protection from chip to cloud, keeping identities and personal and business data safe anywhere people work.
+:::image type="content" source="images/identity-protection-on.png" alt-text="Diagram containing a list of security features." lightbox="images/identity-protection.png" border="false":::

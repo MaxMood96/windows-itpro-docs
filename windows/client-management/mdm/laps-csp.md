@@ -1,15 +1,13 @@
 ---
 title: LAPS CSP
 description: Learn more about the LAPS CSP.
-ms.date: 06/21/2024
+ms.date: 11/05/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
 
 <!-- LAPS-Begin -->
 # LAPS CSP
-
-[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- LAPS-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -327,7 +325,7 @@ Note if a custom managed local administrator account name is specified in this s
 <!-- Description-Source-DDF -->
 Use this setting to configure whether the password is encrypted before being stored in Active Directory.
 
-This setting is ignored if the password is currently being stored in Azure.
+This setting is ignored if the password is currently being stored in Microsoft Entra ID.
 
 This setting is only honored when the Active Directory domain is at Windows Server 2016 Domain Functional Level or higher.
 
@@ -389,7 +387,7 @@ If not specified, this setting defaults to True.
 <!-- Description-Source-DDF -->
 Use this setting to configure the name or SID of a user or group that can decrypt the password stored in Active Directory.
 
-This setting is ignored if the password is currently being stored in Azure.
+This setting is ignored if the password is currently being stored in Microsoft Entra ID.
 
 If not specified, the password will be decryptable by the Domain Admins group in the device's domain.
 
@@ -432,7 +430,7 @@ If the specified user or group account is invalid the device will fallback to us
 <!-- Device-Policies-AutomaticAccountManagementEnableAccount-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- Device-Policies-AutomaticAccountManagementEnableAccount-Applicability-End -->
 
 <!-- Device-Policies-AutomaticAccountManagementEnableAccount-OmaUri-Begin -->
@@ -488,7 +486,7 @@ If not specified, this setting defaults to False.
 <!-- Device-Policies-AutomaticAccountManagementEnabled-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- Device-Policies-AutomaticAccountManagementEnabled-Applicability-End -->
 
 <!-- Device-Policies-AutomaticAccountManagementEnabled-OmaUri-Begin -->
@@ -543,7 +541,7 @@ If not specified, this setting defaults to False.
 <!-- Device-Policies-AutomaticAccountManagementNameOrPrefix-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- Device-Policies-AutomaticAccountManagementNameOrPrefix-Applicability-End -->
 
 <!-- Device-Policies-AutomaticAccountManagementNameOrPrefix-OmaUri-Begin -->
@@ -587,7 +585,7 @@ If not specified, this setting will default to "WLapsAdmin".
 <!-- Device-Policies-AutomaticAccountManagementRandomizeName-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- Device-Policies-AutomaticAccountManagementRandomizeName-Applicability-End -->
 
 <!-- Device-Policies-AutomaticAccountManagementRandomizeName-OmaUri-Begin -->
@@ -643,7 +641,7 @@ If not specified, this setting defaults to False.
 <!-- Device-Policies-AutomaticAccountManagementTarget-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- Device-Policies-AutomaticAccountManagementTarget-Applicability-End -->
 
 <!-- Device-Policies-AutomaticAccountManagementTarget-OmaUri-Begin -->
@@ -759,7 +757,7 @@ If not specified, this setting will default to 0.
 <!-- Device-Policies-PassphraseLength-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- Device-Policies-PassphraseLength-Applicability-End -->
 
 <!-- Device-Policies-PassphraseLength-OmaUri-Begin -->
