@@ -1,7 +1,7 @@
 ---
-title: Configure federation between Google Workspace and Microsoft Entra ID
+title: Configure Federation Between Google Workspace And Microsoft Entra Id
 description: Configuration of a federated trust between Google Workspace and Microsoft Entra ID, with Google Workspace acting as an identity provider (IdP) for Microsoft Entra ID.
-ms.date: 04/10/2024
+ms.date: 12/02/2024
 ms.topic: how-to
 appliesto:
 ---
@@ -43,10 +43,10 @@ To test federation, the following prerequisites must be met:
 1. In the search results page, hover over the *Microsoft Office 365 - Web (SAML)* app and select **Select**
    :::image type="content" source="images/google/google-admin-search-app.png" alt-text="Screenshot showing Google Workspace and the search button for Microsoft Office 365 SAML app.":::
 1. On the **Google Identity Provider details** page, select **Download Metadata** and take note of the location where the **IdP metadata** - *GoogleIDPMetadata.xml* - file is saved, as it's used to set up Microsoft Entra ID later
-1. On the **Service provider detail's** page
+1. On the **Service provider detail's** page:
       - Select the option **Signed response**
       - Verify that the Name ID format is set to **PERSISTENT**
-      - Depending on how the Microsoft Entra users have been provisioned in Microsoft Entra ID, you might need to adjust the **Name ID** mapping.\
+      - Depending on how the Microsoft Entra users have been provisioned in Microsoft Entra ID, you might need to adjust the **Name ID** mapping\
         If using Google autoprovisioning, select **Basic Information > Primary email**
       - Select **Continue**
 1. On the **Attribute mapping** page, map the Google attributes to the Microsoft Entra attributes
@@ -139,4 +139,4 @@ From a private browser session, navigate to https://portal.azure.com and sign in
 1. The user is redirected to Google Workspace to sign in
 1. After Google Workspace authentication, the user is redirected back to Microsoft Entra ID and signed in
 
-:::image type="content" source="images/google/google-sso.gif" alt-text="A GIF that shows the user authenticating the Azure portal using a Google Workspace federated identity.":::
+    :::image type="content" source="images/google/google-sso.gif" alt-text="A GIF that shows the user authenticating the Azure portal using a Google Workspace federated identity.":::

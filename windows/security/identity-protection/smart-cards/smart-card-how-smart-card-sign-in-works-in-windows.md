@@ -2,7 +2,7 @@
 title: How Smart Card Sign-in Works in Windows
 description: This topic for IT professional provides links to resources about the implementation of smart card technologies in the Windows operating system.
 ms.topic: overview
-ms.date: 01/16/2024
+ms.date: 10/29/2024
 ---
 
 # How Smart Card Sign-in Works in Windows

@@ -1,8 +1,8 @@
 ---
-title: Customize the Start layout
+title: Customize The Start Layout For Managed Windows Devices
 description: Learn how to customize the Windows Start layout, export its configuration, and deploy the customization to other devices.
 ms.topic: how-to
-ms.date: 04/10/2024
+ms.date: 12/02/2024
 zone_pivot_groups: windows-versions-11-10
 appliesto:
 ---
@@ -304,10 +304,10 @@ Column="2"/>
 
 You can use the `start:SecondaryTile` tag to pin a web link through a Microsoft Edge secondary tile. This method doesn't require more actions compared to the method of using legacy `.url` shortcuts (through the `start:DesktopApplicationTile` tag).
 
-The following example shows how to create a tile of the Web site's URL using the Microsoft Edge secondary tile:
+The following example shows how to create a tile of the Web site's URL using the Microsoft Edge secondary tile. Ensure to replace `<--Microsoft Edge AUMID-->` with the AUMID of Microsoft Edge (learn how to [Find the Application User Model ID of an installed app](../store/find-aumid.md)):
 
 ```XML
-<start:SecondaryTile AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge"
+<start:SecondaryTile AppUserModelID="<--Microsoft Edge AUMID-->"
 TileID="MyWeblinkTile"
 Arguments="http://msn.com"
 DisplayName="MySite"
@@ -427,13 +427,13 @@ You can edit the JSON file to make any modifications to the **Pinned** section o
 1. Open the `LayoutModification.json` file in a JSON editor, such as Visual Studio Code or Notepad
 1. The `pinnedList` section includes all the pins that are applied to the Start layout
 
-You can add more apps to the section using the following keys:
+    You can add more apps to the section using the following keys:
 
-| Key | Description |
-|--|--|
-| `packagedAppID` | Used for Universal Windows Platform (UWP) apps. To pin a UWP app, use the app's AUMID. |
-| `desktopAppID` | Used for desktop apps. To pin a desktop app, use the app's AUMID. If the app doesn't have an AUMID, use the `desktopAppLink` instead. |
-| `desktopAppLink` | Used for desktop apps that don't have an associated AUMID. To pin this type of app, use the path to the `.lnk` shortcut that points to the app. |
+    | Key | Description |
+    |--|--|
+    | `packagedAppID` | Used for Universal Windows Platform (UWP) apps. To pin a UWP app, use the app's AUMID. |
+    | `desktopAppID` | Used for desktop apps. To pin a desktop app, use the app's AUMID. If the app doesn't have an AUMID, use the `desktopAppLink` instead. |
+    | `desktopAppLink` | Used for desktop apps that don't have an associated AUMID. To pin this type of app, use the path to the `.lnk` shortcut that points to the app. |
 
 ::: zone-end
 

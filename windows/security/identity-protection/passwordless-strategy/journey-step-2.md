@@ -2,7 +2,7 @@
 title: Reduce the user-visible password surface area
 description: Learn about how to reduce the user-visible password surface area, the second step of the Microsoft passwordless journey.
 ms.topic: concept-article
-ms.date: 01/29/2024
+ms.date: 10/29/2024
 ---
 
 # Reduce the user-visible password surface area

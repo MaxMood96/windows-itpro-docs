@@ -22,16 +22,14 @@ When enabled, Credential Guard provides the following benefits:
 
 ## Default enablement
 
-[!INCLUDE [windows-server-2025-preview](../../includes/windows-server-2025-preview.md)]
-
-Starting in **Windows 11, 22H2** and **Windows Server 2025 (preview)**, VBS and Credential Guard are enabled by default on devices that meet the requirements.
+Starting in **Windows 11, 22H2** and **Windows Server 2025**, VBS and Credential Guard are enabled by default on devices that meet the requirements.
 
 The default enablement is **without UEFI Lock**, thus allowing administrators to disable Credential Guard remotely if needed.
 
 When Credential Guard is enabled, [VBS](#system-requirements) is automatically enabled too.
 
 > [!NOTE]
-> If Credential Guard is explicitly [disabled](configure.md#disable-credential-guard) *before* a device is updated to Windows 11, version 22H2 / Windows Server 2025 (preview) or later, default enablement does not overwrite the existing settings. That device will continue to have Credential Guard disabled even after updating to a version of Windows that enables Credential Guard by default.
+> If Credential Guard is explicitly [disabled](configure.md#disable-credential-guard) *before* a device is updated to Windows 11, version 22H2 / Windows Server 2025 or later, default enablement does not overwrite the existing settings. That device will continue to have Credential Guard disabled even after updating to a version of Windows that enables Credential Guard by default.
 
 ### Default enablement on Windows
 
@@ -48,7 +46,7 @@ Devices running Windows 11, 22H2 or later have Credential Guard enabled by defau
 
 ### Default enablement on Windows Server
 
-Devices running Windows Server 2025 (preview) or later have Credential Guard enabled by default if they:
+Devices running Windows Server 2025 or later have Credential Guard enabled by default if they:
 
 - Meet the [license requirements](#windows-edition-and-licensing-requirements)
 - Meet the [hardware and software requirements](#system-requirements)

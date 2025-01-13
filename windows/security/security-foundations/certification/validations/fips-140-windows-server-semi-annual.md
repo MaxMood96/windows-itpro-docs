@@ -1,19 +1,24 @@
 ---
 title: FIPS 140 validated modules for Windows Server Semi-Annual Releases
 description: This topic lists the completed FIPS 140 cryptographic module validations for Windows Server semi-annual releases.
-ms.date: 2/1/2024
+ms.date: 11/13/2024
 ms.topic: reference
-ms.author: v-rodurff
-author: msrobertd
-ms.reviewer: paoloma
-ms.collection: tier3
 ---
 
 # FIPS 140 validated modules in Windows Server semi-annual releases
 
 The following tables list the completed FIPS 140 validations of cryptographic modules used in Windows Server semi-annual releases, organized by major release of the operating system. The linked Security Policy document for each module provides details on the module capabilities and the policies the operator must follow to use the module in its FIPS approved mode of operation. For information on using the overall operating system in its FIPS approved mode, see [Use Windows in a FIPS approved mode of operation](../fips-140-validation.md#use-windows-in-a-fips-approved-mode-of-operation). For details on the FIPS approved algorithms used by each module, including CAVP algorithm certificates, see the module's linked Security Policy document or CMVP module certificate.
 
-## Windows Server, version 2004 (May 2020 Update)
+## Windows Server, version 20H2
+
+Build: 10.0.19042. Validated Editions: Standard Core, Datacenter Core
+
+|Cryptographic Module (linked to Security Policy document)|CMVP Certificate #|Validated Algorithms|
+|--- |--- |--- |
+|[Cryptographic Primitives Library][sp-4825]|[#4825][certificate-4825]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
+|[Kernel Mode Cryptographic Primitives Library][sp-4766]|[#4766][certificate-4766]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
+
+## Windows Server, version 2004
 
 Build: 10.0.19041. Validated Editions: Standard Core, Datacenter Core
 
@@ -28,7 +33,7 @@ Build: 10.0.19041. Validated Editions: Standard Core, Datacenter Core
 |[Virtual TPM][sp-4537]|[#4537][certificate-4537]|FIPS Approved: AES, CKG, CVL, DRBG, ECDSA, HMAC, KAS, KBKDF, KTS, RSA, and SHS; Other Allowed: NDRNG|
 |[Windows OS Loader][sp-4339]|[#4339][certificate-4339]|FIPS Approved: AES, CKG, DRBG, RSA, and SHS; Other Allowed: NDRNG|
 
-## Windows Server, version 1909 (November 2019 Update)
+## Windows Server, version 1909
 
 Build: 10.0.18363. Validated Editions: Standard Core, Datacenter Core
 
@@ -43,7 +48,7 @@ Build: 10.0.18363. Validated Editions: Standard Core, Datacenter Core
 |[Virtual TPM][sp-4537]|[#4537][certificate-4537]|FIPS Approved: AES, CKG, CVL, DRBG, ECDSA, HMAC, KAS, KBKDF, KTS, RSA, and SHS; Other Allowed: NDRNG|
 |[Windows OS Loader][sp-4339]|[#4339][certificate-4339]|FIPS Approved: AES, CKG, DRBG, RSA, and SHS; Other Allowed: NDRNG|
 
-## Windows Server, version 1903 (May 2019 Update)
+## Windows Server, version 1903
 
 Build: 10.0.18362. Validated Editions: Standard Core, Datacenter Core
 
@@ -127,6 +132,8 @@ Build: 10.0.16299. Validated Editions: Standard Core, Datacenter Core
 [certificate-4536]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4536
 [certificate-4537]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4537
 [certificate-4538]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4538
+[certificate-4766]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4766
+[certificate-4825]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4825
 
 <!-- Security Policies -->
 
@@ -150,3 +157,5 @@ Build: 10.0.16299. Validated Editions: Standard Core, Datacenter Core
 [sp-4536]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4536.pdf
 [sp-4537]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4537.pdf
 [sp-4538]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4537.pdf
+[sp-4766]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4766.pdf
+[sp-4825]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4825.pdf

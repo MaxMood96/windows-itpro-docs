@@ -55,7 +55,7 @@ items:
   items:
   - name: Overview
     href: security-foundation.md
-  - name: Offensive research
+  - name: Secure Future Initiative and offensive research
     href: security-foundation-offensive-research.md
   - name: Certification
     href: security-foundation-certification.md
@@ -63,3 +63,5 @@ items:
     href: security-foundation-secure-supply-chain.md
 - name: Conclusion
   href: conclusion.md
+- name: Features index
+  href: features-index.md

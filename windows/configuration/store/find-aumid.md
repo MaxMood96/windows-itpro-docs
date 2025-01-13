@@ -2,7 +2,9 @@
 title: Find the Application User Model ID of an installed app
 description: Learn how to find the Application User Model ID (AUMID) of the applications installed on a Windows device.
 ms.topic: how-to
-ms.date: 02/06/2024
+ms.date: 10/31/2024
+appliesto:
+zone_pivot_groups: windows-versions-11-10
 ---
 
 # Find the Application User Model ID of an installed app
@@ -90,6 +92,8 @@ Get-AppAUMID -AppName Word
 Get-AppAUMID
 ```
 
+::: zone pivot="windows-10"
+
 # [:::image type="icon" source="../images/icons/explorer.svg"::: **Explorer**](#tab/explorer)
 
 To get the names and AUMIDs for all apps installed for the current user, perform the following steps:
@@ -99,7 +103,7 @@ To get the names and AUMIDs for all apps installed for the current user, perform
 1. In the **Choose Details** window, select **AppUserModelId**, and then select **OK**. (You might need to c
 1. Change the **View** setting from **Tiles** to **Details**
 
-:::image type="content" source="images/aumid-file-explorer.png" alt-text="Screenshot of the File Explorer showing the AUMID details." border="false":::
+::: zone-end
 
 # [:::image type="icon" source="../images/icons/registry.svg"::: **Registry**](#tab/registry)
 

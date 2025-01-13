@@ -2,7 +2,7 @@
 title: Configure cellular settings
 description: Learn how to provision cellular settings for devices with built-in modems or plug-in USB modem dongles.
 ms.topic: concept-article
-ms.date: 04/23/2024
+ms.date: 12/05/2024
 ---
 
 # Configure cellular settings

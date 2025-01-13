@@ -1,7 +1,7 @@
 ---
 title: ADMX_FileRevocation Policy CSP
 description: Learn more about the ADMX_FileRevocation Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -36,7 +36,7 @@ Windows Runtime applications can protect content which has been associated with 
 
 Example value:
 
-Contoso.com,ContosoIT. HumanResourcesApp_m5g0r7arhahqy.
+`Contoso.com,ContosoIT.HumanResourcesApp_m5g0r7arhahqy`
 
 - If you enable this policy setting, the application identified by the Package Family Name will be permitted to revoke access to all content protected using the specified EID on the device.
 

@@ -1,7 +1,7 @@
 ---
 title: Use Certificates to enable SSO for Microsoft Entra join devices
 description: If you want to use certificates for on-premises single-sign on for Microsoft Entra joined devices, then follow these additional steps.
-ms.date: 04/24/2024
+ms.date: 11/22/2024
 ms.topic: how-to
 ---
 
@@ -62,21 +62,21 @@ To include the on-premises distinguished name in the certificate's subject, Micr
 
 Sign-in to computer running Microsoft Entra Connect with access equivalent to *local administrator*.
 
-1. Open **Synchronization Services** from the **Microsoft Entra Connect** folder
-1. In the **Synchronization Service Manager**, select **Help** and then select **About**
-1. If the version number isn't **1.1.819** or later, then upgrade Microsoft Entra Connect to the latest version
+1. Open **Synchronization Services** from the **Microsoft Entra Connect** folder.
+1. In the **Synchronization Service Manager**, select **Help** and then select **About**.
+1. If the version number isn't **1.1.819** or later, then upgrade Microsoft Entra Connect to the latest version.
 
 ### Verify the onPremisesDistinguishedName attribute is synchronized
 
 The easiest way to verify that the onPremisesDistingushedNamne attribute is synchronized is to use the Graph Explorer for Microsoft Graph.
 
-1. Open a web browser and navigate to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
-1. Select **Sign in to Graph Explorer** and provide Microsoft Entra ID credentials
+1. Open a web browser and navigate to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
+1. Select **Sign in to Graph Explorer** and provide Microsoft Entra ID credentials.
 
    > [!NOTE]
    > To successfully query the Graph API, adequate [permissions](/graph/api/user-get?) must be granted
 1. Select **Modify permissions (Preview)**. Scroll down and locate **User.Read.All** (or any other required permission) and select **Consent**. You'll now be prompted for delegated permissions consent
-1. In the Graph Explorer URL, enter `https://graph.microsoft.com/v1.0/users/[userid]?$select=displayName,userPrincipalName,onPremisesDistinguishedName`, where **[userid]** is the user principal name of a user in Microsoft Entra ID. Select **Run query**
+1. In the Graph Explorer URL, enter `https://graph.microsoft.com/v1.0/users/[userid]?$select=displayName,userPrincipalName,onPremisesDistinguishedName`, where **[userid]** is the user principal name of a user in Microsoft Entra ID. Select **Run query**.
 
    > [!NOTE]
    > Because the v1.0 endpoint of the Graph API only provides a limited set of parameters, we will use the $select [Optional OData query parameter](/graph/api/user-get?). For convenience, it is possible to switch the API version selector from **v1.0** to **beta** before performing the query. This will provide all available user information, but remember, **beta** endpoint queries should not be used in production scenarios.
@@ -91,7 +91,7 @@ The easiest way to verify that the onPremisesDistingushedNamne attribute is sync
    GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}?$select=displayName,userPrincipalName,onPremisesDistinguishedName
    ```
 
-1. In the returned results, review the JSON data for the **onPremisesDistinguishedName** attribute. Ensure the attribute has a value and that the value is accurate for the given user. If the **onPremisesDistinguishedName** attribute isn't synchronized the value will be **null**
+1. In the returned results, review the JSON data for the **onPremisesDistinguishedName** attribute. Ensure the attribute has a value and that the value is accurate for the given user. If the **onPremisesDistinguishedName** attribute isn't synchronized the value will be **null**.
 
    #### Response
    <!-- {
@@ -119,23 +119,23 @@ The deployment uses the **NDES Servers** security group to assign the NDES servi
 
 Sign-in to a domain controller or management workstation with access equivalent to *domain administrator*.
 
-1. Open **Active Directory Users and Computers**
-1. Expand the domain node from the navigation pane
-1. Right-click the **Users** container. Hover over **New** and select **Group**
-1. Type **NDES Servers** in the **Group Name** text box
-1. Select **OK**
+1. Open **Active Directory Users and Computers**.
+1. Expand the domain node from the navigation pane.
+1. Right-click the **Users** container. Hover over **New** and select **Group**.
+1. Type **NDES Servers** in the **Group Name** text box.
+1. Select **OK**.
 
 ### Add the NDES server to the NDES Servers global security group
 
 Sign-in to a domain controller or management workstation with access equivalent to *domain administrator*.
 
-1. Open **Active Directory Users and Computers**
-1. Expand the domain node from the navigation pane
-1. Select **Computers** from the navigation pane. Right-click the name of the NDES server that will host the NDES server role. Select **Add to a group**
-1. Type **NDES Servers** in **Enter the object names to select**. Select **OK**. Select **OK** on the **Active Directory Domain Services** success dialog
+1. Open **Active Directory Users and Computers**.
+1. Expand the domain node from the navigation pane.
+1. Select **Computers** from the navigation pane. Right-click the name of the NDES server that will host the NDES server role. Select **Add to a group**.
+1. Type **NDES Servers** in **Enter the object names to select**. Select **OK**. Select **OK** on the **Active Directory Domain Services** success dialog.
 
-> [!NOTE]
-> For high-availability, you should have more than one NDES server to service Windows Hello for Business certificate requests. You should add additional Windows Hello for Business NDES servers to this group to ensure they receive the proper configuration.
+   > [!NOTE]
+   > For high-availability, you should have more than one NDES server to service Windows Hello for Business certificate requests. You should add additional Windows Hello for Business NDES servers to this group to ensure they receive the proper configuration.
 
 ### Create the NDES Service Account
 
@@ -143,10 +143,10 @@ The Network Device Enrollment Services (NDES) role runs under a service account.
 
 Sign-in to a domain controller or management workstation with access equivalent to *domain administrator*.
 
-1. In the navigation pane, expand the node that has your domain name. Select **Users**
-1. Right-click the **Users** container. Hover over **New** and then select **User**. Type **NDESSvc** in  **Full Name** and **User logon name**. Select **Next**
-1. Type a secure password in **Password**. Confirm the secure password in **Confirm Password**. Clear **User must change password at next logon**. Select **Next**
-1. Select **Finish**
+1. In the navigation pane, expand the node that has your domain name. Select **Users**.
+1. Right-click the **Users** container. Hover over **New** and then select **User**. Type **NDESSvc** in  **Full Name** and **User logon name**. Select **Next**.
+1. Type a secure password in **Password**. Confirm the secure password in **Confirm Password**. Clear **User must change password at next logon**. Select **Next**.
+1. Select **Finish**.
 
 > [!IMPORTANT]
 > Configuring the service's account password to **Password never expires** may be more convenient, but it presents a security risk. Normal service account passwords should expire in accordance with the organizations user password expiration policy. Create a reminder to change the service account's password two weeks before it will expire. Share the reminder with others that are allowed to change the password to ensure the password is changed before it expires.
@@ -159,16 +159,16 @@ Sign-in a domain controller or management workstations with *Domain Admin* equiv
 
 1. Start the **Group Policy Management Console** (gpmc.msc)
 
-1. Expand the domain and select the **Group Policy Object** node in the navigation pane
-1. Right-click **Group Policy object** and select **New**
-1. Type **NDES Service Rights** in the name box and select **OK**
-1. In the content pane, right-click the **NDES Service Rights** Group Policy object and select **Edit**
-1. In the navigation pane, expand **Policies** under **Computer Configuration**
-1. Expand **Windows Settings > Security Settings > Local Policies**. Select **User Rights Assignments**
-1. In the content pane, double-click **Allow log on locally**. Select **Define these policy settings** and select **OK**. Select **Add User or Group...**. In the **Add User or Group** dialog box, select **Browse**. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type **Administrators;Backup Operators;DOMAINNAME\NDESSvc;Users** where **DOMAINNAME** is the NetBios name of the domain (Example CONTOSO\NDESSvc) in **User and group names**. Select **OK** twice
-1. In the content pane, double-click **Log on as a batch job**. Select **Define these policy settings** and select **OK**. Select **Add User or Group...**. In the **Add User or Group** dialog box, select **Browse**. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type **Administrators;Backup Operators;DOMAINNAME\NDESSvc;Performance Log Users** where **DOMAINNAME** is the NetBios name of the domain (Example CONTOSO\NDESSvc) in **User and group names**. Select **OK** twice
-1. In the content pane, double-click **Log on as a service**. Select **Define these policy settings** and select **OK**. Select **Add User or Group...**. In the **Add User or Group** dialog box, select **Browse**. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type **NT SERVICE\ALL SERVICES;DOMAINNAME\NDESSvc** where **DOMAINNAME** is the NetBios name of the domain (Example CONTOSO\NDESSvc) in **User and group names**. Select **OK** three times
-1. Close the **Group Policy Management Editor**
+1. Expand the domain and select the **Group Policy Object** node in the navigation pane.
+1. Right-click **Group Policy object** and select **New**.
+1. Type **NDES Service Rights** in the name box and select **OK**.
+1. In the content pane, right-click the **NDES Service Rights** Group Policy object and select **Edit**.
+1. In the navigation pane, expand **Policies** under **Computer Configuration**.
+1. Expand **Windows Settings > Security Settings > Local Policies**. Select **User Rights Assignments**.
+1. In the content pane, double-click **Allow log on locally**. Select **Define these policy settings** and select **OK**. Select **Add User or Group...**. In the **Add User or Group** dialog box, select **Browse**. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type **Administrators;Backup Operators;DOMAINNAME\NDESSvc;Users** where **DOMAINNAME** is the NetBios name of the domain (Example CONTOSO\NDESSvc) in **User and group names**. Select **OK** twice.
+1. In the content pane, double-click **Log on as a batch job**. Select **Define these policy settings** and select **OK**. Select **Add User or Group...**. In the **Add User or Group** dialog box, select **Browse**. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type **Administrators;Backup Operators;DOMAINNAME\NDESSvc;Performance Log Users** where **DOMAINNAME** is the NetBios name of the domain (Example CONTOSO\NDESSvc) in **User and group names**. Select **OK** twice.
+1. In the content pane, double-click **Log on as a service**. Select **Define these policy settings** and select **OK**. Select **Add User or Group...**. In the **Add User or Group** dialog box, select **Browse**. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, type **NT SERVICE\ALL SERVICES;DOMAINNAME\NDESSvc** where **DOMAINNAME** is the NetBios name of the domain (Example CONTOSO\NDESSvc) in **User and group names**. Select **OK** three times.
+1. Close the **Group Policy Management Editor**.
 
 ### Configure security for the NDES Service User Rights Group Policy object
 
@@ -176,11 +176,11 @@ The best way to deploy the **NDES Service User Rights** Group Policy object is t
 
 Sign-in to a domain controller or management workstation with access equivalent to *domain administrator*.
 
-1. Start the **Group Policy Management Console** (gpmc.msc)
-1. Expand the domain and select the **Group Policy Object** node in the navigation pane
-1. Double-click the **NDES Service User Rights** Group Policy object
-1. In the **Security Filtering** section of the content pane, select **Add**. Type **NDES Servers** or the name of the security group you previously created and select **OK**
-1. Select the **Delegation** tab. Select **Authenticated Users** and select **Advanced**
+1. Start the **Group Policy Management Console** (gpmc.msc).
+1. Expand the domain and select the **Group Policy Object** node in the navigation pane.
+1. Double-click the **NDES Service User Rights** Group Policy object.
+1. In the **Security Filtering** section of the content pane, select **Add**. Type **NDES Servers** or the name of the security group you previously created and select **OK**.
+1. Select the **Delegation** tab. Select **Authenticated Users** and select **Advanced**.
 1. In the **Group or User names** list, select **Authenticated Users**. In the **Permissions for Authenticated Users** list, clear the **Allow** check box for the **Apply Group Policy** permission. Select **OK**
 
 ### Deploy the NDES Service User Rights Group Policy object
@@ -228,20 +228,20 @@ NDES uses a server authentication certificate to authenticate the server endpoin
 
 Sign-in to the issuing certificate authority or management workstations with *Domain Admin* equivalent credentials.
 
-1. Open the **Certificate Authority** management console
-1. Right-click **Certificate Templates** and select **Manage**
-1. In the **Certificate Template Console**, right-click the **Computer** template in the details pane and select **Duplicate Template**
-1. On the **General** tab, type **NDES-Intune Authentication** in **Template display name**. Adjust the validity and renewal period to meet your enterprise's needs
+1. Open the **Certificate Authority** management console.
+1. Right-click **Certificate Templates** and select **Manage**.
+1. In the **Certificate Template Console**, right-click the **Computer** template in the details pane and select **Duplicate Template**.
+1. On the **General** tab, type **NDES-Intune Authentication** in **Template display name**. Adjust the validity and renewal period to meet your enterprise's needs.
 
    > [!NOTE]
-   > If you use different template names, you'll need to remember and substitute these names in different portions of the lab
-1. On the **Subject** tab, select **Supply in the request**
-1. On the **Cryptography** tab, validate the **Minimum key size** is **2048**
-1. On the **Security** tab, select **Add**
-1. Select **Object Types**, then in the window that appears, choose **Computers** and select **OK**
-1. Type **NDES server** in the **Enter the object names to select** text box and select **OK**
-1. Select **NDES server** from the **Group or users names** list. In the **Permissions for** section, select the **Allow** check box for the **Enroll** permission. Clear the **Allow** check box for the **Enroll** and **Autoenroll** permissions for all other items in the **Group or users names** list if the check boxes aren't already cleared. Select **OK**
-1. Select on the **Apply** to save changes and close the console
+   > If you use different template names, you'll need to remember and substitute these names in different portions of the lab.
+1. On the **Subject** tab, select **Supply in the request**.
+1. On the **Cryptography** tab, validate the **Minimum key size** is **2048**.
+1. On the **Security** tab, select **Add**.
+1. Select **Object Types**, then in the window that appears, choose **Computers** and select **OK**.
+1. Type **NDES server** in the **Enter the object names to select** text box and select **OK**.
+1. Select **NDES server** from the **Group or users names** list. In the **Permissions for** section, select the **Allow** check box for the **Enroll** permission. Clear the **Allow** check box for the **Enroll** and **Autoenroll** permissions for all other items in the **Group or users names** list if the check boxes aren't already cleared. Select **OK**.
+1. Select on the **Apply** to save changes and close the console.
 
 ### Create a Microsoft Entra joined Windows Hello for Business authentication certificate template
 
@@ -249,21 +249,21 @@ During Windows Hello for Business provisioning,  Windows requests an authenticat
 
 Sign in a certificate authority or management workstations with *Domain Admin equivalent* credentials.
 
-1. Open the **Certificate Authority** management console
-1. Right-click **Certificate Templates** and select **Manage**
-1. Right-click the **Smartcard Logon** template and choose **Duplicate Template**
-1. On the **Compatibility** tab, clear the **Show resulting changes** check box. Select **Windows Server 2012** or **Windows Server 2012 R2** from the **Certification Authority** list. Select **Windows Server 2012** or **Windows Server 2012 R2** from the **Certificate Recipient** list
-1. On the **General** tab, type **ENTRA JOINED WHFB Authentication** in **Template display name**. Adjust the validity and renewal period to meet your enterprise's needs
+1. Open the **Certificate Authority** management console.
+1. Right-click **Certificate Templates** and select **Manage**.
+1. Right-click the **Smartcard Logon** template and choose **Duplicate Template**.
+1. On the **Compatibility** tab, clear the **Show resulting changes** check box. Select **Windows Server 2012** or **Windows Server 2012 R2** from the **Certification Authority** list. Select **Windows Server 2012** or **Windows Server 2012 R2** from the **Certificate Recipient** list.
+1. On the **General** tab, type **ENTRA JOINED WHFB Authentication** in **Template display name**. Adjust the validity and renewal period to meet your enterprise's needs.
 
    > [!NOTE]
    > If you use different template names, you'll need to remember and substitute these names in different portions of the deployment
-1. On the **Cryptography** tab, select **Key Storage Provider** from the **Provider Category** list. Select **RSA** from the **Algorithm name** list. Type **2048** in the **Minimum key size** text box. Select **SHA256** from the **Request hash** list
-1. On the **Extensions** tab, verify the **Application Policies** extension includes **Smart Card Logon**
-1. On the **Subject** tab, select **Supply in the request**
-1. On the **Request Handling** tab, select **Signature and encryption** from the **Purpose** list. Select the **Renew with same key** check box. Select **Enroll subject without requiring any user input**
-1. On the **Security** tab, select **Add**. Type **NDESSvc** in the **Enter the object names to select** text box and select **OK**
-1. Select  **NDESSvc** from the **Group or users names** list. In the **Permissions for NDES Servers** section, select the **Allow** check box for **Read** and **Enroll**. Clear the **Allow** check box for the **Enroll** and **Autoenroll** permissions for all other entries in the **Group or users names** section if the check boxes aren't already cleared. Select **OK**
-1. Close the console
+1. On the **Cryptography** tab, select **Key Storage Provider** from the **Provider Category** list. Select **RSA** from the **Algorithm name** list. Type **2048** in the **Minimum key size** text box. Select **SHA256** from the **Request hash** list.
+1. On the **Extensions** tab, verify the **Application Policies** extension includes **Smart Card Logon**.
+1. On the **Subject** tab, select **Supply in the request**.
+1. On the **Request Handling** tab, select **Signature and encryption** from the **Purpose** list. Select the **Renew with same key** check box. Select **Enroll subject without requiring any user input**.
+1. On the **Security** tab, select **Add**. Type **NDESSvc** in the **Enter the object names to select** text box and select **OK**.
+1. Select **NDESSvc** from the **Group or users names** list. In the **Permissions for NDES Servers** section, select the **Allow** check box for **Read** and **Enroll**. Clear the **Allow** check box for the **Enroll** and **Autoenroll** permissions for all other entries in the **Group or users names** section if the check boxes aren't already cleared. Select **OK**.
+1. Close the console.
 
 ### Publish certificate templates
 

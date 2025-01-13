@@ -1,7 +1,7 @@
 ---
 title: UCDOStatus data schema
 titleSuffix: Windows Update for Business reports
-description: UCDOStatus schema for Windows Update for Business reports. UCDOStatus provides information, for a single device, on its DO and MCC bandwidth utilization.
+description: UCDOStatus schema for Windows Update for Business reports. UCDOStatus provides information, for a single device, on its DO and Microsoft Connected Cache bandwidth utilization.
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: reference
@@ -27,7 +27,7 @@ UCDOStatus provides information, for a single device, on its bandwidth utilizati
 | **AzureADTenantId** |  [string](/azure/kusto/query/scalar-data-types/string) | `69ca04b0-703d-4b3a-9184-c4e3c15d6f5e` | Microsoft Entra tenant ID |
 | **BWOptPercent28Days** |  [real](/azure/kusto/query/scalar-data-types/real) | `10.61` | Bandwidth optimization (as a percentage of savings of total bandwidth otherwise incurred) for this device. A rolling 28-day basis.|
 | **BWOptPercent7Days** |  [real](/azure/kusto/query/scalar-data-types/real) | `10.61` | Bandwidth optimization (as a percentage of savings of total bandwidth otherwise incurred) for this device. A rolling 7-day basis.|
-| **BytesFromCache** |  [long](/azure/kusto/query/scalar-data-types/long) | `285212672` | Total number of bytes that were delivered from Microsoft Connected Cache (MCC). |
+| **BytesFromCache** |  [long](/azure/kusto/query/scalar-data-types/long) | `285212672` | Total number of bytes that were delivered from Microsoft Connected Cache. |
 | **BytesFromCDN** |  [long](/azure/kusto/query/scalar-data-types/long) | `11463008693388` | Total number of bytes that were delivered from a Content Delivery Network (CDN). |
 | **BytesFromGroupPeers** |  [long](/azure/kusto/query/scalar-data-types/long) | `30830657175` | Total number of bytes that were delivered from Group peers, sharing the same GroupId. |
 | **BytesFromIntPeers** |  [long](/azure/kusto/query/scalar-data-types/long) | `285212672` | Total number of bytes that were delivered from Internet peers. |

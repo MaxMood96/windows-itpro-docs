@@ -2,12 +2,12 @@
 title: Network Unlock
 description: Learn how BitLocker Network Unlock works and how to configure it.
 ms.topic: how-to
-ms.date: 06/18/2024
+ms.date: 12/05/2024
 ---
 
 # Network Unlock
 
-Network Unlock is a BitLocker *key protector* for operating system volumes. Network Unlock enables easier management for BitLocker-enabled desktops and servers in a domain environment by providing automatic unlock of operating system volumes at system reboot when connected to a wired corporate network. Network Unlock requires the client hardware to have a DHCP driver implemented in its UEFI firmware. Without Network Unlock, operating system volumes protected by `TPM+PIN` protectors require a PIN to be entered when a device reboots or resumes from hibernation (for example, by Wake on LAN). Requiring a PIN after a reboot can make it difficult to enterprises to roll out software patches to unattended desktops and remotely administered servers.
+Network Unlock is a BitLocker *key protector* for operating system volumes. Network Unlock enables easier management for BitLocker-enabled desktops and servers in a domain environment by providing automatic unlock of operating system volumes at system reboot when connected to a wired corporate network. Network Unlock requires the client hardware to have a DHCP driver implemented in its UEFI firmware. Without Network Unlock, operating system volumes protected by `TPM+PIN` protectors require a PIN to be entered when a device reboots or resumes from hibernation (for example, by Wake on LAN). Requiring a PIN after a reboot can make it difficult for enterprises to roll out software patches to unattended desktops and remotely administered servers.
 
 Network Unlock allows BitLocker-enabled systems that have a `TPM+PIN` and that meet the hardware requirements to boot into Windows without user intervention. Network Unlock works in a similar fashion to the `TPM+StartupKey` at boot. Rather than needing to read the StartupKey from USB media, however, the Network Unlock feature needs the key to be composed from a key stored in the TPM and an encrypted network key that is sent to the server, decrypted and returned to the client in a secure session.
 
@@ -248,7 +248,7 @@ The following steps describe how to deploy the required group policy setting:
 
 By default, all clients with the correct Network Unlock certificate and valid Network Unlock protectors that have wired access to a Network Unlock-enabled WDS server via DHCP are unlocked by the server. A subnet policy configuration file on the WDS server can be created to limit which are the subnet(s) the Network Unlock clients can use to unlock.
 
-The configuration file, called `bde-network-unlock.ini`, must be located in the same directory as the Network Unlock provider DLL (`%windir%\System32\Nkpprov.dll`) and it applies to both IPv6 and IPv4 DHCP implementations. If the subnet configuration policy becomes corrupted, the provider fails and stops responding to requests.
+The configuration file called `bde-network-unlock.ini`, must be located in the same directory as the Network Unlock provider DLL (`%windir%\System32\Nkpprov.dll`) and it applies to both IPv6 and IPv4 DHCP implementations. If the subnet configuration policy becomes corrupted, the provider fails and stops responding to requests.
 
 The subnet policy configuration file must use a `[SUBNETS]` section to identify the specific subnets. The named subnets may then be used to specify restrictions in certificate subsections. Subnets are defined as simple name-value pairs, in the common INI format, where each subnet has its own line, with the name on the left of the equal-sign, and the subnet identified on the right of the equal-sign as a Classless Inter-Domain Routing (CIDR) address or range. The key word `ENABLED` is disallowed for subnet names.
 
@@ -299,6 +299,8 @@ To update the certificates used by Network Unlock, administrators need to import
 Troubleshooting Network Unlock issues begins by verifying the environment. Many times, a small configuration issue can be the root cause of the failure. Items to verify include:
 
 - Verify that the client hardware is UEFI-based and is on firmware version 2.3.1 and that the UEFI firmware is in native mode without a Compatibility Support Module (CSM) for BIOS mode enabled. Verification can be done by checking that the firmware doesn't have an option enabled such as "Legacy mode" or "Compatibility mode" or that the firmware doesn't appear to be in a BIOS-like mode
+- If client hardware is a Secure Core device, you may need to disable Secure Core functionality
+
 - All required roles and services are installed and started
 - Public and private certificates have been published and are in the proper certificate containers. The presence of the Network Unlock certificate can be verified in the Microsoft Management Console (MMC.exe) on the WDS server with the certificate snap-ins for the local computer enabled. The client certificate can be verified by checking the registry key **`HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates\FVE_NKP`** on the client computer
 - Group policy for Network Unlock is enabled and linked to the appropriate domains

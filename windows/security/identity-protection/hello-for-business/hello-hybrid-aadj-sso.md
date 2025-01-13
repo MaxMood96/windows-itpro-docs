@@ -1,7 +1,7 @@
 ---
 title: Configure single sign-on (SSO) for Microsoft Entra joined devices
 description: Learn how to configure single sign-on to on-premises resources for Microsoft Entra joined devices, using Windows Hello for Business.
-ms.date: 04/23/2024
+ms.date: 11/22/2024
 ms.topic: how-to
 ---
 
@@ -150,14 +150,16 @@ The web server is ready to host the CRL distribution point. Now, configure the i
 1. In the navigation pane, right-click the name of the certificate authority and select **Properties**
 1. Select **Extensions**. On the **Extensions** tab, select **CRL Distribution Point (CDP)** from the **Select extension** list
 1. On the **Extensions** tab, select **Add**. Type <b>http://crl.[domainname]/cdp/</b> in **location**. For example, `<http://crl.corp.contoso.com/cdp/>` or `<http://crl.contoso.com/cdp/>` (don't forget the trailing forward slash)
-    ![CDP New Location dialog box.](images/aadj/cdp-extension-new-location.png)
-1. Select **\<CaName>** from the **Variable** list and select **Insert**. Select **\<CRLNameSuffix>** from the **Variable** list and select **Insert**. Select **\<DeltaCRLAllowed>** from the **Variable** list and select **Insert**
-1. Type **.crl** at the end of the text in **Location**. Select **OK**
-1. Select the CDP you just created
+
+   ![CDP New Location dialog box.](images/aadj/cdp-extension-new-location.png)
+1. Select **\<CaName>** from the **Variable** list and select **Insert**. Select **\<CRLNameSuffix>** from the **Variable** list and select **Insert**. Select **\<DeltaCRLAllowed>** from the **Variable** list and select **Insert**.
+1. Type **.crl** at the end of the text in **Location**. Select **OK**.
+1. Select the CDP you just created.
+
     ![CDP complete http.](images/aadj/cdp-extension-complete-http.png)
-1. Select **Include in CRLs. Clients use this to find Delta CRL locations**
-1. Select **Include in the CDP extension of issued certificates**
-1. Select **Apply** save your selections. Select **No** when ask to restart the service
+1. Select **Include in CRLs. Clients use this to find Delta CRL locations**.
+1. Select **Include in the CDP extension of issued certificates**.
+1. Select **Apply** save your selections. Select **No** when ask to restart the service.
 
 > [!NOTE]
 > Optionally, you can remove unused CRL distribution points and publishing locations.
@@ -170,7 +172,8 @@ The web server is ready to host the CRL distribution point. Now, configure the i
 1. On the **Extensions** tab, select **Add**. Type the computer and share name you create for your CRL distribution point in [Configure the CDP file share](#configure-the-cdp-file-share). For example, **\\\app\cdp$\\** (don't forget the trailing backwards slash)
 1. Select **\<CaName>** from the **Variable** list and select **Insert**. Select **\<CRLNameSuffix>** from the **Variable** list and select **Insert**. Select **\<DeltaCRLAllowed>** from the **Variable** list and select **Insert**
 1. Type **.crl** at the end of the text in **Location**. Select **OK**
-1. Select the CDP you just created
+1. Select the CDP you just created.
+
     ![CDP publishing location.](images/aadj/cdp-extension-complete-unc.png)
 1. Select **Publish CRLs to this location**
 1. Select **Publish Delta CRLs to this location**
@@ -178,10 +181,10 @@ The web server is ready to host the CRL distribution point. Now, configure the i
 
 #### Publish a new CRL
 
-1. On the issuing certificate authority, sign-in as a local administrator. Start the **Certificate Authority** console from **Administrative Tools**
+1. On the issuing certificate authority, sign-in as a local administrator. Start the **Certificate Authority** console from **Administrative Tools**.
 1. In the navigation pane, right-click **Revoked Certificates**, hover over **All Tasks**, and select **Publish**
-    ![Publish a New CRL.](images/aadj/publish-new-crl.png)
-1. In the **Publish CRL** dialog box, select **New CRL** and select **OK**
+    ![Publish a New CRL.](images/aadj/publish-new-crl.png).
+1. In the **Publish CRL** dialog box, select **New CRL** and select **OK**.
 
 #### Validate CDP Publishing
 

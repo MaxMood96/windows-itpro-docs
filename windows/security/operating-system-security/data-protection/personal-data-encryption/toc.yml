@@ -1,7 +1,7 @@
 items:
-- name: PDE overview
+- name: Overview
   href: index.md
-- name: Configure PDE
+- name: Configure Personal Data Encryption
   href: configure.md
-- name: PDE frequently asked questions (FAQ)
+- name: Frequently asked questions (FAQ)
   href: faq.yml

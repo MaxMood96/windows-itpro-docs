@@ -1,19 +1,23 @@
 ---
-title: Security foundation
-description: Windows 11 security book - Security foundation chapter.
+title: Windows 11 security book - Certification
+description: Security foundation chapter - Certification.
 ms.topic: overview
-ms.date: 04/09/2024
+ms.date: 11/18/2024
 ---
 
 # Certification
 
-:::image type="content" source="images/security-foundation.png" alt-text="Diagram of containing a list of security features." lightbox="images/security-foundation.png" border="false":::
+:::image type="content" source="images/security-foundation.png" alt-text="Diagram containing a list of security features." lightbox="images/security-foundation.png" border="false":::
 
 Microsoft is committed to supporting product security standards and certifications, including FIPS 140 and Common Criteria, as an external validation of security assurance.
 
 ## Federal Information Processing Standard (FIPS)
 
-The Federal Information Processing Standard (FIPS) Publication 140 is a US government standard that defines the minimum security requirements for cryptographic modules in IT products. Microsoft maintains an active commitment to meeting the requirements of the FIPS 140 standard, having validated cryptographic modules against FIPS 140-2 since it was first established. Microsoft products, including Windows 11, Windows 10, Windows Server, and many cloud services, use these cryptographic modules.
+The Federal Information Processing Standard (FIPS) Publication 140 is a U.S. government standard that specifies the minimum security requirements for cryptographic modules in IT products. Microsoft is dedicated to adhering to the requirements in the FIPS 140 standard, consistently validating its cryptographic modules against FIPS 140 since the standard's inception. Microsoft products, including Windows 11, Windows 10, Windows Server, and many cloud services, use these cryptographic modules.
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+
+- [Windows FIPS 140 validation][LINK-1]
 
 ## Common Criteria (CC)
 
@@ -21,4 +25,11 @@ Common Criteria (CC) is an international standard currently maintained by nation
 
 Microsoft ensures that products incorporate the features and functions required by relevant Common Criteria Protection Profiles and completes Common Criteria certifications of Microsoft Windows products.
 
-Microsoft publishes the list of FIPS 140 and Common Criteria certified products at [Federal](/windows/security/security-foundations/certification/fips-140-validation) [Information Processing Standard (FIPS)](/windows/security/security-foundations/certification/fips-140-validation) 140 Validation and [Common Criteria Certifications.](/windows/security/threat-protection/windows-platform-common-criteria)
+[!INCLUDE [learn-more](includes/learn-more.md)]
+
+- [Common Criteria certifications][LINK-2]
+
+<!--links-->
+
+[LINK-1]: /windows/security/security-foundations/certification/fips-140-validation
+[LINK-2]: /windows/security/threat-protection/windows-platform-common-criteria

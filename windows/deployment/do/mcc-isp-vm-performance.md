@@ -25,7 +25,7 @@ The Microsoft Connected Cache module is optimized for Ubuntu 20.04 LTS. Install 
 
 #### NIC requirements
 
-- Multiple NICs on a single MCC instance are supported using a *link aggregated* configuration.
+- Multiple NICs on a single Microsoft Connected Cache instance are supported using a *link aggregated* configuration.
 - 10 Gbps NIC is the minimum speed recommended, but any NIC is supported.
 
 #### Drive performance
@@ -55,9 +55,9 @@ Change the following settings to maximize the egress in virtual environments:
 
 1. Enable **Single Root I/O Virtualization (SR-IOV)** in the following three locations:
 
-    - The BIOS of the MCC virtual machine
-    - The network card properties of the MCC virtual machine
-    - The hypervisor for the MCC virtual machine
+    - The BIOS of the Connected Cache virtual machine
+    - The network card properties of the Connected Cache virtual machine
+    - The hypervisor for the Connected Cache virtual machine
 
     Microsoft has found these settings to double egress when using a Microsoft Hyper-V deployment.
 

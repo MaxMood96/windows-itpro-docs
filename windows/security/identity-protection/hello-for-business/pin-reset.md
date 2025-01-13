@@ -1,7 +1,7 @@
 ---
 title: PIN reset
 description: Learn how Microsoft PIN reset service enables your users to recover a forgotten Windows Hello for Business PIN, and how to configure it.
-ms.date: 04/23/2024
+ms.date: 11/22/2024
 ms.topic: how-to
 ---
 
@@ -13,8 +13,8 @@ This article describes how *Microsoft PIN reset service* enables your users to r
 
 Windows Hello for Business provides the capability for users to reset forgotten PINs. There are two forms of PIN reset:
 
-- *Destructive PIN reset*: the user's existing PIN and underlying credentials, including any keys or certificates added to their Windows Hello container, are deleted from the client and a new sign in key and PIN are provisioned. Destructive PIN reset is the default option, and doesn't require configuration
-- *Non-destructive PIN reset*: the user's Windows Hello for Business container and keys are preserved, but the user's PIN that they use to authorize key usage is changed. For nondestructive PIN reset, you must deploy the *Microsoft PIN reset service* and configure your clients' policy to enable the *PIN recovery* feature
+- *Destructive PIN reset*: The user's existing PIN and underlying credentials, including any keys or certificates added to their Windows Hello container, are deleted from the client and a new sign in key and PIN are provisioned. Destructive PIN reset is the default option, and doesn't require configuration.
+- *Non-destructive PIN reset*: The user's Windows Hello for Business container and keys are preserved, but the user's PIN that they use to authorize key usage is changed. For nondestructive PIN reset, you must deploy the *Microsoft PIN reset service* and configure your clients' policy to enable the *PIN recovery* feature.
 
 ## How nondestructive PIN reset works
 

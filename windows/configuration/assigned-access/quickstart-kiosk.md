@@ -2,7 +2,7 @@
 title: "Quickstart: configure a kiosk experience with Assigned Access"
 description: Learn how to configure a kiosk experience with Assigned Access using the Assigned Access configuration service provider (CSP), Microsoft Intune, PowerShell, or group policy (GPO).
 ms.topic: quickstart
-ms.date: 03/04/2024
+ms.date: 10/31/2024
 ---
 
 # Quickstart: configure a kiosk with Assigned Access

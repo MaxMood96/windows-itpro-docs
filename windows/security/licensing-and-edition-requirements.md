@@ -1,8 +1,8 @@
 ---
-title: Windows security features licensing and edition requirements
+title: Windows Security Features Licensing And Edition Requirements
 description: Learn about Windows licensing and edition requirements for the features included in Windows.
 ms.topic: conceptual
-ms.date: 04/10/2024
+ms.date: 12/02/2024
 appliesto:
 - ✅ <a href=/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 ms.author: paoloma

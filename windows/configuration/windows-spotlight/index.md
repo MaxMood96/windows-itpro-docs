@@ -2,7 +2,7 @@
 title: Configure Windows spotlight
 description: Learn how to configure Windows spotlight using Group Policy and mobile device management (MDM) settings.
 ms.topic: how-to
-ms.date: 04/23/2024
+ms.date: 12/05/2024
 ms.author: paoloma
 author: paolomatarazzo
 appliesto:
@@ -21,6 +21,9 @@ Windows spotlight is a feature that displays different wallpapers and offers sug
 
 :::image type="content" source="images/lockscreen-11.png" alt-text="Screenshot of the Windows 11 lock screen with Windows Spotlight enabled." border="false":::
 
+> [!NOTE]
+> After installing the [KB5046633 (October 22, 2024)](https://support.microsoft.com/topic/22631-4460-6ff7b117-cd80-471a-a9ac-48a794bda2d6), the default Windows wallpaper changes to Windows spotlight. To modify this behavior, use the [AllowSpotlightCollection policy setting](#policy-settings), or configure a custom lock screen and background image.
+
 ::: zone-end
 
 ::: zone pivot="windows-10"
@@ -30,6 +33,9 @@ Windows spotlight is a feature that displays different wallpapers and offers sug
 - **Organizational messages**: messages from your organization, which can be displayed in the lock screen, taskbar, the notification area, or the Get Started app
 
 :::image type="content" source="images/lockscreen-10.png" alt-text="Screenshot of the Windows 10 lock screen with Windows Spotlight enabled." border="false":::
+
+> [!NOTE]
+> After installing the [KB5048652 (December 10, 2024)](https://support.microsoft.com/topic/19045-5247-454fbd4c-0723-449e-915b-8515ab41f8e3), the default Windows wallpaper changes to Windows spotlight. To modify this behavior, configure a custom lock screen and background image.
 
 ::: zone-end
 

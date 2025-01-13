@@ -1,7 +1,7 @@
 ---
 title: Dual enrollment
 description: Learn how to configure Windows Hello for Business dual enrollment and how to configure Active Directory to support Domain Administrator enrollment.
-ms.date: 05/06/2024
+ms.date: 11/22/2024
 ms.topic: how-to
 ---
 
@@ -40,7 +40,7 @@ Active Directory Domain Services uses `AdminSDHolder` to secure privileged users
 
 Sign in to a domain controller or management workstation with access equivalent to *domain administrator*.
 
-1. Type the following command to add the **allow** read and write property permissions for msDS-KeyCredentialLink attribute for the `Key Admins` group on the `AdminSDHolder` object
+1. Type the following command to add the **allow** read and write property permissions for msDS-KeyCredentialLink attribute for the `Key Admins` group on the `AdminSDHolder` object.
 
     ```cmd
     dsacls "CN=AdminSDHolder,CN=System,DC=domain,DC=com" /g "[domainName\keyAdminGroup]":RPWP;msDS-KeyCredentialLink
@@ -52,21 +52,21 @@ Sign in to a domain controller or management workstation with access equivalent 
     dsacls "CN=AdminSDHolder,CN=System,DC=corp,DC=mstepdemo,DC=net" /g "mstepdemo\Key Admins":RPWP;msDS-KeyCredentialLink
     ```
 
-1. To trigger security descriptor propagation, open `ldp.exe`
-1. Select **Connection** and select **Connect...**  Next to **Server**, type the name of the domain controller that holds the PDC role for the domain. Next to **Port**, type **389** and select **OK**
-1. Select **Connection** and select **Bind...**  Select **OK** to bind as the currently signed-in user
-1. Select **Browser** and select **Modify**. Leave the **DN** text box blank. Next to **Attribute**, type **RunProtectAdminGroupsTask**. Next to **Values**, type `1`. Select **Enter** to add this to the **Entry List**
-1. Select **Run** to start the task
-1. Close LDP
+1. To trigger security descriptor propagation, open `ldp.exe`.
+1. Select **Connection** and select **Connect...**  Next to **Server**, type the name of the domain controller that holds the PDC role for the domain. Next to **Port**, type **389** and select **OK**.
+1. Select **Connection** and select **Bind...**  Select **OK** to bind as the currently signed-in user.
+1. Select **Browser** and select **Modify**. Leave the **DN** text box blank. Next to **Attribute**, type **RunProtectAdminGroupsTask**. Next to **Values**, type `1`. Select **Enter** to add this to the **Entry List**.
+1. Select **Run** to start the task.
+1. Close LDP.
 
 ### Configure dual enrollment with group policy
 
 You configure Windows to support dual enrollment using the computer configuration portion of a Group Policy object:
 
-1. Using the Group Policy Management Console (GPMC), create a new domain-based Group Policy object and link it to an organizational Unit that contains Active Directory computer objects used by privileged users
-1. Edit the Group Policy object from step 1
+1. Using the Group Policy Management Console (GPMC), create a new domain-based Group Policy object and link it to an organizational Unit that contains Active Directory computer objects used by privileged users.
+1. Edit the Group Policy object from step 1.
 1. Enable the **Allow enumeration of emulated smart cards for all users** policy setting located under **Computer Configuration->Administrative Templates->Windows Components->Windows Hello for Business**
-1. Close the Group Policy Management Editor to save the Group Policy object. Close the GPMC
-1. Restart computers targeted by this Group Policy object
+1. Close the Group Policy Management Editor to save the Group Policy object. Close the GPMC.
+1. Restart computers targeted by this Group Policy object.
 
-The computer is ready for dual enrollment. Sign in as the privileged user first and enroll for Windows Hello for Business. Once completed, sign out and sign in as the nonprivileged user and enroll for Windows Hello for Business. You can now use your privileged credential to perform privileged tasks without using your password and without needing to switch users.
+   The computer is ready for dual enrollment. Sign in as the privileged user first and enroll for Windows Hello for Business. Once completed, sign out and sign in as the nonprivileged user and enroll for Windows Hello for Business. You can now use your privileged credential to perform privileged tasks without using your password and without needing to switch users.

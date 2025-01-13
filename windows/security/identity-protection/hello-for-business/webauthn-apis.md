@@ -1,7 +1,7 @@
 ---
 title: WebAuthn APIs
 description: Learn how to use WebAuthn APIs to enable passwordless authentication for your sites and apps.
-ms.date: 04/23/2024
+ms.date: 11/22/2024
 ms.topic: how-to
 ---
 # WebAuthn APIs for passwordless authentication on Windows

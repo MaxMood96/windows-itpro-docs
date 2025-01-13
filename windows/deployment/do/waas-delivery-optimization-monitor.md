@@ -24,7 +24,7 @@ To monitor Delivery Optimization, you can use either the Windows Update for Busi
 
 ## Monitor with Windows Update for Business Delivery Optimization report
 
-Windows Update for Business Delivery Optimization Report provides you with information about your Delivery Optimization configuration, including the observed bandwidth savings across all devices that used peer-to-peer, Microsoft Connected Cache (MCC), HTTP source/CDN distribution over the past 28 days.
+Windows Update for Business Delivery Optimization Report provides you with information about your Delivery Optimization configuration, including the observed bandwidth savings across all devices that used peer-to-peer, Microsoft Connected Cache, HTTP source/CDN distribution over the past 28 days.
 
 :::image type="content" source="../update/media/wufb-do-overview.png" alt-text="This screenshot shows the Windows Update for Business report, Delivery Optimization status in Update Compliance." lightbox= "../update/media/wufb-do-overview.png":::
 
@@ -49,7 +49,7 @@ For details, see [Windows Update for Business Delivery Optimization Report](/win
 | BytesFromHTTP | Total number of bytes received over HTTP. This metric represents all HTTP sources, **which includes BytesFromCacheServer** |
 | Status | Current state of the operation. Possible values are: **Downloading** (download in progress); **Complete** (download completed, but isn't uploading yet); **Caching** (download completed successfully and is ready to upload or uploading); **Paused** (download/upload paused by caller) |
 | Priority | Priority of the download; values are **foreground** or **background** |
-| BytesFromCacheServer | Total number of bytes received from cache server (MCC) |
+| BytesFromCacheServer | Total number of bytes received from cache server (Connected Cache) |
 | BytesFromLanPeers | Total number of bytes received from peers found on the LAN |
 | BytesFromGroupPeers | Total number of bytes received from peers found in the group. (Note: Group mode is LAN + Group. If peers are found on the LAN, those bytes are registered in 'BytesFromLANPeers'.)  |
 | BytesFromInternetPeers | Total number of bytes received from internet peers |

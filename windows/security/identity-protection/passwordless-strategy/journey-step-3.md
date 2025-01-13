@@ -2,7 +2,7 @@
 title: Transition into a passwordless deployment
 description: Learn about how to transition into a passwordless deployment, the third step of the Microsoft passwordless journey.
 ms.topic: concept-article
-ms.date: 01/29/2024
+ms.date: 10/29/2024
 ---
 
 # Transition into a passwordless deployment

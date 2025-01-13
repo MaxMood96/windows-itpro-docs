@@ -1,9 +1,9 @@
 ---
 title: Quality update status report
-description: Provides a per device view of the current update status for all Windows Autopatch enrolled devices.
-ms.date: 07/08/2024
+description: Provides a per device view of the current update status for all Intune devices.
+ms.date: 11/20/2024
 ms.service: windows-client
-ms.subservice: itpro-updates
+ms.subservice: autopatch
 ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
@@ -17,7 +17,9 @@ ms.collection:
 
 # Quality update status report
 
-The Quality update status report provides a per device view of the current update status for all Windows Autopatch enrolled devices.
+[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
+
+The Quality update status report provides a per device view of the current update status for all Intune devices.
 
 **To view the Quality update status report:**
 
@@ -27,11 +29,14 @@ The Quality update status report provides a per device view of the current updat
 1. Select **Quality update status**.
 
 > [!NOTE]
-> The data in this report is refreshed every 24 hours with data received by your Windows Autopatch managed devices. The last refreshed on date/time can be seen at the top of the page. For more information about how often Windows Autopatch receives data from your managed devices, see [Data latency](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#about-data-latency).
+> The data in this report is refreshed every four hours with data received by your Windows Autopatch managed devices. The last refreshed on date/time can be seen at the top of the page. For more information about how often Windows Autopatch receives data from your managed devices, see [Data latency](../operate/windows-autopatch-groups-windows-quality-and-feature-update-reports-overview.md#about-data-latency).
 
 ## Report information
 
 ### Default columns
+
+> [!IMPORTANT]
+> **Due to a recent change, we have identified an issue that prevents the Pause status column from being displayed**. Until a fix is deployed, **you must keep track of your paused releases so you can resume them at a later date**. The team is actively working on resolving this issue and we'll provide an update when a fix is deployed.
 
 The following information is available as default columns in the Quality update status report:
 
@@ -53,7 +58,7 @@ The following information is available as optional columns in the Quality update
 | ----- | ----- |
 | Microsoft Entra device ID | The current Microsoft Entra ID recorded device ID for the device |
 | Serial number | The current Intune recorded serial number for the device |
-| Intune last check in time | The last time the device checked in to Intune |
+| Intune last check-in time | The last time the device checked in to Intune |
 | Service State | The Service State provided from Windows Update |
 | Service Substate | The Service Substate provided from Windows Update |
 | Client State | The Client State provided from Windows Update |
@@ -75,8 +80,8 @@ The following options are available:
 
 | Option | Description |
 | ----- | ----- |
-| Search | Use to search by device name, Microsoft Entra device ID or serial number |
+| Search | Use to search by device name, Microsoft Entra device ID, or serial number |
 | Sort | Select the **column headings** to sort the report data in ascending and descending order. |
 | Export | Select **Export devices** at the top of the page to export data from this report into a CSV file. |
-| Filter | Select either the **Add filters** or at the top of the report to filter the results. |
+| Filter | Select **Add filters** or use the filters at the top of the report to filter the results. |
 | Columns | Select a column to add or remove the column from the report. |

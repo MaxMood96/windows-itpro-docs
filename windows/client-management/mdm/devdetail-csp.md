@@ -1,7 +1,7 @@
 ---
 title: DevDetail CSP
 description: Learn more about the DevDetail CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -1259,7 +1259,7 @@ Returns the name of the Original Equipment Manufacturer (OEM) as a string, as de
 
 <!-- Device-SwV-Description-Begin -->
 <!-- Description-Source-DDF -->
-Returns the Windows 10 OS software version in the format MajorVersion. MinorVersion. BuildNumber. QFEnumber. Currently the BuildNumber returns the build number on the desktop and mobile build number on the phone. In the future, the build numbers may converge.
+Returns the Windows 10 OS software version in the format `MajorVersion.MinorVersion.BuildNumber.QFEnumber`. Currently the BuildNumber returns the build number on the desktop and mobile build number on the phone. In the future, the build numbers may converge.
 <!-- Device-SwV-Description-End -->
 
 <!-- Device-SwV-Editable-Begin -->

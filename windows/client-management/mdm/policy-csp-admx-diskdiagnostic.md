@@ -1,7 +1,7 @@
 ---
 title: ADMX_DiskDiagnostic Policy CSP
 description: Learn more about the ADMX_DiskDiagnostic Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -32,7 +32,7 @@ ms.date: 08/06/2024
 
 <!-- DfdAlertPolicy-Description-Begin -->
 <!-- Description-Source-ADMX -->
-This policy setting substitutes custom alert text in the disk diagnostic message shown to users when a disk reports a S. M. A. R. T. fault.
+This policy setting substitutes custom alert text in the disk diagnostic message shown to users when a disk reports a S.M.A.R.T. fault.
 
 - If you enable this policy setting, Windows displays custom alert text in the disk diagnostic message. The custom text may not exceed 512 characters.
 
@@ -97,15 +97,15 @@ This policy setting only takes effect if the Disk Diagnostic scenario policy set
 
 <!-- WdiScenarioExecutionPolicy-Description-Begin -->
 <!-- Description-Source-ADMX -->
-This policy setting determines the execution level for S. M. A. R. T.-based disk diagnostics.
+This policy setting determines the execution level for S.M.A.R.T.-based disk diagnostics.
 
-Self-Monitoring And Reporting Technology (S. M. A. R. T). is a standard mechanism for storage devices to report faults to Windows. A disk that reports a S. M. A. R. T. fault may need to be repaired or replaced. The Diagnostic Policy Service (DPS) detects and logs S. M. A. R. T. faults to the event log when they occur.
+Self-Monitoring And Reporting Technology (S.M.A.R.T). is a standard mechanism for storage devices to report faults to Windows. A disk that reports a S.M.A.R.T. fault may need to be repaired or replaced. The Diagnostic Policy Service (DPS) detects and logs S.M.A.R.T. faults to the event log when they occur.
 
-- If you enable this policy setting, the DPS also warns users of S. M. A. R. T. faults and guides them through backup and recovery to minimize potential data loss.
+- If you enable this policy setting, the DPS also warns users of S.M.A.R.T. faults and guides them through backup and recovery to minimize potential data loss.
 
-- If you disable this policy, S. M. A. R. T. faults are still detected and logged, but no corrective action is taken.
+- If you disable this policy, S.M.A.R.T. faults are still detected and logged, but no corrective action is taken.
 
-- If you don't configure this policy setting, the DPS enables S. M. A. R. T. fault resolution by default.
+- If you don't configure this policy setting, the DPS enables S.M.A.R.T. fault resolution by default.
 
 This policy setting takes effect only if the diagnostics-wide scenario execution policy isn't configured.
 

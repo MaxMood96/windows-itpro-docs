@@ -33,21 +33,45 @@
   items:
     - name: What is Microsoft Connected Cache?
       href: waas-microsoft-connected-cache.md
-    - name: MCC for Enterprise and Education
+    - name: Microsoft Connected Cache for Enterprise and Education
       items:
-      - name: MCC for Enterprise and Education Overview
+      - name: Connected Cache for Enterprise and Education overview
         href: mcc-ent-edu-overview.md
       - name: Requirements
-        href: mcc-enterprise-prerequisites.md
-      - name: Deploy Microsoft Connected Cache
-        href: mcc-enterprise-deploy.md
-      - name: Update or uninstall MCC
-        href: mcc-enterprise-update-uninstall.md
-      - name: Appendix
-        href: mcc-enterprise-appendix.md
-    - name: MCC for ISPs
+        href: mcc-ent-prerequisites.md
+      - name: How-to guides
+        items:
+        - name: Create and configure Connected Cache resources and cache nodes
+          href: mcc-ent-create-resource-and-cache.md
+        - name: Deploy Connected Cache nodes to host machines
+          items:
+          - name: Deploy Connected Cache to Linux
+            href: mcc-ent-deploy-to-linux.md
+          - name: Deploy Connected Cache to Windows
+            href: mcc-ent-deploy-to-windows.md
+        - name: Use Azure CLI to manage Connected Cache
+          href: mcc-ent-manage-using-cli.md 
+        - name: Verify Connected Cache node functionality
+          href: mcc-ent-verify-cache-node.md
+        - name: Monitor Connected Cache nodes
+          href: mcc-ent-monitoring.md
+        - name: Update Connected Cache nodes
+          href: mcc-ent-update-cache-node.md 
+        - name: Uninstall Connected Cache nodes
+          href: mcc-ent-uninstall-cache-node.md     
+      - name: Resources
+        items:
+        - name: Frequent Asked Questions
+          href: mcc-ent-faq.yml
+        - name: Troubleshooting
+          href: mcc-ent-troubleshooting.md
+        - name: Microsoft Connected Cache for Enterprise and Education early preview
+          href: mcc-ent-early-preview.md
+      - name: Release notes
+        href: mcc-ent-release-notes.md        
+    - name: Microsoft Connected Cache for ISPs
       items:
-      - name: MCC for ISPs Overview
+      - name: Connected Cache for ISPs Overview
         href: mcc-isp-overview.md
       - name: How-to guides
         items:  
@@ -67,9 +91,8 @@
           href: mcc-isp-vm-performance.md
         - name: Support and troubleshooting
           href: mcc-isp-support.md
-        - name: MCC for ISPs (early preview)
+        - name: Connected Cache for ISPs (early preview)
           href: mcc-isp.md
 - name: Endpoints for Microsoft Connected Cache content and services
   href: delivery-optimization-endpoints.md 
-
   

@@ -1,9 +1,9 @@
 ---
 title: What's new 2023
 description: This article lists the 2023 feature releases and any corresponding Message center post numbers.
-ms.date: 12/14/2023
+ms.date: 10/07/2024
 ms.service: windows-client
-ms.subservice: itpro-updates
+ms.subservice: autopatch
 ms.topic: whats-new
 ms.localizationpriority: medium
 author: tiaraquan
@@ -100,7 +100,7 @@ Minor corrections such as typos, style, or formatting issues aren't listed.
 | ----- | ----- |
 | [Roles and responsibilities](../overview/windows-autopatch-roles-responsibilities.md) | Updated article to include Windows Autopatch groups |
 | [Windows Autopatch groups overview](../deploy/windows-autopatch-groups-overview.md) | General Availability<ul><li>[MC628172](https://admin.microsoft.com/adminportal/home#/MessageCenter)</li></ul> |
-| [Manage Windows Autopatch groups](../deploy/windows-autopatch-groups-manage-autopatch-groups.md) | General Availability<ul><li>[MC628172](https://admin.microsoft.com/adminportal/home#/MessageCenter)</li></ul> |
+| [Manage Windows Autopatch groups](../manage/windows-autopatch-manage-autopatch-groups.md) | General Availability<ul><li>[MC628172](https://admin.microsoft.com/adminportal/home#/MessageCenter)</li></ul> |
 | [Customize Windows Update settings](../operate/windows-autopatch-groups-windows-update.md) | General Availability<ul><li>[MC628172](https://admin.microsoft.com/adminportal/home#/MessageCenter)</li></ul> |
 | [Windows quality updates](../operate/windows-autopatch-groups-windows-quality-update-overview.md) | General Availability<ul><li>[MC628172](https://admin.microsoft.com/adminportal/home#/MessageCenter)</li></ul> |
 | [Windows feature updates](../operate/windows-autopatch-groups-windows-feature-update-overview.md) | General Availability<ul><li>[MC628172](https://admin.microsoft.com/adminportal/home#/MessageCenter)</li></ul> |
@@ -148,7 +148,6 @@ Minor corrections such as typos, style, or formatting issues aren't listed.
 | [Customize Windows Update settings](../operate/windows-autopatch-groups-windows-update.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
 | [Windows quality update overview](../operate/windows-autopatch-groups-windows-quality-update-overview.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
 | [Windows quality update end user experience](../manage/windows-autopatch-windows-quality-update-end-user-exp.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
-| [Windows quality update signals](../operate/windows-autopatch-groups-windows-quality-update-signals.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
 | [Windows quality update communications](../operate/windows-autopatch-groups-windows-quality-update-communications.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
 | [Windows feature update overview](../operate/windows-autopatch-groups-windows-feature-update-overview.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
 | [Manage Windows feature update](../operate/windows-autopatch-groups-manage-windows-feature-update-release.md) | New article for the Windows Autopatch groups experience. Windows Autopatch groups is in public preview |
@@ -213,11 +212,11 @@ Minor corrections such as typos, style, or formatting issues aren't listed.
 | [Microsoft 365 Apps for enterprise](../operate/windows-autopatch-microsoft-365-apps-enterprise.md) | Added [Allow or block Microsoft 365 App updates](../operate/windows-autopatch-microsoft-365-apps-enterprise.md#allow-or-block-microsoft-365-app-updates) section |
 | [Windows feature updates](../operate/windows-autopatch-windows-feature-update-overview.md#) | Added note about [Windows 10 Long-Term Servicing Channel (LTSC) support](../operate/windows-autopatch-windows-feature-update-overview.md) |
 | [Windows quality updates](../operate/windows-autopatch-windows-quality-update-overview.md) | Added note about [Windows 10 Long-Term Servicing Channel (LTSC) support](../operate/windows-autopatch-windows-quality-update-overview.md) |
-| [Register your devices](../deploy/windows-autopatch-register-devices.md) | Added note about [Windows 10 Long-Term Servicing Channel (LTSC) support](../deploy/windows-autopatch-register-devices.md#prerequisites-for-device-registration) |
+| [Register your devices](../deploy/windows-autopatch-register-devices.md) | Added note about [Windows 10 Long-Term Servicing Channel (LTSC) support](../deploy/windows-autopatch-device-registration-overview.md#prerequisites-for-device-registration) |
 | [Prerequisites](../prepare/windows-autopatch-prerequisites.md) | Added note about [Windows 10 Long-Term Servicing Channel (LTSC) support](../prepare/windows-autopatch-prerequisites.md#more-about-licenses) |
 | [Privacy](../overview/windows-autopatch-privacy.md) | Added additional resources to the [Microsoft Windows 10/11 diagnostic data](../overview/windows-autopatch-privacy.md#microsoft-windows-1011-diagnostic-data) section |
 | [Changes made at tenant enrollment](../references/windows-autopatch-changes-to-tenant.md) | Updated Feature update policies section with Windows Autopatch - DSS Policy [deployment ring] |
-| [Register your devices](../deploy/windows-autopatch-register-devices.md) |<ul><li>Updated the [Built-in roles required for registration](../deploy/windows-autopatch-register-devices.md#built-in-roles-required-for-device-registration) section</li><li>Added more information about assigning less-privileged user accounts</li></ul> |
+| [Register your devices](../deploy/windows-autopatch-register-devices.md) |<ul><li>Updated the [Built-in roles required for registration](../deploy/windows-autopatch-device-registration-overview.md#built-in-roles-required-for-device-registration) section</li><li>Added more information about assigning less-privileged user accounts</li></ul> |
 
 ### February service releases
 

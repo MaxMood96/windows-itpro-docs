@@ -1,13 +1,15 @@
 ---
 title: TextInput Policy CSP
 description: Learn more about the TextInput Area in Policy CSP.
-ms.date: 01/18/2024
+ms.date: 11/05/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
 
 <!-- TextInput-Begin -->
 # Policy CSP - TextInput
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- TextInput-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -1171,6 +1173,56 @@ Specifies the touch keyboard is always docked. When this policy is set to enable
 <!-- ForceTouchKeyboardDockedState-Examples-End -->
 
 <!-- ForceTouchKeyboardDockedState-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-Begin -->
+## TouchKeyboardControllerModeAvailability
+
+<!-- TouchKeyboardControllerModeAvailability-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- TouchKeyboardControllerModeAvailability-Applicability-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/TextInput/TouchKeyboardControllerModeAvailability
+```
+<!-- TouchKeyboardControllerModeAvailability-OmaUri-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-Description-Begin -->
+<!-- Description-Source-DDF -->
+Specifies whether the controller keyboard mode is enabled or disabled for the touch keyboard. When this policy is set to disabled, the controller keyboard mode for touch keyboard is disabled.
+<!-- TouchKeyboardControllerModeAvailability-Description-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- TouchKeyboardControllerModeAvailability-Editable-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- TouchKeyboardControllerModeAvailability-DFProperties-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | The OS determines when it's most appropriate to be available. |
+| 1 | Controller keyboard is always available. |
+| 2 | Controller keyboard is always disabled. |
+<!-- TouchKeyboardControllerModeAvailability-AllowedValues-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- TouchKeyboardControllerModeAvailability-Examples-End -->
+
+<!-- TouchKeyboardControllerModeAvailability-End -->
 
 <!-- TouchKeyboardDictationButtonAvailability-Begin -->
 ## TouchKeyboardDictationButtonAvailability

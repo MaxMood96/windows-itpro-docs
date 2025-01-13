@@ -1,6 +1,4 @@
 items:
-- name: Overview
-  href: index.md
 - name: Application and driver control
   href: application-control/toc.yml
 - name: Application isolation

@@ -1,7 +1,7 @@
 ---
 title: Windows Hello for Business cloud Kerberos trust deployment guide
 description: Learn how to deploy Windows Hello for Business in a cloud Kerberos trust scenario.
-ms.date: 03/12/2024
+ms.date: 11/22/2024
 ms.topic: tutorial
 ---
 
@@ -41,13 +41,13 @@ If you haven't deployed Microsoft Entra Kerberos, follow the instructions in the
 
 When Microsoft Entra Kerberos is enabled in an Active Directory domain, an *AzureADKerberos* computer object is created in the domain. This object:
 
-- Appears as a Read Only Domain Controller (RODC) object, but isn't associated with any physical servers
+- Appears as a read only domain controller (RODC) object, but isn't associated with any physical servers
 - Is only used by Microsoft Entra ID to generate TGTs for the Active Directory domain
 
   > [!NOTE]
   > Similar rules and restrictions used for RODCs apply to the AzureADKerberos computer object. For example, users that are direct or indirect members of priviliged built-in security groups won't be able to use cloud Kerberos trust.
 
-:::image type="content" source="images/azuread-kerberos-object.png" alt-text="Screenshot of the Active Directory Users and Computers console, showing the computer object representing the Microsoft Entra Kerberos server.":::
+:::image type="content" source="images/azuread-kerberos-object.png" alt-text="Screenshot of the Active Directory Users and Computers console, showing the computer object representing the Microsoft Entra Kerberos server." lightbox="images/azuread-kerberos-object.png":::
 
 For more information about how Microsoft Entra Kerberos works with Windows Hello for Business cloud Kerberos trust, see [Windows Hello for Business authentication technical deep dive](../how-it-works-authentication.md#microsoft-entra-hybrid-join-authentication-using-cloud-kerberos-trust).
 
@@ -83,7 +83,7 @@ If the Intune tenant-wide policy is enabled and configured to your needs, you on
 
 | Category | Setting name | Value |
 |--|--|--|
-| **Windows Hello for Business** | Use Passport For Work | true |
+| **Windows Hello for Business** | Use Windows Hello For Business | true |
 | **Windows Hello for Business** | Use Cloud Trust For On Prem Auth | Enabled |
 | **Windows Hello for Business** | Require Security Device | true |
 
@@ -169,8 +169,8 @@ If you deployed Windows Hello for Business using the key trust model, and want t
 1. [Enable cloud Kerberos trust via Group Policy or Intune](#configure-windows-hello-for-business-policy-settings)
 1. For Microsoft Entra joined devices, sign out and sign in to the device using Windows Hello for Business
 
-> [!NOTE]
-> For Microsoft Entra hybrid joined devices, users must perform the first sign in with new credentials while having line of sight to a DC.
+  > [!NOTE]
+  > For Microsoft Entra hybrid joined devices, users must perform the first sign in with new credentials while having line of sight to a DC.
 
 ## Migrate from certificate trust deployment model to cloud Kerberos trust
 
@@ -179,11 +179,11 @@ If you deployed Windows Hello for Business using the key trust model, and want t
 
 If you deployed Windows Hello for Business using the certificate trust model, and want to use the cloud Kerberos trust model, you must redeploy Windows Hello for Business by following these steps:
 
-1. Disable the certificate trust policy
-1. [Enable cloud Kerberos trust via Group Policy or Intune](#configure-windows-hello-for-business-policy-settings)
-1. Remove the certificate trust credential using the command `certutil.exe -deletehellocontainer` from the user context
-1. Sign out and sign back in
-1. Provision Windows Hello for Business using a method of your choice
+1. Disable the certificate trust policy.
+1. [Enable cloud Kerberos trust via Group Policy or Intune](#configure-windows-hello-for-business-policy-settings).
+1. Remove the certificate trust credential using the command `certutil.exe -deletehellocontainer` from the user context.
+1. Sign out and sign back in.
+1. Provision Windows Hello for Business using a method of your choice.
 
 > [!NOTE]
 > For Microsoft Entra hybrid joined devices, users must perform the first sign-in with new credentials while having line of sight to a DC.

@@ -1,11 +1,11 @@
 ---
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 09/18/2023
+ms.date: 11/06/2024
 ms.topic: include
 ---
 
-| Feature name | Windows Pro | Windows Enterprise | Windows Pro Education/SE | Windows Education |
+| Feature name | Windows Pro | Windows Enterprise/IoT Enterprise | Windows Pro Education | Windows Education |
 |:---|:---:|:---:|:---:|:---:|
 |**[Access Control (ACL/SACL)](/windows/security/identity-protection/access-control/access-control)**|Yes|Yes|Yes|Yes|
 |**[Account Lockout Policy](/windows/security/threat-protection/security-policy-settings/account-lockout-policy)**|Yes|Yes|Yes|Yes|
@@ -13,7 +13,7 @@ ms.topic: include
 |**[Always On VPN (device tunnel)](/Windows-server/remote/remote-access/overview-always-on-vpn)**|❌|Yes|❌|Yes|
 |**[App containers](/virtualization/windowscontainers/about/)**|Yes|Yes|Yes|Yes|
 |**[AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/applocker/applocker-overview)**|Yes|Yes|Yes|Yes|
-|**[Assigned Access (kiosk mode)](/windows/configuration/kiosk-methods)**|Yes|Yes|Yes|Yes|
+|**[Assigned Access (kiosk mode)](/windows/configuration/assigned-access)**|Yes|Yes|Yes|Yes|
 |**[Attack surface reduction (ASR)](/microsoft-365/security/defender-endpoint/overview-attack-surface-reduction)**|Yes|Yes|Yes|Yes|
 |**[Azure Code Signing](/windows/security/application-security/application-control/windows-defender-application-control/deployment/use-code-signing-for-better-control-and-protection)**|Yes|Yes|Yes|Yes|
 |**[BitLocker enablement](/windows/security/operating-system-security/data-protection/bitlocker/)**|Yes|Yes|Yes|Yes|
@@ -32,7 +32,7 @@ ms.topic: include
 |**[Federal Information Processing Standard (FIPS) 140 validation](/windows/security/security-foundations/certification/fips-140-validation)**|Yes|Yes|Yes|Yes|
 |**[Federated sign-in](/education/windows/federated-sign-in)**|❌|❌|Yes|Yes|
 |**[FIDO2 security key](/azure/active-directory/authentication/howto-authentication-passwordless-security-key)**|Yes|Yes|Yes|Yes|
-|**[Hardware-enforced stack protection](https://techcommunity.microsoft.com/t5/windows-os-platform-blog/understanding-hardware-enforced-stack-protection/ba-p/1247815)**|Yes|Yes|Yes|Yes|
+|**[Hardware-enforced stack protection](https://techcommunity.microsoft.com/blog/windowsosplatform/understanding-hardware-enforced-stack-protection/1247815)**|Yes|Yes|Yes|Yes|
 |**[Hypervisor-protected Code Integrity (HVCI)](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity)**|Yes|Yes|Yes|Yes|
 |**[Kernel Direct Memory Access (DMA) protection](/windows/security/hardware-security/kernel-dma-protection-for-thunderbolt)**|Yes|Yes|Yes|Yes|
 |**[Local Security Authority (LSA) Protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection)**|Yes|Yes|Yes|Yes|
@@ -53,7 +53,7 @@ ms.topic: include
 |**[OneFuzz service](https://www.microsoft.com/security/blog/2020/09/15/microsoft-onefuzz-framework-open-source-developer-tool-fix-bugs/)**|Yes|Yes|Yes|Yes|
 |**Opportunistic Wireless Encryption (OWE)**|Yes|Yes|Yes|Yes|
 |**[Passkeys](/windows/security/identity-protection/passkeys)**|Yes|Yes|Yes|Yes|
-|**[Personal data encryption (PDE)](/windows/security/operating-system-security/data-protection/personal-data-encryption/)**|❌|Yes|❌|Yes|
+|**[Personal Data Encryption (PDE)](/windows/security/operating-system-security/data-protection/personal-data-encryption/)**|❌|Yes|❌|Yes|
 |**Privacy Resource Usage**|Yes|Yes|Yes|Yes|
 |**Privacy Transparency and Controls**|Yes|Yes|Yes|Yes|
 |**[Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard)**|Yes|Yes|Yes|Yes|
@@ -84,6 +84,7 @@ ms.topic: include
 |**[Windows Firewall](/windows/security/operating-system-security/network-security/windows-firewall)**|Yes|Yes|Yes|Yes|
 |**[Windows Hello for Business](/windows/security/identity-protection/hello-for-business/)**|Yes|Yes|Yes|Yes|
 |**[Windows Hello for Business Enhanced Security Sign-in (ESS)](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security)**|Yes|Yes|Yes|Yes|
+|**Windows Hotpatch**|❌|Yes|❌|❌|
 |**[Windows LAPS](/windows-server/identity/laps/laps-overview)**|Yes|Yes|Yes|Yes|
 |**[Windows passwordless experience](/windows/security/identity-protection/passwordless-experience)**|Yes|Yes|Yes|Yes|
 |**[Windows presence sensing](https://support.microsoft.com/windows/managing-presence-sensing-settings-in-windows-11-82285c93-440c-4e15-9081-c9e38c1290bb)**|Yes|Yes|Yes|Yes|

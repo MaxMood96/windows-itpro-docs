@@ -1,7 +1,7 @@
 ---
 title: Shared PC technical reference
 description: List of policies and settings applied by the Shared PC options.
-ms.date: 02/06/2024
+ms.date: 10/31/2024
 ms.topic: reference
 ---
 

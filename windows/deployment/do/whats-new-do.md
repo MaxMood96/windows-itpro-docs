@@ -22,9 +22,9 @@ This article contains information about what's new in Delivery Optimization, a p
 
 ## Microsoft Connected Cache (early preview)
 
-Microsoft Connected Cache (MCC) is a software-only caching solution that delivers Microsoft content within Enterprise networks. MCC can be deployed to as many bare-metal servers or VMs as needed, and is managed from a cloud portal. Cache nodes are created in the cloud portal and are configured by applying the client policy using management tools such as Intune.
+Microsoft Connected Cache is a software-only caching solution that delivers Microsoft content within Enterprise networks. Connected Cache can be deployed to as many bare-metal servers or VMs as needed, and is managed from a cloud portal. Cache nodes are created in the cloud portal and are configured by applying the client policy using management tools such as Intune.
 
-For more information about MCC, see [Microsoft Connected Cache overview](waas-microsoft-connected-cache.md).
+For more information about Connected Cache, see [Microsoft Connected Cache overview](waas-microsoft-connected-cache.md).
 
 There are two different versions:
 
@@ -39,12 +39,12 @@ There are two different versions:
 
 - -HealthCheck: Provides an overall check of the device setup to ensure Delivery Optimization communication is possible on the device.
 - -P2P: Provides output specific to P2P settings, efficiency, and errors.
-- -MCC: Provides output specific to MCC settings and verifies the client can access the cache server.
+- -MCC: Provides output specific to Connected Cache settings and verifies the client can access the cache server.
 
 ### Windows 11 22H2
 
-- New setting: Customize vpn detection by choosing custom keywords. Now, you don't have to rely on Delivery Optimization keywords to detect your Vpn. By using the new VpnKeywords configuration you can add keywords for Delivery Optimization to use when detecting a Vpn when in use. You can find this configuration **[VPN Keywords](waas-delivery-optimization-reference.md#vpn-keywords)** in Group Policy or MDM under **DOVpnKeywords**.
-- New setting: Use the disallow downloads from a connected cache server, when a Vpn is detected and you want to prevent the download from the connected cache server. You can find this configuration **[Disallow download from MCC over VPN](waas-delivery-optimization-reference.md#disallow-cache-server-downloads-on-vpn) in Group Policy or MDM under **DODisallowCacheServerDownloadsOnVPN**.
+- New setting: Customize VPN detection by choosing custom keywords. Now, you don't have to rely on Delivery Optimization keywords to detect your VPN. By using the new VpnKeywords setting, you can add keywords for Delivery Optimization to use to detect when a VPN is in use. You can find this configuration **[VPN Keywords](waas-delivery-optimization-reference.md#vpn-keywords)** in Group Policy or MDM under **DOVpnKeywords**.
+- New setting: Use the disallow downloads from a connected cache server, when a VPN is detected and you want to prevent the download from the connected cache server. You can find this configuration **[Disallow download from Connected Cache over VPN](waas-delivery-optimization-reference.md#disallow-cache-server-downloads-on-vpn)** in Group Policy or MDM under **DODisallowCacheServerDownloadsOnVPN**.
 - Delivery Optimization introduced support for receiver side ledbat (rLEDBAT).
 - New setting: Local Peer Discovery, a new option for **[Restrict Peer Selection By](waas-delivery-optimization-reference.md#select-a-method-to-restrict-peer-selection)** in Group Policy or MDM **DORestrictPeerSelectionBy**. This option restricts the discovery of local peers using the DNS-SD protocol. When you set Option 2, Delivery Optimization restricts peer selection to peers that are locally discovered (using DNS-SD).
 

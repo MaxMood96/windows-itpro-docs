@@ -36,7 +36,7 @@ During sign-up, a verification code is sent to your NOC email address present in
 
 #### Unable to re-sign up
 
-Delete any MCC resource that you're using before you resign up for the service. Deleting any existing MCC resource unlocks your ASN, which allows you to successfully sign up.
+Delete any Microsoft Connected Cache resource that you're using before you resign up for the service. Deleting any existing Connected Cache resource unlocks your ASN, which allows you to successfully sign up.
 
 ### Cache Node Errors  
 
@@ -100,9 +100,9 @@ iotedge check -verbose
 
 ## Diagnose and Solve Problems
 
-If this article isn't resolving the issue you're facing with your cache node, you can use the **Diagnose and solve problems** functionality within your MCC resource to continue troubleshooting. **Diagnose and solve problems** contains solutions to most common problems that users might face as they onboard.
+If this article isn't resolving the issue you're facing with your cache node, you can use the **Diagnose and solve problems** functionality within your Connected Cache resource to continue troubleshooting. **Diagnose and solve problems** contains solutions to most common problems that users might face as they onboard.
 
-You can find **Diagnose and solve problems** on the left pane within your MCC resource.
+You can find **Diagnose and solve problems** on the left pane within your Connected Cache resource.
 
 :::image type="content" source="images/mcc-isp-diagnose-solve.png" alt-text="A screenshot of Azure portal showing the Diagnose and Solve problems tab on the left hand pane of Azure portal." lightbox="images/mcc-isp-diagnose-solve.png":::
 

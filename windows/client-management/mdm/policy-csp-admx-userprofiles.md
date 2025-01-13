@@ -1,7 +1,7 @@
 ---
 title: ADMX_UserProfiles Policy CSP
 description: Learn more about the ADMX_UserProfiles Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -157,7 +157,7 @@ This policy setting controls whether Windows forcefully unloads the user's regis
 <!-- Description-Source-ADMX -->
 This policy setting determines whether the system retains a roaming user's Windows Installer and Group Policy based software installation data on their profile deletion.
 
-By default Windows deletes all information related to a roaming user (which includes the user's settings, data, Windows Installer related data, and the like) when their profile is deleted. As a result, the next time a roaming user whose profile was previously deleted on that client logs on, they will need to reinstall all apps published via policy at logon increasing logon time. You can use this policy setting to change this behavior.
+By default Windows deletes all information related to a roaming user (which includes the user's settings, data, Windows Installer related data, and the like) when their profile is deleted. As a result, the next time a roaming user whose profile was previously deleted on that client logs on, they'll need to reinstall all apps published via policy at logon increasing logon time. You can use this policy setting to change this behavior.
 
 - If you enable this policy setting, Windows won't delete Windows Installer or Group Policy software installation data for roaming users when profiles are deleted from the machine. This will improve the performance of Group Policy based Software Installation during user logon when a user profile is deleted and that user subsequently logs on to the machine.
 

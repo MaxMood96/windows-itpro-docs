@@ -1,7 +1,7 @@
 ---
 title: Defender Policy CSP
 description: Learn more about the Defender Area in Policy CSP.
-ms.date: 06/28/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -30,7 +30,7 @@ ms.date: 06/28/2024
 
 <!-- AllowArchiveScanning-Description-Begin -->
 <!-- Description-Source-ADMX -->
-This policy setting allows you to configure scans for malicious software and unwanted software in archive files such as . ZIP or . CAB files.
+This policy setting allows you to configure scans for malicious software and unwanted software in archive files such as .ZIP or .CAB files.
 
 - If you enable or don't configure this setting, archive files will be scanned.
 
@@ -745,7 +745,7 @@ This policy setting allows you to configure scheduled scans and on-demand (manua
 | Name | Value |
 |:--|:--|
 | Name | Scan_DisableScanningNetworkFiles |
-| Friendly Name | Scan network files |
+| Friendly Name | Configure scanning of network files |
 | Location | Computer Configuration |
 | Path | Windows Components > Microsoft Defender Antivirus > Scan |
 | Registry Key Name | Software\Policies\Microsoft\Windows Defender\Scan |

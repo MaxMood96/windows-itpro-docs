@@ -96,6 +96,7 @@ The registry keys are found under the key: `HKLM:\SOFTWARE\Microsoft\Windows\Cur
 | Run all administrators in Admin Approval Mode | `EnableLUA` | 0 = Disabled<br>1 (Default) = Enabled |
 | Switch to the secure desktop when prompting for elevation| `PromptOnSecureDesktop` | 0 = Disabled<br>1 (Default) = Enabled |
 | Virtualize file and registry write failures to per-user locations | `EnableVirtualization` | 0 = Disabled<br>1 (Default) = Enabled |
+| Prioritise network logons over cached logons | `InteractiveLogonFirst` | 0 (Default) = Disabled<br>1 = Enabled |
 
 [WIN-1]: /windows/client-management/mdm/policy-csp-localpoliciessecurityoptions
 [MEM-1]: /mem/intune/configuration/custom-settings-windows-10

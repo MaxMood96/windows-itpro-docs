@@ -1,9 +1,9 @@
 ---
-title: Manage Copilot in Windows
-description: Learn how to manage Copilot in Windows for commercial environments using MDM and group policy. Learn about the chat providers available to Copilot in Windows.
-ms.topic: how-to
+title: Updated Windows and Microsoft Copilot experience
+description: Learn about changes to the Copilot in Windows experience for commercial environments and how to configure it for your organization.
+ms.topic: overview
 ms.subservice: windows-copilot
-ms.date: 06/13/2024
+ms.date: 12/12/2024
 ms.author: mstewart
 author: mestew
 ms.collection:
@@ -13,226 +13,146 @@ appliesto:
 - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11, version 22H2 or later</a>
 ---
 
-# Manage Copilot in Windows
-<!--8445848-->
+# Updated Windows and Microsoft Copilot experience
+<!--8445848, 9294806-->
 
->**Looking for consumer information?** See [Welcome to Copilot in Windows](https://support.microsoft.com/windows/welcome-to-copilot-in-windows-675708af-8c16-4675-afeb-85a5a476ccb0).
+>**Looking for consumer information?** See [Welcome to Copilot in Windows](https://support.microsoft.com/topic/675708af-8c16-4675-afeb-85a5a476ccb0). **Looking for more information on Microsoft Copilot experiences?** See [Understanding the different Microsoft Copilot experiences](https://support.microsoft.com/topic/cfff4791-694a-4d90-9c9c-1eb3fb28e842).
 
-> [!Note]
-> - This article and the [TurnOffWindowsCopilot](mdm/policy-csp-windowsai.md#turnoffwindowscopilot) policy isn't for the [new Copilot experience](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-copilot-in-windows-for-your-workforce/ba-p/4141999) that's in some [Windows Insider builds](https://blogs.windows.com/windows-insider/2024/05/22/releasing-windows-11-version-24h2-to-the-release-preview-channel/) and that will be gradually rolling out to Windows 11 and Windows 10 devices. <!--9048085-->
+## Enhanced data protection with enterprise data protection
 
-Copilot in Windows provides centralized generative AI assistance to your users right from the Windows desktop. Copilot in Windows appears as a side bar docked on the Windows desktop and is designed to help users get things done in Windows. Copilot in Windows can perform common tasks in Windows like changing Windows settings, which makes it different from the browser-based [Copilot in Edge](/copilot/edge). However, both user experiences, Copilot in Windows and Copilot in Edge, can share the same underlying chat provider platform. It's important for organizations to properly configure the chat provider platform that Copilot in Windows uses, since it's possible for users to copy and paste sensitive information into the chat.
+The Copilot experience on Windows is changing to enhance data security, privacy, compliance, and simplify the user experience, for users signed in with a Microsoft Entra work or school account. [Microsoft Copilot will offer enterprise data protection](https://techcommunity.microsoft.com/t5/copilot-for-microsoft-365/updates-to-microsoft-copilot-to-bring-enterprise-data-protection/ba-p/4217152) at no additional cost and redirect users to a new simplified interface designed for work and education. [Enterprise data protection (EDP)](/copilot/microsoft-365/enterprise-data-protection) refers to controls and commitments, under the Data Protection Addendum and Product Terms, that apply to customer data for users of Copilot for Microsoft 365 and Microsoft Copilot. This means that security, privacy, compliance controls and commitments available for Copilot for Microsoft 365 will extend to Microsoft Copilot prompts and responses. Prompts and responses are protected by the same terms and commitments that are widely trusted by our customers - not only for Copilot for Microsoft 365, but also for emails in Exchange and files in SharePoint. This is an improvement on top of the previous commercial data protection (CDP) promise. This update is rolling out now. For more information, see the [Microsoft Copilot updates and enterprise data protection FAQ](/copilot/edpfaq).
+
+> [!IMPORTANT]
+> To streamline the user experience, updates to the Copilot entry points in Windows are being made for users. **Copilot in Windows (preview) will be removed from Windows**. The experience will slightly vary depending on whether your organization has already opted into using Copilot in Windows (preview) or not. 
+
+## Copilot in Windows (preview) isn't enabled
+
+If your organization hasn't enabled Copilot in Windows (preview), your existing preferences are respected. Neither the Microsoft Copilot app nor the Microsoft 365 app are pinned to the taskbar. To prepare for the eventual removal of the [Copilot in Windows policy](/windows/client-management/mdm/policy-csp-windowsai#turnoffwindowscopilot), admins should [set Microsoft Copilot pinning options](/copilot/microsoft-365/pin-copilot) in the Microsoft 365 admin center.
+
+> [!NOTE]
+> Although we won't be pinning any app to the taskbar by default, IT has the capability to use policies to enforce their preferred app pinning.
+
+## Copilot in Windows (preview) is enabled
+
+If you had previously activated Copilot in Windows (in preview) for your workforce, we want to thank you for your enthusiasm. To provide the best Copilot experience for your users moving forward, and support greater efficiency and productivity, we won't automatically pin the Microsoft 365 app to the taskbar in Windows. Rather, we ensure that you have control over how you enable the Copilot experience within your organization. Our focus remains on empowering IT to seamlessly manage AI experiences and adopt those experiences at a pace that suits your organizational needs.
+
+If you have already activated Copilot in Windows (preview) - and want your users to have uninterrupted access to Copilot on the taskbar after the update - use the [configuration options](/windows/configuration/taskbar/?pivots=windows-11) to pin the Microsoft 365 app to the taskbar as Copilot in Windows (preview) icon will be removed from the taskbar.
+
+## Users signing in to new PCs with Microsoft Entra accounts
+
+For users signing in to new PCs with work or school accounts, the following experience occurs:
+
+-	The Microsoft 365 app is pinned to the taskbar - this is the app comes preinstalled with Windows and includes convenient access to Office apps such as Word, PowerPoint, etc. 
+-	Users that have the Microsoft 365 Copilot license have Microsoft Copilot pinned by default inside the Microsoft 365 app. 
+-	Within the Microsoft 365 app, the Microsoft Copilot icon is situated next to the home button.
+    - Microsoft Copilot (`web` grounding chat) isn't the same as Microsoft 365 Copilot (`web` and `work` scope), which is a separate add-on license. 
+    - Microsoft Copilot is available at no additional cost to customers with a Microsoft Entra account. Microsoft Copilot is the entry point for Copilot at work. While the Copilot chat experience helps users ground their conversations in web data, Microsoft 365 Copilot allows users to incorporate both web and work data they have access to into their conversations by switching between work and web modes in Business Chat. 
+   - For users with the Microsoft 365 Copilot license, they can toggle between the web grounding-based chat capabilities of Microsoft Copilot and the work scoped chat capabilities of Microsoft 365 Copilot. 
+-	Customers that don't have a license for Microsoft 365 Copilot are asked if they want to pin Microsoft Copilot to ensure they have easy access to Copilot. To set the default behavior, admins should [set Microsoft Copilot pinning options](/copilot/microsoft-365/pin-copilot) in the Microsoft 365 admin center. 
+-	If admins elect not to pin Copilot and indicate that users can be asked, users will be asked to pin it themselves in the Microsoft 365 app, Outlook, and Teams. 
+-	If admins elect not to pin Microsoft Copilot and indicate that users can't be asked, Microsoft Copilot won't be available via the Microsoft 365 app, Outlook, or Teams. Users have access to Microsoft Copilot from <www.microsoft.com/copilot> unless that URL is blocked by the IT admin.
+-	If the admins make no selection, users will be asked to pin Microsoft Copilot by themselves for easy access. 
 
 
-## Configure Copilot in Windows for commercial environments
+## When will this happen?
 
-At a high level, managing and configuring Copilot in Windows for your organization involves the following steps:
+The update to Microsoft Copilot to offer enterprise data protection is rolling out now.
+The shift to the Microsoft 365 app as the entry point for Microsoft Copilot with enterprise data protection (EDP) is coming soon. Changes will be rolled out to managed PCs starting with the September 2024 optional nonsecurity preview release, and following with the October 2024 monthly security update for all supported versions of Windows 11. These changes will be applied to Windows 10 PCs the month after. This update is replacing the current Copilot in Windows experience.
+ 
+The Microsoft Copilot app will be automatically enabled after you install the Windows updates listed above if you haven't previously enabled a group policy to prevent the installation of Copilot. The [AppLocker policy](/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview) is available to control this Copilot experience before installing these Windows updates mentioned above or any subsequent Windows updates. 
+ 
+Note that the Microsoft Copilot app doesn't support Microsoft Entra authentication and users trying to sing in to the app using a Microsoft Entra account will be redirected to https://copilot.cloud.microsoft/ in their default browser. For users authenticating with a Microsoft Entra account, they should access Copilot through the Microsoft 365 app as the entry point. We recommend you pin Copilot to the navigation bar of the Microsoft 365 app to enable easy access.
 
-> [!Note]
-> - Copilot in Windows is currently available as a preview. We will continue to experiment with new ideas and methods using your feedback.
-> - Copilot in Windows (in preview) is available in select global markets and will be rolled out to additional markets over time. [Learn more](https://www.microsoft.com/windows/copilot-ai-features#faq). <!--8737645-->
 
-1. Understand the [available chat provider platforms for Copilot in Windows](#chat-provider-platforms-for-copilot-in-windows)
-1. [Configure the chat provider platform](#configure-the-chat-provider-platform-that-copilot-in-windows-uses) used by Copilot in Windows
-1. Ensure the [Copilot in Windows user experience](#ensure-the-copilot-in-windows-user-experience-is-enabled) is enabled
-1. Verify [other settings that might affect Copilot in Windows](#other-settings-that-might-affect-copilot-in-windows-and-its-underlying-chat-provider) and its underlying chat provider
+## Policy information for previous Copilot in Windows (preview) experience
 
-Organizations that aren't ready to use Copilot in Windows can disable it until they're ready with the **Turn off Windows Copilot** policy. This policy setting allows you to turn off Copilot in Windows. If you enable this policy setting, users can't use Copilot in Windows and the icon doesn't appear on the taskbar either. If you disable or don't configure this policy setting, users can use Copilot in Windows when it's available to them.
+Admins should configure the [pinning options](/copilot/microsoft-365/pin-copilot) to enable access to Microsoft Copilot within the Microsoft 365 app in the Microsoft 365 admin center. 
+
+The following policy to manage Copilot in Windows (preview) will be removed in the future and is considered a legacy policy:
+
 
 | &nbsp; | Setting  |
 |---|---|
 | **CSP** | ./User/Vendor/MSFT/Policy/Config/WindowsAI/[TurnOffWindowsCopilot](mdm/policy-csp-windowsai.md#turnoffwindowscopilot) |
 | **Group policy** | User Configuration > Administrative Templates > Windows Components > Windows Copilot > **Turn off Windows Copilot** |
 
+## Remove or prevent installation of the Copilot app
 
-## Chat provider platforms for Copilot in Windows
+You can remove or uninstall the Copilot app from your device by using one of the following methods:
 
-Copilot in Windows can use either Microsoft Copilot, Copilot with commercial data protection, or Copilot with Graph-grounded chat as its chat provider platform. The chat provider platform is the underlying service that Copilot in Windows uses to communicate with the user. The chat provider platform is important because it's possible for users to copy and paste sensitive information into the chat. Each chat provider platform has different privacy and security protections.
+1. Enterprise users  can uninstall the Copilot app by going to **Settings** > **Apps** >**Installed Apps**. Select the three dots appearing on the right side of the app and select **Uninstall** from the dropdown list.
 
-### Copilot
+1. If you are an IT administrator, you can prevent installation of the app or remove the Copilot app using one of the following methods:
+   1. Prevent installation of the Copilot app:
+     - Configure [AppLocker policy](/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview) before installing Windows update. AppLocker helps you control which apps and files users can run. Note: AppLocker policy should be used instead of the [Turn Off Windows Copilot](mdm/policy-csp-windowsai.md#turnoffwindowscopilot) legacy policy setting and its MDM equivalent, [TurnOffWindowsCopilot](mdm/policy-csp-windowsai.md#turnoffwindowscopilot). The policy is subject to near-term deprecation. 
+     - The Applocker policy can be configured by following one of the methods listed in [Edit an AppLocker policy](/windows/security/application-security/application-control/app-control-for-business/applocker/edit-an-applocker-policy) and adding the below text to the policy:
+     </br>**Publisher**: CN=MICROSOFT CORPORATION, O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US
+     </br> **Package name**: MICROSOFT.COPILOT
+    </br> **Package version**: * (and above)
 
-Copilot is a consumer experience and has a daily limit on the number of chat queries per user when not signed in with a Microsoft account. It doesn't offer the same data protection as Copilot with commercial data protection.
-
-- [Copilot in Windows: Your data and privacy](https://support.microsoft.com/windows/3e265e82-fc76-4d0a-afc0-4a0de528b73a)
-- The privacy statement for using Copilot follows the [Microsoft privacy statement](https://privacy.microsoft.com/privacystatement) including the product specific guidance in the Microsoft privacy statement for **Bing** under the **Search, Microsoft Edge, and artificial intelligence** section.
-
-  > [!Note]
-  > Copilot doesn't have access to Microsoft 365 Apps data, such as email, calendar, or files using Microsoft Graph, unlike [Microsoft Copilot with Graph-grounded chat](#microsoft-copilot-with-graph-grounded-chat).
-
-### Copilot with commercial data protection
-
-[Copilot with commercial data protection](/copilot/overview) is intended for commercial use scenarios and offers commercial data protection. The following privacy and security protections apply for Copilot with commercial data protection:
-
-- User and organizational data is protected, chat data isn't saved, and your data isn't used to train the underlying large language models (LLMs). Because of this protection, chat history, 3rd-party plugins, and the Bing app for iOS or Android aren't currently supported. Copilot with commercial data protection is accessible from mobile browsers, including Edge mobile on iOS and Android. Review the Copilot with commercial data protection [privacy statement](/copilot/privacy-and-protections).
-- Copilot with commercial data protection is available, at no additional cost, for the following licenses:
-   - Microsoft 365 E3 or E5
-   - Microsoft 365 F3 <!--8681080, 8681034-->
-   - Microsoft 365 A1, A3, or A5 <!--8681034-->
-       - Copilot with commercial data protection is limited to faculty and higher education students over 18 years of age
-   - Office 365 A1, A3, or A5 <!--8681034-->
-       - Copilot with commercial data protection is limited to faculty and higher education students over 18 years of age
-   - Microsoft 365 Business Standard
-   - Microsoft 365 Business Premium
-
-  > [!Note]
-  > Copilot with commercial data protection doesn't have access to Microsoft 365 Apps data, such as email, calendar, or files using Microsoft Graph, unlike [Microsoft Copilot with Graph-grounded chat](#microsoft-copilot-with-graph-grounded-chat).
-
-### Microsoft Copilot with Graph-grounded chat
-<!---8639813-->
-Copilot with Graph-grounded chat enables you to use your work content and context in Copilot for Windows. With Graph-grounded chat, you can draft content and get answers to questions, all securely grounded in your Microsoft Graph data such as user documents, emails, calendar, chats, meetings, and contacts. When you use the **Work** toggle in Copilot in Windows to query Graph-grounded chat, the following high-level privacy and security protections apply:
-
-- Prompts, responses, and data accessed through Microsoft Graph aren't used to train foundational LLMs.
-- It only surfaces organizational data to which individual users have at least view permissions.
-- The information contained within your prompts, the data retrieved, and the generated responses remain within your tenant's service boundary. For more information about privacy and security for Graph-grounded chat, see [Data, Privacy, and Security for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-privacy)
-- Copilot with Graph-grounded chat is part of Copilot for Microsoft 365. Copilot for Microsoft 365 is an add-on plan. For more information about prerequisites and license requirements, see [Microsoft Copilot for Microsoft 365 requirements](/microsoft-365-copilot/microsoft-365-copilot-requirements#license-requirements).
-
-## Configure the chat provider platform that Copilot in Windows uses
-
-Configuring the correct chat provider platform for Copilot in Windows is important because it's possible for users to copy and paste sensitive information into the chat. Each chat provider platform has different privacy and security protections. Once you select the chat provider platform that you want to use for Copilot in Windows, ensure it's configured for your organization's users. The following sections describe how to configure the chat provider platform that Copilot in Windows uses.
-
-### Microsoft Copilot as the chat provider platform
-
-Copilot is used as the default chat provider platform for Copilot in Windows when any of the following conditions occur:
-
-- Commercial data protection isn't configured for the user.
-- Commercial data protection is [turned off](/copilot/manage).
-- The user isn't assigned a license that includes Copilot with commercial data protection.
-- The user isn't signed in with a Microsoft Entra account that's licensed for Copilot with commercial data protection.
-
-### Copilot with commercial data protection as the chat provider platform (recommended for commercial environments)
-
-To verify that Copilot with commercial data protection is enabled for the user as the chat provider platform for Copilot in Windows, use the following instructions:
-
-1. Sign into the [Microsoft 365 admin center](https://admin.microsoft.com/).
-1. In the admin center, select  **Users** > **Active users** and verify that users are assigned a license that includes **Copilot**. Copilot with commercial data protection is included and enabled by default for users that are assigned one of the following licenses:
-   - Microsoft 365 E3 or E5
-   - Microsoft 365 F3 <!--8681080, 8681034-->
-   - Microsoft 365 A1, A3, or A5 
-     - Copilot with commercial data protection is limited to faculty and higher education students over 18 years of age <!--8681034-->
-   - Office 365 A1, A3, or A5 <!--8681034-->
-      - Copilot with commercial data protection is limited to faculty and higher education students over 18 years of age <!--8681034-->
-   - Microsoft 365 Business Standard
-   - Microsoft 365 Business Premium
-1. To verify that commercial data protection is enabled for the user, select the user's **Display name** to open the flyout menu.
-1. In the flyout, select the **Licenses & apps** tab, then expand the **Apps** list.
-1. Verify that **Copilot** is enabled for the user.
-1. If you prefer to view a user's licenses from the [Azure portal](https://portal.azure.com), you'll find it under **Microsoft Entra ID** > **Users**. Select the user's name, then **Licenses**. Select a  license that includes **Copilot**, and verify that it's listed as **On**. If you previously disabled Copilot with commercial data protection (formerly Bing Chat Enterprise), see [Manage Copilot](/copilot/manage) for verifying that commercial data protection is enabled for your users.
-1. Copilot with commercial data protection is used as the chat provider platform for users when the following conditions are met:
-   - Users have an eligible license, commercial data protection in Copilot is enabled, and the [Copilot in Windows user experience is enabled](#enable-the-copilot-in-windows-user-experience-for-windows-11-version-22h2-clients).
-   - Users are signed in with their Microsoft Entra ID (work accounts)
-      - Users can sign into Windows with their Microsoft Entra ID
-      - For Active Directory users on Windows 11, a Microsoft Entra ID in the Web Account Manager (WAM) authentication broker can be used. Entra IDs in Microsoft Edge profiles and Microsoft 365 Apps would both be in WAM. <!--8470699-->
-
-The following sample PowerShell script connects to Microsoft Graph and lists which users that have Copilot with commercial data protection enabled and disabled:
-
-```powershell
-# Install Microsoft Graph module
-if (-not (Get-Module Microsoft.Graph.Users)) {
-    Install-Module Microsoft.Graph.Users
-}
-
-# Connect to Microsoft Graph
-Connect-MgGraph -Scopes 'User.Read.All'
-
-# Get all users
-$users = Get-MgUser -All -ConsistencyLevel eventual -Property Id, DisplayName, Mail, UserPrincipalName, AssignedPlans
-
-# Users with Copilot with commercial data protection enabled
-$users | Where-Object { $_.AssignedPlans -and $_.AssignedPlans.Service -eq "Bing" -and $_.AssignedPlans.CapabilityStatus -eq "Enabled" } | Format-Table
-
-# Users without Copilot with commercial data protection enabled
-$users | Where-Object { -not $_.AssignedPlans -or ($_.AssignedPlans.Service -eq "Bing" -and $_.AssignedPlans.CapabilityStatus -ne "Enabled") } | Format-Table
-```
-
-When Copilot with commercial data protection is the chat provider platform, the user experience clearly states that **Your personal and company data are protected in this chat**. There's also a shield symbol labeled **Protected** at the top of the Copilot in Windows sidebar and the provider is listed under the Copilot logo when the sidebar is first opened. The following image shows the message that's displayed in this scenario:
-
-:::image type="content" source="images/copilot-commercial-data-protection-chat-provider.png" alt-text="Screenshot of the Copilot in Windows user experience when Copilot with commercial data protection is the chat provider." lightbox="images/copilot-commercial-data-protection-chat-provider.png":::
+   1. Remove the Copilot app using PowerShell script:
+      1. Open a Windows PowerShell window. You can do this by opening the Start menu, typing `PowerShell`, and selecting **Windows PowerShell** from the results.
+      1. Once the PowerShell window is open, enter the following commands:
+       ```powershell
+       # Get the package full name of the Microsoft Copilot app
+       $packageFullName = Get-AppxPackage -Name "Microsoft.Copilot" | Select-Object -ExpandProperty PackageFullName
+       # Remove the Microsoft Copilot app
+       Remove-AppxPackage -Package $packageFullName
+       ```
 
 
-### Copilot with Graph-grounded chat as the chat provider platform 
-<!---8639813-->
+## Implications for the Copilot hardware key
+<!--9598546-->
+The Microsoft Copilot app is now available only to consumer users authenticating with a Microsoft account and won't work for commercial users authenticating with a Microsoft Entra account. With this change, IT admins need to take steps to ensure users authenticating with a Microsoft Entra account can still access Copilot with the Copilot key. Users attempting to sign in to the Copilot app with their Microsoft Entra account will be redirected to the browser version of Microsoft Copilot with enterprise data protection (https://copilot.cloud.microsoft). 
 
-When users are assigned [Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/microsoft-365-copilot-setup) licenses, they're automatically presented with a **Work** toggle in Copilot for Windows. When **Work** is selected, Copilot with Graph-grounded chat is the chat provider platform used by Copilot in Windows. When using Graph-grounded chat, user prompts can securely access Microsoft Graph content, such as emails, chats, and documents.  
+For the optimal experience, enterprise customers should go to Windows client policies, such as Group Policy or Configuration Service Provider (CSP) policies to update the target of the key to the Microsoft 365 app so that users can access Copilot within the Microsoft 365 app. End users can also configure this from the **Settings** page. 
 
-:::image type="content" source="images/work-toggle-graph-grounded-chat.png" alt-text="Screenshot of the Copilot in Windows user experience when the work toggle is selected and the chart provider is Copilot with Graph-grounded chat." lightbox="images/work-toggle-graph-grounded-chat.png":::
+The Microsoft 365 app comes preinstalled on all Windows 11 PCs. If your organization uninstalled the Microsoft 365 app, we suggest you reinstall it from the Microsoft Store or your preferred application management solution so that the Copilot key can be remapped to the Microsoft 365 app. We also suggest you [Pin Microsoft Copilot](/copilot/microsoft-365/pin-copilot) to the navigation bar of the Microsoft 365 app. 
 
-## Ensure the Copilot in Windows user experience is enabled
+To avoid confusion for users as to which entry point for Microsoft Copilot to use, we recommend you uninstall the Copilot app.
 
-Once you've configured the chat provider platform that Copilot in Windows uses, you need to ensure that the Copilot in Windows user experience is enabled. Ensuring the Copilot in Windows user experience is enabled varies by the Windows version.
+Use the table below to help determine the experience for your managed organization:
 
-### Enable the Copilot in Windows user experience for Windows 11, version 22H2 clients
+| Configuration | Copilot experience | Copilot key invokes |
+| ---| --- | --- |
+| Copilot **not enabled** in environment | Neither Copilot in Windows (preview) nor the Microsoft Copilot app are present. | Windows Search |
+| Copilot **enabled** + **do not authenticate** with Microsoft Entra | Copilot in Windows (preview) is removed and replaced by the Microsoft Copilot app, which is not pinned to the taskbar unless you elect to do so. | Microsoft Copilot app | 
+| Copilot **enabled** + **authenticate** with Microsoft Entra + **new device** |  Copilot in Windows (preview) is not present. Microsoft Copilot is accessed through the Microsoft 365 app (after post-setup update). | Microsoft Copilot within the Microsoft 365 app (after post-setup update). |
+|  Copilot **enabled** + **authenticate** with Microsoft Entra + **existing device** | Copilot in Windows (preview) is removed. Existing users with Copilot enabled on their devices will still see the Microsoft Copilot app. | IT admins should use policy to remap the Copilot key to the Microsoft 365 app, or prompt users to choose. |
 
-Copilot in Windows isn't technically enabled by default for managed Windows 11, version 22H2 devices because it's behind a [temporary enterprise control](/windows/whats-new/temporary-enterprise-feature-control). For the purposes of temporary enterprise control, a system is considered managed if it's configured to get updates from Windows Update for Business or [Windows Server Update Services (WSUS)](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus). Clients that get updates from Microsoft Configuration Manager, Microsoft Intune, and Windows Autopatch are considered managed since their updates ultimately come from WSUS or Windows Updates for Business.
 
-To enable Copilot in Windows for managed Windows 11, version 22H2 devices, you need to enable features under temporary enterprise control for these devices. Since enabling features behind [temporary enterprise control](/windows/whats-new/temporary-enterprise-feature-control) can be impactful, you should test this change before deploying it broadly. To enable Copilot in Windows for managed Windows 11, version 22H2 devices, use the following instructions:
+## Policies to manage the Copilot key
 
-1. Verify that the user accounts have the correct chat provider platform configured for Copilot in Windows. For more information, see the [Configure the chat provider platform that Copilot in Windows uses](#configure-the-chat-provider-platform-that-copilot-in-windows-uses) section.
-1. Apply a policy to enable features under temporary enterprise control for managed clients. The following polices apply to Windows 11, version 22H2 with [KB5022845](https://support.microsoft.com/topic/february-14-2023-kb5022845-os-build-22621-1265-90a807f4-d2e8-486e-8a43-d09e66319f38) and later:
-   - **Group Policy:** Computer Configuration\Administrative Templates\Windows Components\Windows Update\Manage end user experience\\**Enable features introduced via servicing that are off by default**
+Policies are available to configure the target app of the Copilot hardware key. For more information, see [WindowsAI Policy CSP](mdm/policy-csp-windowsai.md). 
 
-    - **CSP**: ./Device/Vendor/MSFT/Policy/Config/Update/[AllowTemporaryEnterpriseFeatureControl](/windows/client-management/mdm/policy-csp-update?toc=/windows/deployment/toc.json&bc=/windows/deployment/breadcrumb/toc.json#allowtemporaryenterprisefeaturecontrol)
-       - In the Intune [settings catalog](/mem/intune/configuration/settings-catalog), this setting is named **Allow Temporary Enterprise Feature Control** under the **Windows Update for Business** category.
-     > [!Important]
-     > For the purposes of temporary enterprise control, a system is considered managed if it's configured to get updates from Windows Update for Business or [Windows Server Update Services (WSUS)](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus). Clients that get updates from Microsoft Configuration Manager, Microsoft Intune, and Windows Autopatch are considered managed since their updates ultimately come from WSUS or Windows Updates for Business.
+To configure the Copilot key, use the following policy:
 
-1. Copilot in Windows will be initially deployed to devices using a controlled feature rollout (CFR). Depending on how soon you start deploying Copilot in Windows, you might also need to [enable optional updates](/windows/deployment/update/waas-configure-wufb#enable-optional-updates) with one of the following policies:
-   - **Group Policy:** Computer Configuration\Administrative Templates\Windows Components\Windows Update\Windows Update for Business\\**Allow updates to Windows optional features**
-   - **CSP**: ./Device/Vendor/MSFT/Policy/Config/Update/[AllowOptionalUpdates](/windows/client-management/mdm/policy-csp-update?toc=/windows/deployment/toc.json&bc=/windows/deployment/breadcrumb/toc.json#allowoptionalupdates)
-      - In the Intune [settings catalog](/mem/intune/configuration/settings-catalog), this setting is named **Allow optional updates** under the **Windows Update for Business** category.
+| &nbsp; | Setting  |
+|---|---|
+| **CSP** | ./User/Vendor/MSFT/Policy/Config/WindowsAI/[SetCopilotHardwareKey](mdm/policy-csp-windowsai.md#setcopilothardwarekey) |
+| **Group policy** | User Configuration > Administrative Templates > Windows Components > Windows Copilot > **Set Copilot Hardware Key** |
 
-   The optional updates policy applies to Windows 11, version 22H2 with [KB5029351](https://support.microsoft.com/help/5029351) and later. When setting policy for [optional updates](/windows/deployment/update/waas-configure-wufb#enable-optional-updates), ensure you select one of the following options that includes CFRs:
-    - Automatically receive optional updates (including CFRs)
-      - This selection places devices into an early CFR phase
-    - Users can select which optional updates to receive
 
-1. Windows 11, version 22H2 devices display Copilot in Windows when the CFR is enabled for the device. CFRs are enabled for devices in phases, sometimes called waves.
+## End user settings for the Copilot key
 
-### Enable the Copilot in Windows user experience for Windows 11, version 23H2 clients
+If you choose to provide users in your organization with the choice to manage their own experience, a protocol to launch the **Settings** app remap the Copilot key is available. The following can be used by apps and scripts to bring the user to the setting so they can modify it to meet their needs:
 
-Once a managed device installs the version 23H2 update, the [temporary enterprise control](/windows/whats-new/temporary-enterprise-feature-control) for Copilot in Windows is removed. This means that Copilot in Windows is enabled by default for these devices.
+`ms-settings:personalization-textinput-copilot-hardwarekey`
 
-While the user experience for Copilot in Windows is enabled by default, you still need to verify that the correct chat provider platform configured for Copilot in Windows. While every effort is made to ensure that Copilot with commercial data protection is the default chat provider for commercial organizations, it's still possible that Copilot might still be used if the configuration is incorrect, or if other settings are affecting Copilot in Windows. For more information, see:
-- [Configure the chat provider platform that Copilot in Windows uses](#configure-the-chat-provider-platform-that-copilot-in-windows-uses)
-- [Other settings that might affect Copilot in Windows and its underlying chat provider](#other-settings-that-might-affect-copilot-in-windows-and-its-underlying-chat-provider)
+:::image type="content" border="true" source="./images/9598546-copilot-key-settings.png" alt-text="Screenshot of the text input page in Settings." lightbox="./images/9598546-copilot-key-settings.png":::
 
-Organizations that aren't ready to use Copilot in Windows can disable it until they're ready by using the following policy:
 
-- **CSP**: ./User/Vendor/MSFT/Policy/Config/WindowsAI/[TurnOffWindowsCopilot](mdm/policy-csp-windowsai.md#turnoffwindowscopilot)
-- **Group Policy**: User Configuration\Administrative Templates\Windows Components\Windows Copilot\\**Turn off Windows Copilot**
 
-## Other settings that might affect Copilot in Windows and its underlying chat provider
+If a user signed in with their Microsoft Entra account doesn't already have the key mapped to the Microsoft 365 app, they can select the app by going to **Settings** > **Personalization** > **Text input**, then selecting from the dropdown menu in the setting called **Customize Copilot key on keyboard**. This dropdown has options for: **Search**, **Custom**, or a currently mapped app if one is selected.
 
-Copilot in Windows and [Copilot in Edge](/copilot/edge), can share the same underlying chat provider platform. This also means that some settings that affect Copilot, Copilot with commercial data protection, and Copilot in Edge can also affect Copilot in Windows. The following common settings might affect Copilot in Windows and its underlying chat provider:
+To map the key to the Microsoft 365 app, the user should select **Custom** and then choose the Microsoft 365 app from the app picker. If this app picker is empty or doesn't include the Microsoft 365 app, they should reinstall it from the Microsoft Store. 
 
-### Bing settings
+Users can also choose to have the Copilot key launch an app that is MSIX packaged and signed, ensuring the app options the Copilot key can remap to meet security and privacy requirements.   
 
-- If [SafeSearch](https://support.microsoft.com/topic/946059ed-992b-46a0-944a-28e8fb8f1814) is enabled for Bing, it can block chat providers for Copilot in Windows. The following network changes block the chat providers for Copilot in Windows and Edge:
 
-   - Mapping `www.bing.com` to `strict.bing.com`
-   - Mapping `edgeservices.bing.com` to `strict.bing.com`
-   - Blocking `bing.com`
+## Copilot installation with Windows updates and controls
 
-- If Copilot with commercial data protection is turned on for your organization, users can access it through Edge mobile when signed in with their work account. If you would like to remove the Bing Chat button from the Edge mobile interface, you can use an [Intune Mobile Application Management (MAM) policy for Microsoft Edge](/mem/intune/apps/manage-microsoft-edge) to remove it:
+If you're an IT administrator and have enabled group policies to prevent the installation of Copilot, the Copilot app won't be installed on the configured devices. If you haven't enabled a group policy, you can remove the Copilot app by following one of the steps in the [Remove or prevent installation of the Copilot app](#remove-or-prevent-installation-of-the-copilot-app) section or configure the [AppLocker policy](/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview) before installing Windows updates. When the AppLocker policy for Copilot is enabled, it will:
 
-    | Key                                          | Value                                                                      |
-    |:---------------------------------------------|:---------------------------------------------------------------------------|
-    | com.microsoft.intune.mam.managedbrowser.Chat | **true** (default) shows the interface </br> **false** hides the interface |
-
-### Microsoft Edge policies
-
-- If [HubsSidebarEnabled](/deployedge/microsoft-edge-policies#hubssidebarenabled) is set to `disabled`, it blocks Copilot in Edge from being displayed.
-- If [DiscoverPageContextEnabled](/deployedge/microsoft-edge-policies#discoverpagecontextenabled) is set to `disabled`, it blocks Copilot from reading the current webpage context. The chat providers need access to the current webpage context for providing page summarizations and sending user selected strings from the webpage into the chat provider.
-
-### Search settings
-
-- Setting [ConfigureSearchOnTaskbarMode](/windows/client-management/mdm/policy-csp-search#configuresearchontaskbarmode) to `Hide` might interfere with the Copilot in Windows user experience.
-- Setting [AllowSearchHighlights](/windows/client-management/mdm/policy-csp-search#allowsearchhighlights) to `disabled` might interfere with the Copilot in Windows and the Copilot in Edge user experiences.
-
-### Account settings
-
-- The [AllowMicrosoftAccountConnection](/windows/client-management/mdm/policy-csp-accounts#allowmicrosoftaccountconnection) setting might allow users to use their personal Microsoft account with Copilot in Windows and Copilot in Edge.
-- The [RestrictToEnterpriseDeviceAuthenticationOnly](/windows/client-management/mdm/policy-csp-accounts#restricttoenterprisedeviceauthenticationonly) setting might prevent access to chat providers since it blocks user authentication.
-
-## Microsoft's commitment to responsible AI
-
-Microsoft has been on a responsible AI journey since 2017, when we defined our principles and approach to ensuring this technology is used in a way that is driven by ethical principles that put people first. For more about our responsible AI journey, the ethical principles that guide us, and the tooling and capabilities we've created to assure that we develop AI technology responsibly, see [Responsible AI](https://www.microsoft.com/ai/responsible-ai).
+- Prevent the app from being installed if it isn't already on the device.
+- Block the app from being launched if it's already installed.

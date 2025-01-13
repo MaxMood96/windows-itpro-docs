@@ -9,6 +9,8 @@ items:
     href: validations/fips-140-windows10.md
   - name: Previous Windows releases
     href: validations/fips-140-windows-previous.md
+  - name: Windows Server 2022
+    href: validations/fips-140-windows-server-2022.md
   - name: Windows Server 2019
     href: validations/fips-140-windows-server-2019.md
   - name: Windows Server 2016

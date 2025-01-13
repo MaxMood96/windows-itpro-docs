@@ -1,5 +1,5 @@
 ---
-ms.date: 06/23/2024
+ms.date: 11/22/2024
 ms.topic: include
 ---
 
@@ -19,3 +19,6 @@ Windows Hello for Business requires users perform multifactor authentication (MF
 For information on available non-Microsoft authentication methods see [Configure Additional Authentication Methods for AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs). For creating a custom authentication method see [Build a Custom Authentication Method for AD FS in Windows Server](/windows-server/identity/ad-fs/development/ad-fs-build-custom-auth-method)
 
 Follow the integration and deployment guide for the authentication provider you select to integrate and deploy it to AD FS. Make sure that the authentication provider is selected as a multifactor authentication option in the AD FS authentication policy. For information on configuring AD FS authentication policies see [Configure Authentication Policies](/windows-server/identity/ad-fs/operations/configure-authentication-policies).
+
+> [!TIP]
+> When you validate the AD FS configuration, verify if you need to update the configuration of user agent strings to support Windows Integrated Authentication (WIA). For more information, see [Change WIASupportedUserAgent settings](/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings).

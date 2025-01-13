@@ -1,6 +1,4 @@
 items:
-  - name: Overview
-    href: index.md
   - name: Passwordless sign-in
     items:
     - name: Passwordless strategy
@@ -28,6 +26,12 @@ items:
     href: /education/windows/federated-sign-in
   - name: Advanced credential protection
     items:
+    - name: LSA Protection 🔗
+      href: /windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection
+    - name: Credential Guard
+      href: credential-guard/toc.yml
+    - name: Remote Credential Guard
+      href: remote-credential-guard.md
     - name: Windows LAPS 🔗
       displayName: Local Administrator Password Solution
       href: /windows-server/identity/laps/laps-overview
@@ -39,11 +43,5 @@ items:
     - name: Access Control
       href: access-control/access-control.md
       displayName: ACL/SACL
-    - name: Credential Guard
-      href: credential-guard/toc.yml
-    - name: Remote Credential Guard
-      href: remote-credential-guard.md
-  - name: LSA Protection 🔗
-    href: /windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection
   - name: Local Accounts
     href: access-control/local-accounts.md

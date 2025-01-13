@@ -2,7 +2,7 @@
 title: BitLocker operations guide
 description: Learn how to use different tools to manage and operate BitLocker.
 ms.topic: how-to
-ms.date: 06/18/2024
+ms.date: 12/05/2024
 ---
 
 # BitLocker operations guide
@@ -461,6 +461,9 @@ From the **BitLocker Drive Encryption** Control Panel applet, select the OS driv
 ---
 
 ### Resume BitLocker
+
+> [!NOTE]
+> Resuming protection only works on devices that have accepted the Windows EULA.
 
 #### [:::image type="icon" source="images/powershell.svg"::: **PowerShell**](#tab/powershell)
 

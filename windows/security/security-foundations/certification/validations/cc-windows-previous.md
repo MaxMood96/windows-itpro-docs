@@ -3,10 +3,6 @@ title: Common Criteria certifications for previous Windows releases
 description: Learn about the completed Common Criteria certifications for previous Windows releases.
 ms.date: 2/1/2024
 ms.topic: reference
-ms.author: v-rodurff
-author: msrobertd
-ms.reviewer: paoloma
-ms.collection: tier3
 ---
 
 # Common Criteria certifications for previous Windows releases
@@ -34,14 +30,14 @@ The following tables list the completed Common Criteria certifications for Windo
 
 |Product details  |Date  |Scope  |Documents  |
 |---------|---------|---------|---------|
-|Validated editions: Enterprise, Ultimate. |March 24, 2011 |Certified against the Protection Profile for General Purpose Operating Systems. |[Security Target][security-target-march-2011]; [Administrative Guide][admin-guide-march-2011]; [Certification Report][certification-report-march-2011] |
+|Validated editions: Enterprise, Ultimate. |March 24, 2011 |Certified against the Protection Profile for General Purpose Operating Systems. |[Security Target][security-target-march-2011]; [Certification Report][certification-report-march-2011] |
 
 ## Windows Vista
 
 |Product details  |Date  |Scope  |Documents  |
 |---------|---------|---------|---------|
-|Validated edition: Enterprise. |August 15, 2009 |EAL 4. Controlled Access Protection Profile. CC Part 2: security functional requirements. CC Part 3: security assurance requirements. |[Security Target][security-target-august-2009]; [Administrative Guide][admin-guide-august-2009]; [Certification Report][certification-report-august-2009] |
-|Validated edition: Enterprise. |September 17, 2008 |EAL 1. CC Part 2: security functional requirements. CC Part 3: security assurance requirements. |[Security Target][security-target-september-2008]; [Administrative Guide][admin-guide-september-2008]; [Certification Report][certification-report-september-2008] |
+|Validated edition: Enterprise. |August 15, 2009 |EAL 4. Controlled Access Protection Profile. CC Part 2: security functional requirements. CC Part 3: security assurance requirements. |[Security Target][security-target-august-2009]; [Certification Report][certification-report-august-2009] |
+|Validated edition: Enterprise. |September 17, 2008 |EAL 1. CC Part 2: security functional requirements. CC Part 3: security assurance requirements. |[Security Target][security-target-september-2008]; [Certification Report][certification-report-september-2008] |
 
 ---
 
@@ -69,9 +65,6 @@ The following tables list the completed Common Criteria certifications for Windo
 [admin-guide-january-2015-rt]: https://download.microsoft.com/download/8/6/e/86e8c001-8556-4949-90cf-f5beac918026/microsoft%20windows%208%20microsoft%20windows%20rt%20common%20criteria%20supplemental%20admin.docx
 [admin-guide-april-2014]: https://download.microsoft.com/download/0/8/4/08468080-540b-4326-91bf-f2a33b7e1764/administrative%20guidance%20for%20software%20full%20disk%20encryption%20clients.pdf
 [admin-guide-january-2014]: https://download.microsoft.com/download/a/9/f/a9fd7e2d-023b-4925-a62f-58a7f1a6bd47/microsoft%20windows%208%20windows%20server%202012%20supplemental%20admin%20guidance%20ipsec%20vpn%20client.docx
-[admin-guide-march-2011]: https://www.microsoft.com/downloads/en/details.aspx?familyid=ee05b6d0-9939-4765-9217-63083bb94a00
-[admin-guide-august-2009]: https://www.microsoft.com/downloads/en/details.aspx?familyid=06166288-24c4-4c42-9daa-2b2473ddf567
-[admin-guide-september-2008]: https://www.microsoft.com/downloads/en/details.aspx?familyid=06166288-24c4-4c42-9daa-2b2473ddf567
 
 <!-- Certification and Validation Reports -->
 

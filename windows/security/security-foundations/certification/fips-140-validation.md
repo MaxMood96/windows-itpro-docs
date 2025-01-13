@@ -1,12 +1,8 @@
 ---
 title: Windows FIPS 140 validation
 description: Learn how Microsoft products and cryptographic modules follow the U.S. Federal government standard FIPS 140.
-ms.date: 2/1/2024
+ms.date: 11/13/2024
 ms.topic: reference
-ms.author: v-rodurff
-author: msrobertd
-ms.reviewer: paoloma
-ms.collection: tier3
 ---
 
 # Windows FIPS 140 validation
@@ -25,6 +21,8 @@ The Windows client releases listed below include cryptographic modules that have
 
 #### Windows 10 releases
 
+- [Windows 10, version 21H1 (May 2021 Update)](validations/fips-140-windows10.md#windows-10-version-21h1-may-2021-update)
+- [Windows 10, version 20H2 (October 2020 Update)](validations/fips-140-windows10.md#windows-10-version-20h2-october-2020-update)
 - [Windows 10, version 2004 (May 2020 Update)](validations/fips-140-windows10.md#windows-10-version-2004-may-2020-update)
 - [Windows 10, version 1909 (November 2019 Update)](validations/fips-140-windows10.md#windows-10-version-1909-november-2019-update)
 - [Windows 10, version 1903 (May 2019 Update)](validations/fips-140-windows10.md#windows-10-version-1903-may-2019-update)
@@ -64,16 +62,18 @@ The Windows client releases listed below include cryptographic modules that have
 
 The Windows Server releases listed below include cryptographic modules that have completed FIPS 140 validation. Click on the release for details, including the CMVP certificate, Security Policy document, and algorithm scope for each module. When the CMVP certificate validation label includes the note *When operated in FIPS mode*, specific configuration and security rules outlined in the Security Policy must be followed.
 
-#### Windows Server 2019 and 2016 releases
+#### Windows Server 2022, 2019, and 2016 releases
 
+- [Windows Server 2022](validations/fips-140-windows-server-2022.md#windows-server-2022)
 - [Windows Server 2019](validations/fips-140-windows-server-2019.md#windows-server-2019)
 - [Windows Server 2016](validations/fips-140-windows-server-2016.md#windows-server-2016)
 
 #### Windows Server semi-annual releases
 
-- [Windows Server, version 2004](validations/fips-140-windows-server-semi-annual.md#windows-server-version-2004-may-2020-update)
-- [Windows Server, version 1909](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1909-november-2019-update)
-- [Windows Server, version 1903](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1903-may-2019-update)
+- [Windows Server, version 20H2](validations/fips-140-windows-server-semi-annual.md#windows-server-version-20h2)
+- [Windows Server, version 2004](validations/fips-140-windows-server-semi-annual.md#windows-server-version-2004)
+- [Windows Server, version 1909](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1909)
+- [Windows Server, version 1903](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1903)
 - [Windows Server, version 1809](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1809)
 - [Windows Server, version 1803](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1803)
 - [Windows Server, version 1709](validations/fips-140-windows-server-semi-annual.md#windows-server-version-1709)

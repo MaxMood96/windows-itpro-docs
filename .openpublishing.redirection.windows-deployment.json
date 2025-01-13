@@ -7,7 +7,7 @@
     },
     {
       "source_path": "windows/deployment/deploy-windows-mdt/create-a-task-sequence-with-configuration-manager-and-mdt.md",
-      "redirect_url": "/windows/deployment/deploy-windows-sccm/create-a-task-sequence-with-configuration-manager-and-mdt",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-a-task-sequence-with-configuration-manager-and-mdt",
       "redirect_document_id": false
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "source_path": "windows/deployment/deploy-windows-mdt/deploy-windows-10-with-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-sccm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
       "redirect_document_id": false
     },
     {
@@ -37,32 +37,32 @@
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/add-a-windows-10-operating-system-image-using-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/add-a-windows-10-operating-system-image-using-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/add-a-windows-10-operating-system-image-using-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/add-drivers-to-a-windows-10-deployment-with-windows-pe-using-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/add-drivers-to-a-windows-10-deployment-with-windows-pe-using-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/add-drivers-to-a-windows-10-deployment-with-windows-pe-using-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/create-a-custom-windows-pe-boot-image-with-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/create-a-custom-windows-pe-boot-image-with-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-a-custom-windows-pe-boot-image-with-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/create-a-task-sequence-with-configuration-manager-and-mdt.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/create-a-task-sequence-with-configuration-manager-and-mdt",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-a-task-sequence-with-configuration-manager-and-mdt",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/create-an-application-to-deploy-with-windows-10-using-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/create-an-application-to-deploy-with-windows-10-using-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-an-application-to-deploy-with-windows-10-using-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/deploy-windows-10-using-pxe-and-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/deploy-windows-10-using-pxe-and-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/deploy-windows-10-using-pxe-and-configuration-manager",
       "redirect_document_id": false
     },
     {
@@ -72,12 +72,12 @@
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/deploy-windows-10-with-system-center-2012-r2-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/finalize-the-os-configuration-for-windows-10-deployment-with-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/finalize-the-os-configuration-for-windows-10-deployment-with-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/finalize-the-os-configuration-for-windows-10-deployment-with-configuration-manager",
       "redirect_document_id": false
     },
     {
@@ -87,27 +87,27 @@
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/integrate-configuration-manager-with-mdt.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager#integrate-configuration-manager-with-mdt",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager#integrate-configuration-manager-with-mdt",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/monitor-windows-10-deployment-with-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/deploy-windows-10-using-pxe-and-configuration-manager#procedures",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/deploy-windows-10-using-pxe-and-configuration-manager#procedures",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/refresh-a-windows-7-client-with-windows-10-using-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/refresh-a-windows-7-client-with-windows-10-using-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/refresh-a-windows-7-client-with-windows-10-using-configuration-manager",
       "redirect_document_id": false
     },
     {
       "source_path": "windows/deployment/deploy-windows-sccm/replace-a-windows-7-client-with-windows-10-using-configuration-manager.md",
-      "redirect_url": "/windows/deployment/deploy-windows-cm/replace-a-windows-7-client-with-windows-10-using-configuration-manager",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/replace-a-windows-7-client-with-windows-10-using-configuration-manager",
       "redirect_document_id": false
     },
     {
@@ -127,7 +127,7 @@
     },
     {
       "source_path": "windows/deployment/planning/act-technical-reference.md",
-      "redirect_url": "/windows/deployment/planning/compatibility-administrator-users-guide",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/compatibility-administrator-users-guide",
       "redirect_document_id": false
     },
     {
@@ -1363,6 +1363,326 @@
     {
       "source_path": "windows/deployment/windows-autopatch/references/windows-autopatch-microsoft-365-policies.md",
       "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-microsoft-365-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-windows-quality-update-signals.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-quality-update-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/planning/available-data-types-and-operators-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/available-data-types-and-operators-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/compatibility-administrator-users-guide.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/compatibility-administrator-users-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/compatibility-fix-database-management-strategies-and-deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/compatibility-fix-database-management-strategies-and-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/creating-a-custom-compatibility-fix-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/creating-a-custom-compatibility-fix-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/creating-a-custom-compatibility-mode-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/creating-a-custom-compatibility-mode-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/creating-an-apphelp-message-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/creating-an-apphelp-message-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/enabling-and-disabling-compatibility-fixes-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/enabling-and-disabling-compatibility-fixes-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/installing-and-uninstalling-custom-compatibility-databases-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/installing-and-uninstalling-custom-compatibility-databases-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/managing-application-compatibility-fixes-and-custom-fix-databases.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/managing-application-compatibility-fixes-and-custom-fix-databases",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/searching-for-fixed-applications-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/searching-for-fixed-applications-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/searching-for-installed-compatibility-fixes-with-the-query-tool-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/searching-for-installed-compatibility-fixes-with-the-query-tool-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/testing-your-application-mitigation-packages.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/testing-your-application-mitigation-packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/understanding-and-using-compatibility-fixes.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/understanding-and-using-compatibility-fixes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/using-the-compatibility-administrator-tool.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/using-the-compatibility-administrator-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/using-the-sdbinstexe-command-line-tool.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/using-the-sdbinstexe-command-line-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/viewing-the-events-screen-in-compatibility-administrator.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/viewing-the-events-screen-in-compatibility-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/compatibility-fixes-for-windows-8-windows-7-and-windows-vista.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/compatibility-fixes-for-windows-8-windows-7-and-windows-vista",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/applying-filters-to-data-in-the-sua-tool.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/applying-filters-to-data-in-the-sua-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/fixing-applications-by-using-the-sua-tool.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/fixing-applications-by-using-the-sua-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/showing-messages-generated-by-the-sua-tool.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/showing-messages-generated-by-the-sua-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/sua-users-guide.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/sua-users-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/tabs-on-the-sua-tool-interface.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/tabs-on-the-sua-tool-interface",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/using-the-sua-tool.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/using-the-sua-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/using-the-sua-wizard.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/compatibility/using-the-sua-wizard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-10-pro-in-s-mode.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/s-mode/switch-edition-from-s-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/s-mode.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/s-mode/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/deploy/windows-autopatch-groups-manage-autopatch-groups.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-manage-autopatch-groups",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/add-a-windows-10-operating-system-image-using-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/add-a-windows-10-operating-system-image-using-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/add-drivers-to-a-windows-10-deployment-with-windows-pe-using-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/add-drivers-to-a-windows-10-deployment-with-windows-pe-using-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/create-a-custom-windows-pe-boot-image-with-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-a-custom-windows-pe-boot-image-with-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/create-a-task-sequence-with-configuration-manager-and-mdt.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-a-task-sequence-with-configuration-manager-and-mdt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/create-an-application-to-deploy-with-windows-10-using-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/create-an-application-to-deploy-with-windows-10-using-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/deploy-windows-10-using-pxe-and-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/deploy-windows-10-using-pxe-and-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/finalize-the-os-configuration-for-windows-10-deployment-with-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/finalize-the-os-configuration-for-windows-10-deployment-with-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/prepare-for-zero-touch-installation-of-windows-10-with-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/refresh-a-windows-7-client-with-windows-10-using-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/refresh-a-windows-7-client-with-windows-10-using-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/replace-a-windows-7-client-with-windows-10-using-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/replace-a-windows-7-client-with-windows-10-using-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/deploy-windows-cm/upgrade-to-windows-10-with-configuration-manager.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/deploy-windows-cm/upgrade-to-windows-10-with-configuration-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-10-poc-sc-config-mgr.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/windows-10-poc-sc-config-mgr",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-10-poc.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/windows-10-poc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-10-deployment-posters.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/windows-10-deployment-posters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/prepare/windows-autopatch-enroll-tenant.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/prepare/windows-autopatch-feature-activation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-unenroll-tenant.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-feature-deactivation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/references/windows-autopatch-changes-to-tenant.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/references/windows-autopatch-changes-made-at-feature-activation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/references/windows-autopatch-windows-update-unsupported-policies.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-update-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/prepare/windows-autopatch-fix-issues.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/prepare/windows-autopatch-feature-activation",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "windows/deployment/windows-autopatch/prepare/windows-autopatch-enrollment-support-request.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/prepare/windows-autopatch-feature-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/windows-autopatch/manage/windows-autopatch-manage-windows-feature-update-releases.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-feature-update-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/update/deployment-service-overview.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/overview/windows-autopatch-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/update/deployment-service-prerequisites.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/update/deployment-service-feature-updates.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-feature-update-programmatic-controls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/update/deployment-service-expedited-updates.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-windows-quality-update-programmatic-controls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/update/deployment-service-drivers.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-driver-and-firmware-update-programmatic-controls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "windows/deployment/update/deployment-service-troubleshoot.md",
+      "redirect_url": "/windows/deployment/windows-autopatch/manage/windows-autopatch-troubleshoot-programmatic-controls",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/update/PSFxWhitepaper.md",
+      "redirect_url": "/windows/deployment/update/forward-reverse-differentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/upgrade/windows-10-upgrade-paths.md",
+      "redirect_url": "/windows/deployment/upgrade/windows-upgrade-paths",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/windows-10-infrastructure-requirements.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/planning/windows-10-infrastructure-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/planning/windows-10-enterprise-faq-itpro.yml",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/planning/windows-10-enterprise-faq-itpro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/do/mcc-enterprise-appendix.md",
+      "redirect_url": "/windows/deployment/do/mcc-ent-early-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/do/mcc-enterprise-deploy.md",
+      "redirect_url": "/windows/deployment/do/mcc-ent-early-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/do/mcc-enterprise-prerequisites.md",
+      "redirect_url": "/windows/deployment/do/mcc-ent-early-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "windows/deployment/do/mcc-enterprise-update-uninstall.md",
+      "redirect_url": "/windows/deployment/do/mcc-ent-early-preview",
+      "redirect_document_id": false
+    },          
+    {
+      "source_path": "windows/deployment/planning/windows-10-deployment-considerations.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/deployment/planning/windows-10-deployment-considerations",
       "redirect_document_id": false
     }
   ]

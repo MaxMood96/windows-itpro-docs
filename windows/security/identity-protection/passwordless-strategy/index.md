@@ -2,7 +2,7 @@
 title: Passwordless strategy overview
 description: Learn about the passwordless strategy and how Windows security features help implementing it.
 ms.topic: concept-article
-ms.date: 01/29/2024
+ms.date: 10/29/2024
 ---
 
 # Passwordless strategy overview

@@ -1,7 +1,7 @@
 ---
 title: ADMX_OfflineFiles Policy CSP
 description: Learn more about the ADMX_OfflineFiles Area in Policy CSP.
-ms.date: 08/06/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -352,7 +352,7 @@ This setting replaces the Default Cache Size setting used by pre-Windows Vista s
 <!-- Description-Source-ADMX -->
 Determines how computers respond when they're disconnected from particular offline file servers. This setting overrides the default response, a user-specified response, and the response specified in the "Action on server disconnect" setting.
 
-To use this setting, click Show. In the Show Contents dialog box in the Value Name column box, type the server's computer name. Then, in the Value column box, type "0" if users can work offline when they're disconnected from this server, or type "1" if they cannot.
+To use this setting, click Show. In the Show Contents dialog box in the Value Name column box, type the server's computer name. Then, in the Value column box, type "0" if users can work offline when they're disconnected from this server, or type "1" if they can't.
 
 This setting appears in the Computer Configuration and User Configuration folders. If both settings are configured for a particular server, the setting in Computer Configuration takes precedence over the setting in User Configuration. Both Computer and User configuration take precedence over a user's setting. This setting doesn't prevent users from setting custom actions through the Offline Files tab. However, users are unable to change any custom actions established via this setting.
 
@@ -413,7 +413,7 @@ This setting appears in the Computer Configuration and User Configuration folder
 <!-- Description-Source-ADMX -->
 Determines how computers respond when they're disconnected from particular offline file servers. This setting overrides the default response, a user-specified response, and the response specified in the "Action on server disconnect" setting.
 
-To use this setting, click Show. In the Show Contents dialog box in the Value Name column box, type the server's computer name. Then, in the Value column box, type "0" if users can work offline when they're disconnected from this server, or type "1" if they cannot.
+To use this setting, click Show. In the Show Contents dialog box in the Value Name column box, type the server's computer name. Then, in the Value column box, type "0" if users can work offline when they're disconnected from this server, or type "1" if they can't.
 
 This setting appears in the Computer Configuration and User Configuration folders. If both settings are configured for a particular server, the setting in Computer Configuration takes precedence over the setting in User Configuration. Both Computer and User configuration take precedence over a user's setting. This setting doesn't prevent users from setting custom actions through the Offline Files tab. However, users are unable to change any custom actions established via this setting.
 

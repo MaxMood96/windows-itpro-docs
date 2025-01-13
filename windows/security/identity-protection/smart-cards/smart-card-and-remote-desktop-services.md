@@ -2,7 +2,7 @@
 title: Smart Card and Remote Desktop Services
 description: This topic for the IT professional describes the behavior of Remote Desktop Services when you implement smart card sign-in.
 ms.topic: concept-article
-ms.date: 01/16/2024
+ms.date: 10/29/2024
 ---
 
 # Smart Card and Remote Desktop Services

@@ -1,8 +1,8 @@
 ---
-title: Get and deploy Minecraft Education
+title: Deploy Minecraft Education To Windows Devices
 description: Learn how to obtain and distribute Minecraft Education to Windows devices.
 ms.topic: how-to
-ms.date: 04/10/2024
+ms.date: 12/5/2024
 ms.collection:
   - education
   - tier2
@@ -48,7 +48,7 @@ To purchase direct licenses:
 1. Select the quantity of licenses you'd like to purchase and select **Place Order**
 1. After you've purchased licenses, you'll need to [assign Minecraft Education licenses to your users](#assign-minecraft-education-licenses)
 
-If you need more licenses for Minecraft Education, see [Buy or remove subscription licenses](/microsoft-365/commerce/licenses/buy-licenses).
+   If you need more licenses for Minecraft Education, see [Buy or remove subscription licenses](/microsoft-365/commerce/licenses/buy-licenses)
 
 ### Volume licensing
 
@@ -88,14 +88,14 @@ You must be a *Global*, *License*, or *User admin* to assign licenses. For more 
 1. Go to [https://admin.microsoft.com](https://admin.microsoft.com) and sign in with an account that can assign licenses in your organization
 1. From the left-hand menu in Microsoft Admin Center, select *Users*
 1. From the Users list, select the users you want to add or remove for Minecraft Education access
-1. Add the relevant Minecraft Education, A1 for device or A3/A5 license if it not assigned already
+1. Add the relevant Minecraft Education, A1 for device or A3/A5 license if it is not assigned already
     > [!Note]
-    > If you add a faculty license, the user will be assigned a *teacher* role in the application and will have elevated permissions.
+    > If you add a faculty license, the user will be assigned a *teacher* role in the application and will have elevated permissions
 1. If you've assigned a Microsoft 365 A3 or A5 license, after selecting the product license, ensure to toggle *Minecraft Education* on
     > [!Note]
     > If you turn off this setting after students have been using Minecraft Education, they will have up to 30 more days to use Minecraft Education before they don't have access
 
-:::image type="content" source="images/minecraft/admin-center-minecraft-license.png" alt-text="Screenshot of the Microsoft 365 admin center - assignment of a Minecraft Education license to a user." lightbox="images/minecraft/admin-center-minecraft-license.png":::
+    :::image type="content" source="images/minecraft/admin-center-minecraft-license.png" alt-text="Screenshot of the Microsoft 365 admin center - assignment of a Minecraft Education license to a user." lightbox="images/minecraft/admin-center-minecraft-license.png":::
 
 For more information about license assignment, see [Manage Licenses in the Admin Center][EDU-5].
 
@@ -118,31 +118,31 @@ If you're using Microsoft Intune to manage your devices, follow these steps to d
 1. Select **Next**
 1. On the *Review + Create* screen, select **Create**
 
-Intune will install Minecraft Education at the next device check-in, or will make it available in Company Portal for on-demand installs.
+   Intune will install Minecraft Education at the next device check-in, or will make it available in Company Portal for on-demand installs.
 
-:::image type="content" source="images/minecraft/win11-minecraft-education.png" alt-text="Screenshot of Minecraft Education executing on a Windows 11 device.":::
+   :::image type="content" source="images/minecraft/win11-minecraft-education.png" alt-text="Screenshot of Minecraft Education executing on a Windows 11 device.":::
 
-For more information how to deploy Minecraft Education, see:
+   For more information how to deploy Minecraft Education, see:
 
-- [Windows installation guide][EDU-6]
-- [Chromebook installation guide][EDU-7]
-- [iOS installation guide][EDU-8]
-- [macOS installation guide][EDU-9]
+    - [Windows installation guide][EDU-6]
+    - [Chromebook installation guide][EDU-7]
+    - [iOS installation guide][EDU-8]
+    - [macOS installation guide][EDU-9]
 
-If you're having trouble installing the app, you can get more help on the [Minecraft Education support page][AKA-1].
+   If you're having trouble installing the app, you can get more help on the [Minecraft Education support page][AKA-1].
 
-<!--links-->
-[EDU-1]: https://educommunity.minecraft.net/hc/articles/360047116432
-[EDU-2]: https://educommunity.minecraft.net/hc/articles/360061371532
-[EDU-3]: https://www.microsoft.com/education/products/office
-[EDU-4]: https://educommunity.minecraft.net/hc/articles/360061369812
-[EDU-6]: https://educommunity.minecraft.net/hc/articles/13106858087956
-[EDU-5]: https://educommunity.minecraft.net/hc/articles/360047118672
-[EDU-7]: https://educommunity.minecraft.net/hc/articles/4404625978516
-[EDU-8]: https://educommunity.minecraft.net/hc/articles/360047556351
-[EDU-9]: https://educommunity.minecraft.net/hc/articles/360047118792
+   <!--links-->
+    [EDU-1]: https://educommunity.minecraft.net/hc/articles/360047116432
+    [EDU-2]: https://educommunity.minecraft.net/hc/articles/360061371532
+    [EDU-3]: https://www.microsoft.com/education/products/office
+    [EDU-4]: https://educommunity.minecraft.net/hc/articles/360061369812
+    [EDU-6]: https://educommunity.minecraft.net/hc/articles/13106858087956
+    [EDU-5]: https://educommunity.minecraft.net/hc/articles/360047118672
+    [EDU-7]: https://educommunity.minecraft.net/hc/articles/4404625978516
+    [EDU-8]: https://educommunity.minecraft.net/hc/articles/360047556351
+    [EDU-9]: https://educommunity.minecraft.net/hc/articles/360047118792
 
-[M365-1]: /microsoft-365/commerce/billing-and-payments/pay-for-your-subscription
-[M365-2]: /microsoft-365/admin/add-users/about-admin-roles
+    [M365-1]: /microsoft-365/commerce/billing-and-payments/pay-for-your-subscription
+    [M365-2]: /microsoft-365/admin/add-users/about-admin-roles
 
-[AKA-1]: https://aka.ms/minecraftedusupport
+    [AKA-1]: https://aka.ms/minecraftedusupport

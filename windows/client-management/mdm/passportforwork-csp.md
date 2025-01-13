@@ -1,7 +1,7 @@
 ---
 title: PassportForWork CSP
 description: Learn more about the PassportForWork CSP.
-ms.date: 08/06/2024
+ms.date: 11/05/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -265,7 +265,7 @@ If the user forgets their PIN, it can be changed to a new PIN using the Windows 
 <!-- Device-{TenantId}-Policies-EnableWindowsHelloProvisioningForSecurityKeys-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- Device-{TenantId}-Policies-EnableWindowsHelloProvisioningForSecurityKeys-Applicability-End -->
 
 <!-- Device-{TenantId}-Policies-EnableWindowsHelloProvisioningForSecurityKeys-OmaUri-Begin -->

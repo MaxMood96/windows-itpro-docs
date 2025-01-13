@@ -1,7 +1,7 @@
 ---
 title: Assigned Access examples
 description: Practical examples of XML files to configure Assigned Access.
-ms.date: 03/04/2024
+ms.date: 10/31/2024
 ms.topic: reference
 zone_pivot_groups: windows-versions-11-10
 appliesto:

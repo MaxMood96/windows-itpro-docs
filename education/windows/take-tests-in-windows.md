@@ -1,7 +1,7 @@
 ---
 title: Take tests and assessments in Windows
 description: Learn about the built-in Take a Test app for Windows and how to use it.
-ms.date: 02/29/2024
+ms.date: 11/11/2024
 ms.topic: how-to
 ---
 
@@ -9,11 +9,11 @@ ms.topic: how-to
 
 Many schools use online testing for formative and summation assessments. It's critical that students use a secure browser that prevents them from using other computer or Internet resources during the test. To help schools with testing, Windows provides an application called **Take a Test**. The application is a secure browser that provides different features to help with testing, and can be configured to only allow access a specific URL or a list of URLs. When using Take a Test, students can't:
 
-- print, use screen capture, or text suggestions (unless enabled by the teacher or administrator)
-- access other applications
-- change system settings, such as display extension, notifications, updates
-- access Cortana
-- access content copied to the clipboard
+- Print, use screen capture, or text suggestions (unless enabled by the teacher or administrator)
+- Access other applications
+- Change system settings, such as display extension, notifications, updates
+- Access Cortana
+- Access content copied to the clipboard
 
 ## How to use Take a Test
 
@@ -22,7 +22,7 @@ There are different ways to use Take a Test, depending on the use case:
 - For lower stakes assessments, such a quick quiz in a class, a teacher can generate a *secure assessment URL* and share it with the students. Students can then open the URL to access the assessment through Take a Test. To learn more, see the next section: [Create a secure assessment link](#create-a-secure-assessment-link)
 - For higher stakes assessments, you can configure Windows devices to use a dedicated account for testing and execute Take a Test in a locked-down mode, called **kiosk mode**. Once signed in with the dedicated account, Windows will execute Take a Test in a lock-down mode, preventing the execution of any applications other than Take a Test. For more information, see [Configure Take a Test in kiosk mode](edu-take-a-test-kiosk-mode.md)
 
-:::image type="content" source="./images/takeatest/flow-chart.png" alt-text="Set up and user flow for the Take a Test app." border="false":::
+  :::image type="content" source="./images/takeatest/flow-chart.png" alt-text="Set up and user flow for the Take a Test app." border="false":::
 
 ## Create a secure assessment link
 
@@ -37,9 +37,9 @@ To create a secure assessment link to the test, there are two options:
 
 For this option, copy the assessment URL and open the web application <a href="https://aka.ms/create-a-take-a-test-link" target="_blank"><u>Customize your assessment URL</u></a>, where you can:
 
-- Paste the link to the assessment URL
-- Select the options you want to allow during the test
-- Generate the link by selecting the button Create link
+- Paste the link to the assessment URL.
+- Select the options you want to allow during the test.
+- Generate the link by selecting the button Create link.
 
 This is an ideal option for teachers who want to create a link to a specific assessment and share it with students using OneNote, for example.
 
@@ -67,7 +67,7 @@ To enable permissive mode, don't include `enforceLockdown` in the schema paramet
 
 ## Distribute the secure assessment link
 
-Once the link is created, it can be distributed through the web, email, OneNote, or any other method of your choosing.
+Once the link is created, it can be distributed through the web, email, OneNote, or any other method of your choice.
 
 For example, you can create and copy the shortcut to the assessment URL to the students' desktop.
 

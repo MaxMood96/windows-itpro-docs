@@ -1,7 +1,7 @@
 ---
 title: AssignedAccess CSP
 description: Learn more about the AssignedAccess CSP.
-ms.date: 04/10/2024
+ms.date: 11/26/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -126,7 +126,7 @@ To learn how to configure xml file, see [Create an Assigned Access configuration
 <!-- Description-Source-DDF -->
 This node can accept and return json string which comprises of account name, and AUMID for Kiosk mode app.
 
-Example: `{"User":"domain\\user", "AUMID":"Microsoft. WindowsCalculator_8wekyb3d8bbwe!App"}`.
+Example: `{"User":"domain\\user", "AUMID":"Microsoft.WindowsCalculator_8wekyb3d8bbwe!App"}`.
 
 When configuring kiosk mode app, account name will be used to find the target user. Account name includes domain name and user name. Domain name can be optional if user name is unique across the system. For a local account, domain name should be machine name. When "Get" is executed on this node, domain name is always returned in the output.
 

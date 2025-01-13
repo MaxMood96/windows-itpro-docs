@@ -1,9 +1,9 @@
 ---
-title: Windows passwordless experience
+title: Configure Windows Passwordless Experience With Intune
 description: Learn how Windows passwordless experience enables your organization to move away from passwords.
 ms.collection:
   - tier1
-ms.date: 03/12/2024
+ms.date: 12/02/2024
 ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

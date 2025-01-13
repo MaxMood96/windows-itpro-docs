@@ -1,17 +1,31 @@
 ---
 title: FIPS 140 validated modules for Windows 10
 description: This topic lists the completed FIPS 140 cryptographic module validations for Windows 10.
-ms.date: 2/1/2024
+ms.date: 11/13/2024
 ms.topic: reference
-ms.author: v-rodurff
-author: msrobertd
-ms.reviewer: paoloma
-ms.collection: tier3
 ---
 
 # FIPS 140 validated modules for Windows 10
 
 The following tables list the completed FIPS 140 validations of cryptographic modules used in Windows 10, organized by major release of the operating system. The linked Security Policy document for each module provides details on the module capabilities and the policies the operator must follow to use the module in its FIPS approved mode of operation. For information on using the overall operating system in its FIPS approved mode, see [Use Windows in a FIPS approved mode of operation](../fips-140-validation.md#use-windows-in-a-fips-approved-mode-of-operation). For details on the FIPS approved algorithms used by each module, including CAVP algorithm certificates, see the module's linked Security Policy document or CMVP module certificate.
+
+## Windows 10, version 21H1 (May 2021 Update)
+
+Build: 10.0.19043. Validated Editions: Pro, Enterprise
+
+|Cryptographic Module (linked to Security Policy document)|CMVP Certificate #|Validated Algorithms|
+|--- |--- |--- |
+|[Cryptographic Primitives Library][sp-4825]|[#4825][certificate-4825]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
+|[Kernel Mode Cryptographic Primitives Library][sp-4766]|[#4766][certificate-4766]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
+
+## Windows 10, version 20H2 (October 2020 Update)
+
+Build: 10.0.19042. Validated Editions: Pro, Enterprise
+
+|Cryptographic Module (linked to Security Policy document)|CMVP Certificate #|Validated Algorithms|
+|--- |--- |--- |
+|[Cryptographic Primitives Library][sp-4825]|[#4825][certificate-4825]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
+|[Kernel Mode Cryptographic Primitives Library][sp-4766]|[#4766][certificate-4766]|FIPS Approved: AES, CKG, CVL, DRBG, DSA, ECDSA, ENT (P), HMAC, KAS, KAS-SSC, KBKDF, KTS, PBKDF, RSA, SHS, and Triple-DES|
 
 ## Windows 10, version 2004 (May 2020 Update)
 
@@ -261,6 +275,8 @@ Build: 10.0.10240. Validated Editions: Home, Pro, Enterprise, Enterprise LTSB, M
 [certificate-4536]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4536
 [certificate-4537]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4537
 [certificate-4538]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4538
+[certificate-4766]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4766
+[certificate-4825]: https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4825
 
 <!-- Security Policies -->
 
@@ -324,3 +340,5 @@ Build: 10.0.10240. Validated Editions: Home, Pro, Enterprise, Enterprise LTSB, M
 [sp-4536]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4536.pdf
 [sp-4537]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4537.pdf
 [sp-4538]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4537.pdf
+[sp-4766]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4766.pdf
+[sp-4825]: https://csrc.nist.gov/CSRC/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp4825.pdf

@@ -8,7 +8,7 @@ author: mestew
 ms.author: mstewart
 manager: aaroncz
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 12/31/2017
@@ -16,7 +16,7 @@ ms.date: 12/31/2017
 
 # Policies for update compliance, activity, and user experience
 
-Keeping devices up to date is the best way to keep them working smoothly and securely. 
+Keeping devices up to date is the best way to keep them working smoothly and securely.
 
 ## Deadlines for update compliance
 
@@ -94,7 +94,7 @@ options must be **Disabled** in order to take advantage of intelligent active ho
 If you do set active hours, we recommend setting the following policies to **Disabled** in order to increase update
 velocity:
 
-- [Delay automatic reboot](waas-restart.md#delay-automatic-reboot). While it's possible to set the system to delay restarts for users who are logged in, this setting might delay an update indefinitely if a user is always either logged in or shut down. Instead, we recommend setting the following polices to **Disabled**:
+- [Delay automatic reboot](waas-restart.md#delay-automatic-restart). While it's possible to set the system to delay restarts for users who are logged in, this setting might delay an update indefinitely if a user is always either logged in or shut down. Instead, we recommend setting the following polices to **Disabled**:
     - **Turn off auto-restart during active hours**
     - **No auto-restart with logged on users for scheduled automatic updates**
 
@@ -110,7 +110,7 @@ updates will occur, so we recommend that you set this policy to **Disabled**, to
     - [Update/EngagedRestartTransitionSchedule](/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)
 
 - [Configure automatic update](waas-wu-settings.md#configure-automatic-updates). By properly setting policies to configure automatic updates, you can increase update velocity by having clients contact a Windows Server Update Services (WSUS) server so it can manage them. We recommend that you set this policy to **Disabled**. However, if you need to provide values, ensure that you set downloads to install automatically by setting the [Group Policy](waas-manage-updates-wsus.md#configure-automatic-updates-and-update-service-location) to **4**. If you're using Microsoft Intune, setting the value to [Reset to Default](/mem/intune/protect/windows-update-settings#user-experience-settings).
-- **Allow auto Windows Update to download over metered networks**. Since more devices primarily use cellular data and don't have wi-fi access, consider allowing users to automatically download updates from a metered network. Though the default setting doesn't allow download over a metered network, setting this value to **1** can increase velocity by enabling users to get updates whether they're connected to the internet or not, provided they have cellular service. 
+- **Allow auto Windows Update to download over metered networks**. Since more devices primarily use cellular data and don't have wi-fi access, consider allowing users to automatically download updates from a metered network. Though the default setting doesn't allow download over a metered network, setting this value to **1** can increase velocity by enabling users to get updates whether they're connected to the internet or not, provided they have cellular service.
 
 > [!IMPORTANT]
 > Older versions of Windows don't support intelligent active hours. If your device runs a version of Windows prior to Windows 10, version 1903, we recommend setting the following policies:
@@ -119,7 +119,7 @@ this value to **10**.
 >- [Schedule update installation](waas-restart.md#schedule-update-installation). In the **Configure Automatic Updates** settings, there are two ways to control a forced restart after a specified installation time. If you use **schedule update installation**, do not enable both settings because they will most likely conflict.
 >    - **Specify automatic maintenance time**. This setting lets you set broader maintenance windows for updates and ensures that this schedule does not conflict with active hours. We
 recommend setting this value to **3** (corresponding to 3 AM). If 3:00 AM is in the middle of the work shift, pick another time that is at least a couple hours before your scheduled work time begins.
->    - **Schedule the install time**. This setting allows you to schedule an installation time for a restart. We do *not* recommend you set this to **Disabled** as it could conflict with active hours. 
+>    - **Schedule the install time**. This setting allows you to schedule an installation time for a restart. We do *not* recommend you set this to **Disabled** as it could conflict with active hours.
 
 ### Power policies
 
@@ -166,7 +166,7 @@ The default timeout on devices that support traditional sleep is set to three ho
 
 ## Old or conflicting policies
 
-Each release of Windows client can introduce new policies to make the experience better for both administrators and their organizations. When we release a new client policy, we either release it purely for that release and later or we backport the policy to make it available on earlier versions. 
+Each release of Windows client can introduce new policies to make the experience better for both administrators and their organizations. When we release a new client policy, we either release it purely for that release and later or we backport the policy to make it available on earlier versions.
 
 > [!IMPORTANT]
 > If you are using Group Policy, note that we don't update the old ADMX templates and you must use the newer (1903) ADMX template in order to use the newer policy. Also, if you are
@@ -174,7 +174,7 @@ Each release of Windows client can introduce new policies to make the experience
 
 As administrators, you have set up and expect certain behaviors, so we expressly don't remove older policies since they were set up for your particular use cases. However, if you set a new policy without disabling a similar older policy, you could have conflicting behavior and updates might not perform as expected.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > We sometimes find that administrators set devices to get both Group Policy settings and MDM settings from an MDM server such as Microsoft Intune. Policy conflicts are handled differently, depending on how they are ultimately set up:
 > - Windows updates: Group Policy settings take precedence over MDM.
 > - Microsoft Intune: If you set different values for the same policy on two different groups, you will
@@ -194,4 +194,4 @@ Updates** rather than setting a deferral policy. You can choose a longer period 
 - **Pause Quality Updates Start Time**. Set to **Disabled** unless there's a known issue requiring time for a resolution.
 - **Deadline No Auto Reboot**. Default is **Disabled - Set to 0** . We recommend that devices automatically try to restart when an update is received. Windows uses user interactions to dynamically identify the least disruptive time to restart.
 
-There are also additional policies are no longer supported or have been superseded.
+There are also additional policies that are no longer supported or have been superseded.

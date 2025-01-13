@@ -1,58 +1,65 @@
 ---
-title: Cloud services - Protect your personal information
-description: Windows 11 security book - Cloud services chapter - Protect your personal information.
+title: Windows 11 security book - Cloud services - Protect your personal information
+description: Cloud services chapter - Protect your personal information.
 ms.topic: overview
-ms.date: 04/09/2024
+ms.date: 11/18/2024
 ---
 
 # Protect your personal information
 
-:::image type="content" source="images/cloud-security.png" alt-text="Diagram of containing a list of security features for cloud security." lightbox="images/cloud-security.png" border="false":::
+:::image type="content" source="images/cloud-security.png" alt-text="Diagram containing a list of security features for cloud security." lightbox="images/cloud-security.png" border="false":::
 
-## Microsoft Account
+## Microsoft account
 
-Your Microsoft Account (MSA) gives you access to Microsoft products and services with just one login, allowing you to manage everything all in one place. Keep tabs on your subscriptions and order history, update your privacy and security settings, track the health and safety of your devices, and get rewards. Everything stays with you in the cloud, across devices, and between OS ecosystems, including iOS and Android.
+Your Microsoft account (MSA) provides seamless access to Microsoft products and services with just one sign-in, allowing you to manage everything in one place. You can easily keep track of your subscriptions and order history, update your privacy and security settings, monitor the health and safety of your devices, and earn rewards. Your information stays with you in the cloud, accessible across devices and operating systems, including iOS and Android.
 
-You can even go passwordless with your Microsoft Account by removing the password from your MSA and using the Microsoft Authenticator app on your mobile Android or iOS phone.
+You can even go passwordless with your Microsoft account by removing the password from your MSA:
 
-:::image type="icon" source="images/learn-more.svg" border="false"::: **Learn more:**
+- Use Windows Hello to eliminate the password sign-in method for an even more secure experience
+- Use the Microsoft Authenticator app on your Android or iOS device
 
-- [What is a Microsoft account?](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa)
+[!INCLUDE [learn-more](includes/learn-more.md)]
 
-## User reauthentication before password disablement
-
-Windows provides greater flexibility for users to balance ease of use with security. Users can choose the interval that the machine remains idle before it automatically signs the user out. To avoid a security breach and prevent users from accidentally making settings changes, Windows reauthenticates the user before they are allowed to change the setting to not sign out the user even after the device remains idle indefinitely.
-
-This setting is available on the Sign-in options page in Settings and is available on Windows 11 and onward for MSA users worldwide.
+- [What is a Microsoft account?][LINK-1]
+- [Go passwordless with your Microsoft account][LINK-5]
 
 ## Find my device
 
-When location services and Find my device settings are turned on, basic system services like time zone and Find my device will be allowed to use the device's location. When enabled, Find my device can be used by the admin on the device to help recover lost or stolen Windows devices to reduce security threats that rely on physical access.
+When location services and *Find my device* settings are turned on, basic system services like time zone and Find my device are allowed to use the device's location. Find my device can be used to help recover lost or stolen Windows devices, reducing the security threats that rely on physical access.
 
-:::image type="icon" source="images/learn-more.svg" border="false"::: **Learn more:**
+[!INCLUDE [learn-more](includes/learn-more.md)]
 
-- [How to set up, find, and lock a lost Windows device using a Microsoft Account](https://support.microsoft.com/account-billing/find-and-lock-a-lost-windows-device-890bf25e-b8ba-d3fe-8253-e98a12f26316)
+- [How to set up, find, and lock a lost Windows device using a Microsoft account][LINK-2]
 
 ## OneDrive for personal
 
-Microsoft OneDrive17 for personal provides additional security, backup, and restore options for important personal files. OneDrive stores and protects files in the cloud, allowing users to access them from laptops, desktops, and mobile devices. Plus, OneDrive provides an excellent solution for backing up folders. If a device is lost or stolen, the user can quickly recover all their important files from the cloud.
+Microsoft OneDrive for personal<sup>[\[10\]](conclusion.md#footnote10)</sup> offers enhanced security, backup, and restore options for important personal files. Users can access their data from anywhere, since their files are stored and protected in the cloud. OneDrive provides an excellent solution for backing up folders, ensuring that:
 
-:::image type="icon" source="images/learn-more.svg" border="false"::: **Learn more:**
+- If a device is lost or stolen, users can quickly recover all their important files from the cloud
+- If a user is targeted by a ransomware attack, OneDrive enables recovery. With configured backups, users have more options to mitigate and recover from such attacks
 
-- [OneDrive](/onedrive/plan-onedrive-enterprise)
+[!INCLUDE [learn-more](includes/learn-more.md)]
 
-In the event of a ransomware attack, OneDrive can enable recovery. And if backups are configured in OneDrive, users have additional options to mitigate and recover from a ransomware attack.
+- [Get started with OneDrive][LINK-6]
+- [How to recover from a ransomware attack using Microsoft 365][LINK-7]
+- [How to restore from OneDrive][LINK-3]
 
-:::image type="icon" source="images/learn-more.svg" border="false"::: **Learn more:**
+## Personal Vault
 
-- [How to recover from a ransomware attack using Microsoft 365](/microsoft-365/security/office-365-security/recover-from-ransomware)
+Personal Vault offers robust protection for the most important or sensitive files, without sacrificing the convenience of anywhere access. Secure digital copies of crucial documents in Personal Vault, where they're protected by identity verification and are easily accessible across devices.
 
-:::image type="icon" source="images/learn-more.svg" border="false"::: **Learn more:**
+Once the Personal Vault is configured, users can access it using a strong authentication method or a second step of identity verification. The second steps of verification include fingerprint, face recognition, PIN, or a code sent via email or text.
 
-- [How to restore from OneDrive](https://support.microsoft.com/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15)
+[!INCLUDE [learn-more](includes/learn-more.md)]
 
-## OneDrive Personal Vault
+- [Protect your OneDrive files in Personal Vault][LINK-4]
 
-OneDrive Personal Vault<sup>[\[9\]](conclusion.md#footnote9)</sup> also provides protection for the most important or sensitive files and photos without sacrificing the convenience of anywhere access. Protect digital copies of important documents in OneDrive Personal Vault. Files will be secured by identity verification yet are still easily accessible across devices.
+<!--links-->
 
-Learn how to [set up a Personal Vault](https://support.microsoft.com/office/protect-your-onedrive-files-in-personal-vault-6540ef37-e9bf-4121-a773-56f98dce78c4) with a strong authentication method or a second step of identity verification, such as fingerprint, face, PIN, or a code sent via email or SMS.
+[LINK-1]: https://support.microsoft.com/topic/4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa
+[LINK-2]: https://support.microsoft.com/topic/890bf25e-b8ba-d3fe-8253-e98a12f26316
+[LINK-3]: https://support.microsoft.com/topic/fa231298-759d-41cf-bcd0-25ac53eb8a15
+[LINK-4]: https://support.microsoft.com/topic/6540ef37-e9bf-4121-a773-56f98dce78c4
+[LINK-5]: https://support.microsoft.com/topic/585a71d7-2295-4878-aeac-a014984df856
+[LINK-6]: https://support.microsoft.com/onedrive
+[LINK-7]: /microsoft-365/security/office-365-security/recover-from-ransomware

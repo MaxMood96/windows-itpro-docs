@@ -135,6 +135,7 @@ Select one of the tabs to see the list of available settings:
 ::: zone pivot="windows-11"
 |Policy name| CSP | GPO |
 |-|-|-|
+|[Disable account notifications](#disable-account-notifications)|✅|✅|
 |[Hide **Change account settings**](#hide-change-account-settings)|✅|❌|
 |[Hide **Sign out**](#hide-sign-out)|✅|✅|
 |[Hide **Switch user**](#hide-switch-user)|✅|❌|
@@ -145,6 +146,7 @@ Select one of the tabs to see the list of available settings:
 ::: zone pivot="windows-10"
 |Policy name| CSP | GPO |
 |-|-|-|
+|[Disable account notifications](#disable-account-notifications)|❌|✅|
 |[Hide **Change account settings**](#hide-change-account-settings)|✅|❌|
 |[Hide **Lock**](#hide-lock)|✅|❌|
 |[Hide **Sign out**](#hide-sign-out)|✅|✅|
@@ -153,12 +155,9 @@ Select one of the tabs to see the list of available settings:
 |[Hide user tile](#hide-user-tile)|✅|❌|
 ::: zone-end
 
+[!INCLUDE [disable-account-notifications](includes/disable-account-notifications.md)]
 [!INCLUDE [hide-change-account-settings](includes/hide-change-account-settings.md)]
-
-::: zone pivot="windows-10"
 [!INCLUDE [hide-lock](includes/hide-lock.md)]
-::: zone-end
-
 [!INCLUDE [hide-signout](includes/hide-signout.md)]
 [!INCLUDE [hide-switch-user](includes/hide-switch-user.md)]
 [!INCLUDE [hide-lock](includes/hide-entry-points-for-fast-user-switching.md)]

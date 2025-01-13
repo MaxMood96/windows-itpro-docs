@@ -1,7 +1,7 @@
 ---
 title: Windows Hello for Business known deployment issues
 description: This article is a troubleshooting guide for known Windows Hello for Business deployment issues.
-ms.date: 03/12/2024
+ms.date: 11/22/2024
 ms.topic: troubleshooting
 ---
 

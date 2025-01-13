@@ -17,6 +17,8 @@ This policy setting allows you to control how BitLocker-protected operating syst
 
 If this policy setting is disabled or not configured, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS.
 
+For Microsoft Entra hybrid joined devices, the BitLocker recovery password is backed up to both Active Directory and Entra ID.
+
 |  | Path |
 |--|--|
 | **CSP** | `./Device/Vendor/MSFT/BitLocker/`[SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)|

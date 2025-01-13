@@ -1,7 +1,7 @@
 ---
 title: Manage multi-user and guest Windows devices
 description: options to optimize Windows devices used in shared scenarios, such touchdown spaces in an enterprise, temporary customer use in retail or shared devices in a school.
-ms.date: 02/06/2024
+ms.date: 10/31/2024
 ms.topic: concept-article
 ---
 

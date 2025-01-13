@@ -1,8 +1,8 @@
 ---
-title: Windows Firewall overview 
+title: Windows Firewall overview
 description: Learn overview information about the Windows Firewall security feature.
 ms.topic: overview
-ms.date: 11/21/2023
+ms.date: 09/06/2024
 ---
 
 # Windows Firewall overview
@@ -73,6 +73,18 @@ The *public network* profile is designed with higher security in mind for public
 > [!TIP]
 > Use the PowerShell cmdlet `Get-NetConnectionProfile` to retrieve the active network category (`NetworkCategory`). Use the PowerShell cmdlet `Set-NetConnectionProfile` to switch the category between *private* and *public*.
 
+## Disable Windows Firewall
+
+Microsoft recommends that you don't disable Windows Firewall because you lose other benefits, such as the ability to use Internet Protocol security (IPsec) connection security rules, network protection from attacks that employ network fingerprinting, Windows Service Hardening, and [boot time filters][BTF]. Non-Microsoft firewall software can programmatically disable only the [rule types][FWRC] of Windows Firewall that need to be disabled for compatibility. You shouldn't disable the firewall yourself for this purpose. 
+If disabling Windows Firewall is required, don't disable it by stopping the Windows Firewall service (in the Services snap-in, the display name is Windows Defender Firewall and the service name is MpsSvc). Stopping the Windows Firewall service isn't supported by Microsoft and can cause problems, including:
+
+- Start menu can stop working
+- Modern applications can fail to install or update
+- Activation of Windows via phone fails
+- Application or OS incompatibilities that depend on Windows Firewall
+
+The proper method to disable the Windows Firewall is to disable the Windows Firewall Profiles and leave the service running. See [Manage Windows Firewall with the command line][MFWC] for detailed steps.
+
 ## Next steps
 
 > [!div class="nextstepaction"]
@@ -89,3 +101,6 @@ To provide feedback for Windows Firewall, open [**Feedback Hub**][FHUB] (<kbd>WI
 [FHUB]: feedback-hub:?tabid=2&newFeedback=true
 [NLA]: /windows/win32/winsock/network-location-awareness-service-provider-nla--2
 [CSP-1]: /windows/client-management/mdm/policy-csp-networklistmanager
+[BTF]: /windows/win32/fwp/basic-operation
+[MFWC]: /windows/security/operating-system-security/network-security/windows-firewall/configure-with-command-line
+[FWRC]: /windows/win32/api/icftypes/ne-icftypes-net_fw_rule_category

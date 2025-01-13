@@ -1,7 +1,7 @@
 ---
 title: SUPL CSP
 description: Learn more about the SUPL CSP.
-ms.date: 01/18/2024
+ms.date: 11/27/2024
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -289,7 +289,7 @@ Required. The AppID for SUPL is automatically set to "ap0004". This is a read-on
 
 <!-- Device-SUPL1-Ext-Microsoft-FullVersion-Description-Begin -->
 <!-- Description-Source-DDF -->
-Optional. Determines the full version (X. Y. Z where X, Y and Z are major version, minor version, service indicator, respectively) of the SUPL protocol to use. The default is 1.0.0. If FullVersion is defined, Version field is ignored.
+Optional. Determines the full version (`X.Y.Z` where X, Y and Z are major version, minor version, service indicator, respectively) of the SUPL protocol to use. The default is 1.0.0. If FullVersion is defined, Version field is ignored.
 <!-- Device-SUPL1-Ext-Microsoft-FullVersion-Description-End -->
 
 <!-- Device-SUPL1-Ext-Microsoft-FullVersion-Editable-Begin -->

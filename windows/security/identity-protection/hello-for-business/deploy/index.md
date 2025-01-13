@@ -1,7 +1,7 @@
 ---
 title: Plan a Windows Hello for Business Deployment
 description: Learn about the role of each component within Windows Hello for Business and how certain deployment decisions affect other aspects of your infrastructure.
-ms.date: 05/16/2024
+ms.date: 10/30/2024
 ms.topic: concept-article
 ---
 
@@ -65,7 +65,7 @@ Windows Hello for Business authentication to Microsoft Entra ID always uses the 
 
 The trust type determines whether you issue authentication certificates to your users. One trust model isn't more secure than the other.
 
-The deployment of certificates to users and Domain Controllers requires more configuration and infrastructure, which could also be a factor to consider in your decision. More infrastructure needed for certificate-trust deployments includes a certificate registration authority. In a federated environment, you must activate the Device Writeback option in Microsoft Entra Connect.
+The deployment of certificates to users and domain controllers requires more configuration and infrastructure, which could also be a factor to consider in your decision. More infrastructure needed for certificate-trust deployments includes a certificate registration authority. In a federated environment, you must activate the Device Writeback option in Microsoft Entra Connect.
 
 There are three trust types from which you can choose:
 
@@ -264,16 +264,18 @@ All supported Windows versions can be used with Windows Hello for Business. Howe
 
 ### Windows Server requirements
 
-All supported Windows Server versions can be used with Windows Hello for Business as Domain Controller. However, cloud Kerberos trust requires minimum versions:
+Windows Hello for Business can be used to authenticate against all supported Windows Server versions as a domain controller. However, cloud Kerberos trust requires minimum versions:
 
-|  | Deployment model | Trust type | Domain Controller OS version |
+|  | Deployment model | Trust type | Domain controller OS version |
 |--|--|--|--|
 | **🔲** | **Cloud-only** | n/a | All supported versions |
-| **🔲** | **Hybrid** | Cloud Kerberos | - Windows Server 2016, with [KB3534307][KB-3] and later<br>- Windows Server 2019, with [KB4534321][KB-4] and later<br>- Windows Server 2022 |
+| **🔲** | **Hybrid** | Cloud Kerberos | - Windows Server 2016, with [KB3534307][KB-3] and later<br>- Windows Server 2019, with [KB4534321][KB-4] and later<br>- Windows Server 2022<br>- Windows Server 2025|
 | **🔲** | **Hybrid** | Key | All supported versions |
 | **🔲** | **Hybrid** | Certificate | All supported versions |
 | **🔲** | **On-premises** | Key | All supported versions |
 | **🔲** | **On-premises** | Certificate | All supported versions |
+
+The minimum required domain functional and forest functional levels are Windows Server 2008 R2 for all deployment models.
 
 ## Prepare users
 

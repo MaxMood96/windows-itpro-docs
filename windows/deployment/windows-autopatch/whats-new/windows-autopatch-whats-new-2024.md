@@ -1,9 +1,9 @@
 ---
 title: What's new 2024
 description: This article lists the 2024 feature releases and any corresponding Message center post numbers.
-ms.date: 04/09/2024
+ms.date: 11/19/2024
 ms.service: windows-client
-ms.subservice: itpro-updates
+ms.subservice: autopatch
 ms.topic: whats-new
 ms.localizationpriority: medium
 author: tiaraquan
@@ -21,6 +21,22 @@ This article lists new and updated feature releases, and service releases, with 
 
 Minor corrections such as typos, style, or formatting issues aren't listed.
 
+## November 2024
+
+### November feature releases or updates
+
+| Article | Description |
+| ----- | ----- |
+| Hotpatch | <ul><li>[Hotpatch updates](../manage/windows-autopatch-hotpatch-updates.md)</li><li>[Hotpatch quality update report](../monitor/windows-autopatch-hotpatch-quality-update-report.md)</li></ul> |
+
+## September 2024
+
+### September feature releases or updates
+
+| Article | Description |
+| ----- | ----- |
+| All articles | Windows Update for Business deployment service unified under Windows Autopatch. Unification is going through a gradual rollout over the next several weeks. If your experience looks different from the documentation, you didn't receive the unified experience yet. Review [Prerequisites](../prepare/windows-autopatch-prerequisites.md) and [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities) to understand licensing and feature entitlement.|
+
 ## March 2024
 
 ### March feature releases or updates
@@ -28,7 +44,6 @@ Minor corrections such as typos, style, or formatting issues aren't listed.
 | Article | Description |
 | ----- | ----- |
 | [Reliability report](../operate/windows-autopatch-reliability-report.md) | Added the [Reliability report](../operate/windows-autopatch-reliability-report.md) feature |
-| [Resolve policy conflicts](../operate/windows-autopatch-resolve-policy-conflicts.md) | Added the [Resolve policy conflicts](../operate/windows-autopatch-resolve-policy-conflicts.md) feature |
 
 ## February 2024
 

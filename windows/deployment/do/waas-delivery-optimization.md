@@ -24,7 +24,7 @@ ms.date: 05/23/2024
 
 Windows updates, upgrades, and applications can contain packages with large files. Downloading and distributing updates can consume quite a bit of network resources on the devices receiving them. Delivery Optimization is a reliable HTTP downloader with a cloud-managed solution that allows Windows devices to download those packages from alternate sources if desired (such as other devices on the network and/or a dedicated cache server) in addition to the traditional internet-based servers (referred to as 'HTTP sources' throughout Delivery Optimization documents). You can use Delivery Optimization to reduce bandwidth consumption by sharing the work of downloading these packages among multiple devices in your deployment however, the use of peer-to-peer is optional.
 
-To use either the peer-to-peer functionality or the Microsoft Connected Cache features, devices must have access to the Internet and Delivery Optimization cloud services. When Delivery Optimization is configured to use peers and Microsoft Connected Cache (MCC), to achieve the best possible content delivery experience, the client connects to MCC and peers in parallel. If the desired content can't be obtained from MCC or peers, Delivery Optimization seamlessly falls back to the HTTP source to get the requested content.
+To use either the peer-to-peer functionality or the Microsoft Connected Cache features, devices must have access to the Internet and Delivery Optimization cloud services. When Delivery Optimization is configured to use peers and Microsoft Connected Cache, to achieve the best possible content delivery experience, the client connects to Connected Cache and peers in parallel. If the desired content can't be obtained from Connected Cache or peers, Delivery Optimization seamlessly falls back to the HTTP source to get the requested content.
 
 You can use Delivery Optimization with Windows Update, Windows Server Update Services (WSUS), Microsoft Intune/Windows Update for Business, or Microsoft Configuration Manager (when installation of Express Updates is enabled).
 
@@ -47,12 +47,11 @@ The following table lists the minimum Windows 10 version that supports Delivery 
 
 #### Windows Client
 
-| Windows Client | Minimum Windows version | HTTP Downloader | Peer to Peer | Microsoft Connected Cache (MCC) |
+| Windows Client | Minimum Windows version | HTTP Downloader | Peer to Peer | Microsoft Connected Cache |
 |------------------|---------------|----------------|----------|----------------|
 | Windows Update ([feature updates quality updates, language packs, drivers](../update/get-started-updates-channels-tools.md#types-of-updates)) | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Windows 10/11 UWP Store apps | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Windows 11 Win32 Store apps | Windows 11 | :heavy_check_mark: | |
-| Windows 10 Store for Business apps | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Windows Defender definition updates | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Intune Win32 apps| Windows 10 1709, Windows 11 | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
 | Microsoft 365 Apps and updates | Windows 10 1709, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -67,14 +66,14 @@ The following table lists the minimum Windows 10 version that supports Delivery 
 
 #### Windows Server
 
-| Windows Server | Minimum Windows version | HTTP Downloader | Peer to Peer | Microsoft Connected Cache (MCC) |
+| Windows Server | Minimum Windows version | HTTP Downloader | Peer to Peer | Microsoft Connected Cache |
 |----------------|--------------------------|----------------|----------|----------------|
 | Windows Update | Windows Server 2019 (1809) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Edge Browser Updates | Windows Server 2019 (1809) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 #### Linux (Public Preview)
 
-| Linux ([Public Preview](https://github.com/microsoft/do-client)) | Linux versions | HTTP Downloader | Peer to Peer | Microsoft Connected Cache (MCC) |
+| Linux ([Public Preview](https://github.com/microsoft/do-client)) | Linux versions | HTTP Downloader | Peer to Peer | Microsoft Connected Cache |
 |------------------------|----------------|-----------------|--------------|---------------|
 | Device Update for IoT Hub | Ubuntu 18.04, 20.04 / Debian 9, 10 | :heavy_check_mark: |  | :heavy_check_mark: |
 > [!NOTE]
