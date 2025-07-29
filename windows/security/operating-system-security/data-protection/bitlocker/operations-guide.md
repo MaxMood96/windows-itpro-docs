@@ -2,7 +2,7 @@
 title: BitLocker operations guide
 description: Learn how to use different tools to manage and operate BitLocker.
 ms.topic: how-to
-ms.date: 12/05/2024
+ms.date: 07/29/2025
 ---
 
 # BitLocker operations guide

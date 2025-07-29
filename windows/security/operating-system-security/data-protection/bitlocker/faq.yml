@@ -30,8 +30,8 @@ sections:
         answer: |
           Contact the computer manufacturer to request a Trusted Computing Group (TCG)-compliant BIOS or UEFI boot firmware that meets the following requirements:
 
-          - It's compliant with the TCG standards for a client computer
-          - It has a secure update mechanism to help prevent a malicious BIOS or boot firmware from being installed on the computer
+          - It's compliant with the TCG standards for a client computer.
+          - It has a secure update mechanism to help prevent a malicious BIOS or boot firmware from being installed on the computer.
 
       - question: What user rights are required to use BitLocker?
         answer: To turn on, turn off, or change configurations of BitLocker on operating system and fixed data drives, membership to the local *Administrators* group is required. Standard users can turn on, turn off, or change configurations of BitLocker on removable data drives.
@@ -59,15 +59,21 @@ sections:
           No user action is required for BitLocker in order to apply updates from Microsoft, including [Windows quality updates and feature updates](/windows/deployment/update/waas-quick-start).
           Users need to suspend BitLocker for Non-Microsoft software updates, such as:
 
-          -	Some TPM firmware updates if these updates clear the TPM outside of the Windows API. Not every TPM firmware update will clear the TPM. Users don't have to suspend BitLocker if the TPM firmware update uses Windows API to clear the TPM because in this case, BitLocker will be automatically suspended. It's recommended that users test their TPM firmware updates if they don't want to suspend BitLocker protection
-          -	Non-Microsoft application updates that modify the UEFI\BIOS configuration
-          -	Manual or non-Microsoft updates to secure boot databases (only if BitLocker uses Secure Boot for integrity validation)
-          -	Updates to UEFI\BIOS firmware, installation of additional UEFI drivers, or UEFI applications without using the Windows update mechanism (only if BitLocker doesn't use Secure Boot for integrity validation during updates)
-          -	BitLocker can be checked if it uses Secure Boot for integrity validation with the command line `manage-bde.exe -protectors -get C:`. If Secure Boot for integrity validation is being used, it reports **Uses Secure Boot for integrity validation**
+          -	Some TPM firmware updates if these updates clear the TPM outside of the Windows API. Not every TPM firmware update will clear the TPM. Users don't have to suspend BitLocker if the TPM firmware update uses Windows API to clear the TPM because in this case, BitLocker will be automatically suspended. It's recommended that users test their TPM firmware updates if they don't want to suspend BitLocker protection.
+          -	Non-Microsoft application updates that modify the UEFI\BIOS configuration.
+          -	Manual or non-Microsoft updates to secure boot databases (only if BitLocker uses Secure Boot for integrity validation).
+          -	Updates to UEFI\BIOS firmware, installation of additional UEFI drivers, or UEFI applications without using the Windows update mechanism (only if BitLocker doesn't use Secure Boot for integrity validation during updates).
+          -	BitLocker can be checked if it uses Secure Boot for integrity validation with the command line `manage-bde.exe -protectors -get C:`. If Secure Boot for integrity validation is being used, it reports **Uses Secure Boot for integrity validation**.
 
 
           > [!NOTE]
           > If BitLocker is suspended, you can resume BitLocker protection after the upgrade or update is installed. Upon resuming protection, BitLocker will reseal the encryption key to the new values of the measured components that changed as a part of the upgrade or update. If these types of upgrades or updates are applied without suspending BitLocker, the computer will enter recovery mode when restarting and will require a recovery key or password to access the computer.
+
+          BitLocker behavior on Entra ID-joined devices:
+
+          - When BitLocker is suspended automatically or without the `-rebootcount` parameter, Windows attempts to resume protection at the next reboot. A network connection is required to back up the recovery password to Microsoft Entra ID. If a policy setting requires BitLocker key backup, Windows waits up to 60 seconds for a network connection. If the recovery key can't be backed up, protection won't resume.
+          - If BitLocker is suspended as part of a built-in upgrade or PC reset flow, Windows attempts to export the recovery key and resumes protection regardless of whether the export succeeds.
+
 
   - name: Deployment and administration
     questions:
@@ -105,20 +111,20 @@ sections:
         answer: |
           The following types of system changes can cause an integrity check failure and prevent the TPM from releasing the BitLocker key to decrypt the protected operating system drive:
 
-          - Moving the BitLocker-protected drive into a new computer
-          - Installing a new motherboard with a new TPM
-          - Turning off, disabling, or clearing the TPM
-          - Changing any boot configuration settings
-          - Changing the BIOS, UEFI firmware, master boot record, boot sector, boot manager, option ROM, or other early boot components or boot configuration data
+          - Moving the BitLocker-protected drive into a new computer.
+          - Installing a new motherboard with a new TPM.
+          - Turning off, disabling, or clearing the TPM.
+          - Changing any boot configuration settings.
+          - Changing the BIOS, UEFI firmware, master boot record, boot sector, boot manager, option ROM, or other early boot components or boot configuration data.
 
       - question: What causes BitLocker to start into recovery mode when attempting to start the operating system drive?
         answer: |
           Because BitLocker is designed to protect computers from numerous attacks, there are numerous reasons why BitLocker could start in recovery mode.
           For example:
 
-          - Changing the BIOS boot order to boot another drive in advance of the hard drive
-          - Adding or removing hardware, such as inserting a new card in the computer
-          - Removing, inserting, or completely depleting the charge on a smart battery on a portable computer
+          - Changing the BIOS boot order to boot another drive in advance of the hard drive.
+          - Adding or removing hardware, such as inserting a new card in the computer.
+          - Removing, inserting, or completely depleting the charge on a smart battery on a portable computer.
 
           In BitLocker, recovery consists of decrypting a copy of the volume master key using either a recovery key stored on a USB flash drive or a cryptographic key derived from a recovery password.
           The TPM isn't involved in any recovery scenarios, so recovery is still possible if the TPM fails boot component validation, malfunctions, or is removed.
@@ -160,8 +166,8 @@ sections:
 
           When you set up BitLocker, you must choose how access to BitLocker-protected drives can be recovered in the event that the specified unlock method cannot be used (such as if the TPM cannot validate the boot components, the personal identification number (PIN) is forgotten, or the password is forgotten). In these situations, you must be able to supply either the recovery key or the recovery password to unlock the encrypted data on the drive. When you supply the recovery information, you can use either of the following formats:
 
-          - A recovery password consisting of 48 digits divided into eight groups. During recovery, you need to type this password into the BitLocker recovery console by using the function keys on your keyboard
-          - A key file on a USB flash drive that is read directly by the BitLocker recovery console. During recovery, you need to insert this USB device
+          - A recovery password consisting of 48 digits divided into eight groups. During recovery, you need to type this password into the BitLocker recovery console by using the function keys on your keyboard.
+          - A key file on a USB flash drive that is read directly by the BitLocker recovery console. During recovery, you need to insert this USB device.
 
           **PIN and enhanced PIN**
 
@@ -272,7 +278,7 @@ sections:
           - USB flash drives
           - SD cards
           - External hard disk drives
-          - Other drives that are formatted by using the NTFS, FAT16, FAT32, or exFAT file system.
+          - Other drives that are formatted by using the NTFS, FAT16, FAT32, or exFAT file system
 
           Drive partitioning must meet the [BitLocker Drive Encryption Partitioning Requirements](/windows-hardware/manufacture/desktop/bitlocker-drive-encryption#bitlocker-drive-encryption-partitioning-requirements).
 

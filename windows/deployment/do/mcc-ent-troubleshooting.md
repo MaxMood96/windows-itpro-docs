@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 07/23/2025
+ms.date: 07/28/2025
 ---
 
 
@@ -31,15 +31,15 @@ As a temporary workaround, you can navigate away from the **Metrics** tab and th
 
 ### importCert.ps1 limitations
 
-The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support cache nodes deployed to Windows Server 2022 with a gMSA Connected Cache runtime account.
+The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script doesn't currently support cache nodes deployed to Windows Server 2022 with a gMSA Connected Cache runtime account.
 
 ### Connected Cache Windows installer application limitations
 
-The Connected Cache Windows installer application is an MSIX package that is used to deploy Connected Cache to Windows host machines. The installer application does not currently support Windows Server Core.
+The Connected Cache Windows installer application is an MSIX package that is used to deploy Connected Cache to Windows host machines. The installer application doesn't currently support Windows Server Core.
 
 ### Patched in latest release
 
-[GA release: 7/16/2025](mcc-ent-release-notes.md)
+[GA release: 7/23/2025](mcc-ent-release-notes.md)
 
 * Connected Cache installation fails when Windows host machine is configured with a non-EN locale.
 * Windows-hosted Connected Cache nodes can grow past their configured cache drive size.
@@ -64,12 +64,6 @@ If you're encountering a validation error, check that you have filled out all re
 If your configuration doesn't appear to be taking effect, check that you have selected the **Save** option at the top of the configuration page in the Azure portal user interface.
 
 If you have changed the proxy configuration, you need to redeploy the Connected Cache software on the host machine for the proxy configuration to take effect.
-
-## Troubleshooting cache nodes created during early preview
-
-Cache nodes created and deployed during the [Microsoft Connected Cache for Enterprise and Education early preview](mcc-ent-early-preview.md) should continue to function but can no longer be managed or monitored remotely via the Connected Cache Azure service.
-
-As such, we strongly recommend you [recreate your existing resources in Azure](mcc-ent-create-resource-and-cache.md) and then [redeploy the Connected Cache software to your host machines](mcc-ent-deploy-to-windows.md) using the latest OS-specific installer.
 
 ## Troubleshooting cache node deployment to Windows host machine
 
@@ -122,7 +116,7 @@ To troubleshoot issues with the Connected Cache software on a Windows host machi
 Once the Connected Cache software has been successfully deployed to the Windows host machine, you can check if the cache node is running properly by doing the following on the Windows host machine:
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
-1. Run `wsl -d Ubuntu-24.04-Mcc-Base` to access the Linux distribution that hosts the Connected Cache container
+1. Run `wsl -d Ubuntu-24.04-Mcc` to access the Linux distribution that hosts the Connected Cache container
 1. Run `sudo iotedge list` to show which containers are running within the IoT Edge runtime
 
 If it shows the **edgeAgent** and **edgeHub** containers but doesn't show **MCC**, you can view the status of the IoT Edge security manager using `sudo iotedge system logs -- -f`.
@@ -138,7 +132,7 @@ To troubleshoot the connection, you can try running the following commands from 
 First, access the WSL2 distribution that hosts the Connected Cache container:
 
 ```powershell
-wsl -d Ubuntu-24.04-Mcc-Base
+wsl -d Ubuntu-24.04-Mcc
 ```
 
 Then, run the following bash command to check DNS resolution of the registration endpoint:
@@ -253,6 +247,14 @@ You'll also need to ensure that the host machine's firewall allows inbound traff
 [void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (MCC SUMMARY)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "5000"
 ```
 
+### Cache node deployment to Windows fails with "ERROR: cannot verify certificate"
+
+If you're encountering an error during cache node deployment that states "ERROR: cannot verify certificate," it may be due to your network's TLS-inspecting proxy (e.g. ZScaler) intercepting the communication between the Connected Cache software and the Delivery Optimization service. This interception breaks the certificate chain and prevents Connected Cache from successfully deploying.
+
+To resolve this issue, you must configure your network environment to allow calls to and from "*.prod.do.dsp.mp.microsoft.com" to **bypass** the TLS-inspecting proxy.
+
+You must also [configure the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command. For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
+
 ## Troubleshooting cache node deployment to Linux host machine
 
 [Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux deployment package.
@@ -268,6 +270,14 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 >[!NOTE]
 > After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
 > Otherwise the redeployed node will be up and running, but requests for content will fail.
+
+### Cache node deployment to Linux fails with "ERROR: cannot verify certificate"
+
+If you're encountering an error during cache node deployment that states "ERROR: cannot verify certificate," it may be due to your network's TLS-inspecting proxy (e.g. ZScaler) intercepting the communication between the Connected Cache software and the Delivery Optimization service. This interception breaks the certificate chain and prevents Connected Cache from successfully deploying.
+
+To resolve this issue, you must configure your network environment to allow calls to and from "*.prod.do.dsp.mp.microsoft.com" to **bypass** the TLS-inspecting proxy.
+
+You must also [configure the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
 ## Generating cache node diagnostic support bundle
 

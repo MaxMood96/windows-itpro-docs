@@ -2,7 +2,7 @@
 title: Protect cluster shared volumes and storage area networks with BitLocker
 description: Learn how to protect cluster shared volumes (CSV) and storage area networks (SAN) with BitLocker.
 ms.topic: how-to
-ms.date: 12/05/2024
+ms.date: 07/29/2025
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Windows Server 2025</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Windows Server 2022</a>

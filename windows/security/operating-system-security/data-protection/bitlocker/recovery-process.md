@@ -2,7 +2,7 @@
 title: BitLocker recovery process
 description: Learn how to obtain BitLocker recovery information for Microsoft Entra joined, Microsoft Entra hybrid joined, and Active Directory joined devices, and how to restore access to a locked drive.
 ms.topic: how-to
-ms.date: 02/11/2025
+ms.date: 07/29/2025
 ---
 
 # BitLocker recovery process
@@ -10,6 +10,10 @@ ms.date: 02/11/2025
 If a device or drive fails to unlock using the configured BitLocker mechanism, users may be able to self-recover it. If self-recovery isn't an option, or the user is unsure how to proceed, the helpdesk should have procedures in place to retrieve recovery information quickly and securely.
 
 This article outlines the process of obtaining BitLocker recovery information for Microsoft Entra joined, Microsoft Entra hybrid joined, and Active Directory joined devices. It's assumed that the reader is already familiar with configuring devices to automatically back up BitLocker recovery information, and the available BitLocker recovery options. For more information, see the [BitLocker recovery overview](recovery-overview.md) article.
+
+>[!NOTE]
+> This article is intended for IT professionals and device administrators. If you're an end user or consumer looking for help with BitLocker, see [Find your BitLocker recovery key](https://support.microsoft.com/windows/6b71ad27-0b89-ea08-f143-056f5ab347d6)
+
 
 ## Self-recovery
 

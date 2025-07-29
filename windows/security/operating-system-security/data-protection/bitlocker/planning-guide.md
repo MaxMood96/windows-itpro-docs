@@ -2,7 +2,7 @@
 title: BitLocker planning guide
 description: Learn how to plan for a BitLocker deployment in your organization.
 ms.topic: concept-article
-ms.date: 12/05/2024
+ms.date: 07/29/2025
 ---
 
 # BitLocker planning guide

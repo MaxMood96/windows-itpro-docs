@@ -1,15 +1,16 @@
 ---
-title: BitLocker overview
-description: Learn about BitLocker practical applications and requirements.
+title: BitLocker Overview
+description: Explore BitLocker deployment, configuration, and recovery options for IT professionals and device administrators.
 ms.topic: overview
-ms.date: 04/28/2025
+ms.date: 07/29/2025
 ---
 
 # BitLocker overview
 
-BitLocker is a Windows security feature that provides encryption for entire volumes, addressing the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned devices.
+>[!NOTE]
+> This article is intended for IT professionals and device administrators. If you're an end user or consumer looking for help with BitLocker, see [BitLocker overview](https://support.microsoft.com/windows/44c0c61c-989d-4a69-8822-b95cd49b1bbf).
 
-## Practical applications
+BitLocker is a Windows security feature that provides encryption for entire volumes, addressing the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned devices.
 
 Data on a lost or stolen device is vulnerable to unauthorized access, either by running a software-attack tool against it, or by transferring the device's hard drive to a different device. BitLocker helps mitigate unauthorized data access by enhancing file and system protections, rendering data inaccessible when BitLocker-protected devices are decommissioned or recycled.
 
@@ -25,6 +26,8 @@ On devices that don't have a TPM, BitLocker can still be used to encrypt the ope
 - Use a password. This option isn't secure since it's subject to brute force attacks as there isn't a password lockout logic. As such, the password option is discouraged and disabled by default.
 
 Both options don't provide the preboot system integrity verification offered by BitLocker with a TPM.
+
+The following screenshots show the BitLocker preboot screen when a startup key, PIN, or password is required to start the device:
 
 :::row:::
   :::column span="1":::

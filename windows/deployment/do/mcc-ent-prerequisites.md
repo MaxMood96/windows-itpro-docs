@@ -23,7 +23,7 @@ This article details the requirements and recommended specifications for using M
 
     If you don't have an Azure subscription already, you can create an Azure [pay-as-you-go](https://azure.microsoft.com/offers/ms-azr-0003p/) account, which requires a credit card for verification purposes. For more information, see the [Azure Free Account FAQ](https://azure.microsoft.com/free/free-account-faq/).
 
-    The Azure resources used for Connected Cache will be free to you during this public preview.
+    While access to Azure is required for usage and management, the Connected Cache Azure resource does not incur any Azure cost
 
 - **E3/E5 or A3/A5 license**: Your organization must have one of the following license subscriptions for each device that downloads content from a Connected Cache node:
 

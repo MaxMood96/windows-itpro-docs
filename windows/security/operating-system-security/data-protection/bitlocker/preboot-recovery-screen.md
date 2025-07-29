@@ -2,14 +2,17 @@
 title: BitLocker preboot recovery screen
 description: Learn about the information displayed in the BitLocker preboot recovery screen, depending on configured policy settings and recovery keys status.
 ms.topic: concept-article
-ms.date: 12/05/2024
+ms.date: 07/29/2025
 ---
 
 # BitLocker preboot recovery screen
 
 During BitLocker recovery, the *preboot recovery screen* is a critical touchpoint for users, offering a custom recovery message tailored to the organization's needs, a direct recovery URL for additional support, and strategic hints to assist users in locating their recovery key.
 
-This article delves into the various elements displayed on the preboot recovery screen, detailing how policy settings and the status of recovery keys influence the information presented. Whether it's a personalized message or practical guidance, the preboot recovery screen is designed to streamline the recovery process for users
+This article delves into the various elements displayed on the preboot recovery screen, detailing how policy settings and the status of recovery keys influence the information presented. Whether it's a personalized message or practical guidance, the preboot recovery screen is designed to streamline the recovery process for users.
+
+>[!NOTE]
+> This article is intended for IT professionals and device administrators. If you're an end user or consumer looking for help with BitLocker, see [Find your BitLocker recovery key](https://support.microsoft.com/windows/6b71ad27-0b89-ea08-f143-056f5ab347d6).
 
 ## Default preboot recovery screen
 
